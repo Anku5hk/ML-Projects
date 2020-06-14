@@ -4,6 +4,11 @@ import shutil
 import os 
 import argparse
 
+"""
+Just put this .py in images folder you want to extract faces from. other way is to pass image path with (--image_path)
+argument while running this .py file.
+"""
+
 path_given = False # argument is passed or not
 
 def get_faces(imgs_dir, box_faces = False):
