@@ -12,7 +12,7 @@ My solution:
   - Heavy Augs with mixed_precision training(to improve training speed) and gradient accumulation(to use bigger batch size)added: lb=.7145.
   - Training was same as Effdet D3, Pseudo Labelling(3 epoch). lb=.7274.
   
-3. Faster R-CNN(with resnet12 backbone):  
+3. Faster R-CNN(with resnet152 backbone):  
   - Heavy Augs, image_size=1024, 5 folds, AdamW(lr=0.001) step_lr for 30 epochs: lb=.6945.
   - Then plain SGD with CosineAnnealingLR schedule for ~50 epochs: lb=.7185.
   - Lastly made the ensemble with WBF(Weighted Box Fusion) for 2 effdetd5(1PL another no PL) + 1 Effdetd3 + frcnn, which gave around lb=.73 and private score=.67.
