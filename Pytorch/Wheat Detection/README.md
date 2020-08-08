@@ -15,7 +15,7 @@ My solution:
 3. Faster R-CNN(with resnet12 backbone):  
   - Heavy Augs, image_size=1024, 5 folds, AdamW(lr=0.001) step_lr for 30 epochs: lb=.6945.
   - Then plain SGD with CosineAnnealingLR schedule for ~50 epochs: lb=.7185.
-  - Lastly made the ensemble for 2 effdetd5(1PL another no PL) + 1 Effdetd3 + frcnn, which gave around lb=~.73 and private score=~.67.
+  - Lastly made the ensemble with WBF(Weighted Box Fusion) for 2 effdetd5(1PL another no PL) + 1 Effdetd3 + frcnn, which gave around lb=.73 and private score=.67.
   
   
   
