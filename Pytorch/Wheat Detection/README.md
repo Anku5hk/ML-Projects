@@ -1,7 +1,7 @@
 # Wheat Detection Kaggle
 My solution:
   
-![1](/wheat_sol.png)
+![1](wheat_sol.png)
 
 1. Effdet D3:
   - First 25 epochs with AdamW(lr=0.001), image size=512, Augs+cutmix, 5 folds dataset, step_lr : val_loss=0.4149, lb=.6771.
