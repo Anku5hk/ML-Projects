@@ -13,7 +13,7 @@ This resources are compiled of material that i consider a good, I'll keep updati
 * [Deep Learning for Computer Vision](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) covers the modern techniques of using Deep Learning to tackle Computer Vision challenges. Also provides Deep Learning knowledge.
 
 ## Deep Learning Books
-1.[The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginers, it is free, short yet comprehensive. Folks with experience can also benifit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, it has simple language, tons of real-world ML examples which can take you far.
+1. [The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginers, it is free, short yet comprehensive. Folks with experience can also benifit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, it has simple language, tons of real-world ML examples which can take you far.
 2. [Deep Learning With python](https://www.manning.com/books/deep-learning-with-python-second-edition) by the creator of Keras covers building blocks of Deep Learning with easy language and code supplied thoughtout is very nice package. Also this is upcoming new edition, you can read for free on Manning.
 3. [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk) by Aurelien Geron is a excellent book which provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. Also it provides code for using them with sklearn, Tensorflow.
 4. [Deep Learning with PyTorch](https://www.manning.com/books/deep-learning-with-pytorch) takes the approach of Deep Learing with Python but using Pytorch. Pytorch is very popular among ML reseachers, so it's wise to invest time in Pytorch. Also it is free to read on Manning.
@@ -25,7 +25,7 @@ This resources are compiled of material that i consider a good, I'll keep updati
 
 
 
-## General ML
+## General ML Courses
 * [ML Course by ODS](https://mlcourse.ai/) has very well designed curriculum to boost/build your ML intuition.
 
 ## Newsletters
