@@ -38,6 +38,7 @@ This resources are compiled of material that i consider a good, I'll keep updati
 * [Elements of AI](https://www.elementsofai.com/) easy, overview of AI concepts.
 
 ## Applied ML
+* [Kaggle](https://www.kaggle.com/) best place to learn/apply deep learing skills.
 * [Applied ML in Production](https://madewithml.com/courses/applied-ml/)
 * [Full Stack Deep Learning(upcoming 2021)](https://fullstackdeeplearning.com/)
 
