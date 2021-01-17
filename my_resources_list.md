@@ -2,7 +2,7 @@ This resources are compiled of material that i consider a good, I'll keep updati
 ## Learn Python
 * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics to get you started as you begin.
 * [Byte of Python](https://python.swaroopch.com/) beginner for python.
-* [Automate the Boring Stuff By Al Sweigart](https://automatetheboringstuff.com/) takes you from basics to something.
+* [Automate the Boring Stuff By Al Sweigart](https://automatetheboringstuff.com/) takes you from basic to someone good.
 * Practice Python at [Hackerrank](https://www.hackerrank.com/), [Leetcode](https://leetcode.com/).
 
 ## Learn Tensorflow
@@ -28,8 +28,7 @@ This resources are compiled of material that i consider a good, I'll keep updati
 * [Deep Learing with Pytorch](https://youtube.com/playlist?list=PLLHTzKZzVU9eaEyErdV26ikyolxOsz6mq)
 * [MIT 6.S191: Introduction to Deep Learning](https://youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
 * [Deep Learning Course by DeepMind](https://youtube.com/playlist?list=PLqYmG7hTraZCkftCvihsG2eCTH2OyGScc)
-* [Deep Learning spcialization by Andrew NG](https://www.coursera.org/specializations/deep-learning) Youtube version ->[1](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0),[2](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc),[3](https://www.youtube.com/playlist?list=PLkDaE6sCZn6E7jZ9sN_xHwSHOdjUxUW_b),
-[4](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF),[5](https://www.youtube.com/playlist?list=PLkDaE6sCZn6F6wUI9tvS_Gw1vaFAx6rd6)
+* [Deep Learning spcialization by Andrew NG](https://www.coursera.org/specializations/deep-learning) Youtube version ->[1](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0),[2](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc),[3](https://www.youtube.com/playlist?list=PLkDaE6sCZn6E7jZ9sN_xHwSHOdjUxUW_b),[4](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF),[5](https://www.youtube.com/playlist?list=PLkDaE6sCZn6F6wUI9tvS_Gw1vaFAx6rd6)
 
 ## General ML Courses
 * [Machine Learning by Andrew NG](https://www.coursera.org/learn/machine-learning) legendary course to get started.
@@ -38,7 +37,7 @@ This resources are compiled of material that i consider a good, I'll keep updati
 * [Elements of AI](https://www.elementsofai.com/) easy, overview of AI concepts.
 
 ## Applied ML
-* [Kaggle](https://www.kaggle.com/) best place to learn/apply deep learing skills.
+* [Kaggle](https://www.kaggle.com/) best place to learn/apply deep learning skills.
 * [Applied ML in Production](https://madewithml.com/courses/applied-ml/)
 * [Full Stack Deep Learning(upcoming 2021)](https://fullstackdeeplearning.com/)
 
