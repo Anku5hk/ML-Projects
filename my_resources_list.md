@@ -1,4 +1,5 @@
-This resources are compiled of materials that I consider good, I'll keep updating as new resources are build/found.
+This resources are compiled of materials that I consider good and are almost freely accessible to everyone. I hope anyone taking thier journey into ML/DL world to have a smooth ride with top-class study material without burning thier pockets. I'll keep updating as new resources are build/found.
+
 ## Learn Python
 * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
 * [Byte of Python](https://python.swaroopch.com/) beginner for python.
