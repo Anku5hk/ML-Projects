@@ -16,6 +16,11 @@ This resources are compiled of materials that I consider good, I'll keep updatin
 * [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation.
 * [Deep Learning for Computer Vision](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) covers the modern techniques of using Deep Learning to tackle Computer Vision challenges. Also provides fruitful Deep Learning knowledge.
 
+## Learn NLP
+* [Natural Language Processing](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw)
+* [NLP for Developers](https://youtube.com/playlist?list=PL75e0qA87dlFJiNMeKltWImhQxfFwaxvv)
+* [CS224N: Natural Language Processing with Deep Learning](https://youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
+
 ## Deep Learning Books
 1. [The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginners, it is free, short, yet comprehensive. Folks with experience can also benefit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, it has simple language, tons of real-world ML examples which can take you far.
 2. [Deep Learning With python(2nd Edition Upcoming)](https://www.manning.com/books/deep-learning-with-python-second-edition) by the creator of Keras covers building blocks of Deep Learning with easy language and code supplied thoughtout is a very nice package overall. Also this is upcoming new edition, you can read for free on Manning.
@@ -34,12 +39,19 @@ This resources are compiled of materials that I consider good, I'll keep updatin
 * [Machine Learning by Andrew NG](https://www.coursera.org/learn/machine-learning) legendary course to get started.
 * [ML Course by ODS](https://mlcourse.ai/) has very well designed curriculum to boost/build your ML intuition.
 * [Stat 451: Intro to Machine Learning (Fall 2020) by Sebastian Raschka](https://youtube.com/playlist?list=PLTKMiZHVd_2KyGirGEvKlniaWeLOHhUF3)
-* [Elements of AI](https://www.elementsofai.com/) easy, overview of AI concepts.
+* [Elements of AI](https://www.elementsofai.com/) kind of AI for everyone course, easy and covers overview of AI concepts.
 
 ## Applied ML
 * [Kaggle](https://www.kaggle.com/) best place to learn/apply deep learning skills.
 * [Applied ML in Production](https://madewithml.com/courses/applied-ml/)
 * [Full Stack Deep Learning(upcoming 2021)](https://fullstackdeeplearning.com/)
+* [MLOPS basic](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDBDuCkFbcyjnZQrdskFsBz)
+
+## Other Resources
+* [Learn Numpy](https://cs231n.github.io/python-numpy-tutorial/)
+* [AI,ML,DL overview](https://stanford.edu/~shervine/teaching/cs-230/)
+* [Practice ML Questionaries](https://www.confetti.ai/)
+* [Linear_Algebra_With_Python](https://github.com/MacroAnalyst/Linear_Algebra_With_Python)
 
 ## Newsletters
 
