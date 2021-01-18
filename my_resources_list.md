@@ -20,6 +20,7 @@ This resources are compiled of materials that I consider good and are almost fre
 
 ## Learn NLP
 * [Natural Language Processing](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw)
+* [A Code-First Introduction to NLP by fast.ai](https://www.fast.ai/2019/07/08/fastai-nlp/)
 * [NLP for Developers](https://youtube.com/playlist?list=PL75e0qA87dlFJiNMeKltWImhQxfFwaxvv)
 * [CS224N: Natural Language Processing with Deep Learning](https://youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 
@@ -31,7 +32,7 @@ This resources are compiled of materials that I consider good and are almost fre
 5. [Dive into Deep Learning](https://d2l.ai/) is well thought and written overall. This book has a wide array of techniques starting with basic mathematics to GANs, providing code for almost everything(has pytorch and tensorflow 2 both). Contents are continually updated by the authors. Overall this book is a old-mine for a ML-Engineer and is free.
 
 ## Deep Learning Courses
-* [Deep Learning by Jeremy Howard](https://www.fast.ai/) certainly best place to kick-start deep learing journey.
+* [FastAi: Deep Learning by Jeremy Howard](https://www.fast.ai/) certainly best place to kick-start deep learing journey.
 * [Deep Learing with Pytorch](https://youtube.com/playlist?list=PLLHTzKZzVU9eaEyErdV26ikyolxOsz6mq)
 * [MIT 6.S191: Introduction to Deep Learning](https://youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
 * [Deep Learning Course by DeepMind](https://youtube.com/playlist?list=PLqYmG7hTraZCkftCvihsG2eCTH2OyGScc)
