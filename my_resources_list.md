@@ -15,6 +15,7 @@ This resources are compiled of materials that I consider good, I'll keep updatin
 ## Learn Computer Vision
 * [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation.
 * [Deep Learning for Computer Vision](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) covers the modern techniques of using Deep Learning to tackle Computer Vision challenges. Also provides fruitful Deep Learning knowledge.
+* [PyimageSearch](https://www.pyimagesearch.com/) has curated list of tutorials which are totally worth checking out.
 
 ## Learn NLP
 * [Natural Language Processing](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw)
@@ -54,8 +55,13 @@ This resources are compiled of materials that I consider good, I'll keep updatin
 * [Linear_Algebra_With_Python](https://github.com/MacroAnalyst/Linear_Algebra_With_Python)
 
 ## Newsletters
+* [The Batch by deeplearning.ai](https://www.deeplearning.ai/thebatch/)
+* [Deep learning weekly](https://www.deeplearningweekly.com/)
+* [Andriy Burkov - True Positive Weekly](https://aiweekly.substack.com/people/1236224-andriy-burkov)
+* [NLP News by Sabastian Ruder](http://newsletter.ruder.io/)
 
 ## Exciting Topics
 
 ## Youtube Channels
-
+* [Two Minute Papers](https://www.youtube.com/user/keeroyz)
+* [AI Poscast by Lex Fridman](https://www.youtube.com/user/lexfridman)
