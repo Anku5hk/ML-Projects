@@ -11,7 +11,10 @@ This resources are compiled of materials that I consider good and are almost fre
 * [Eat TF 2.0 in 30 days](https://github.com/lyhue1991/eat_tensorflow2_in_30_days?s=03) builds a strong hands-on of syntax and general usage of Tensorflow.
 
 ## Learn Pytorch
+* [Deep Learning with PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) basic workaround pytorch.
 * [Eat Pytorch in 20 days](https://github.com/lyhue1991/eat_pytorch_in_20_days) builds a strong hands-on of syntax and general usage of Pytorch.
+* [Neural Network Programming - Deep Learning with PyTorch](https://deeplizard.com/learn/video/v5cngxo4mIg) easy to understand course by DeepLizard.
+* [Deep Neural Networks with PyTorch](https://www.coursera.org/learn/deep-neural-networks-with-pytorch) good course by coursera.
 
 ## Learn Computer Vision
 * [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation.
