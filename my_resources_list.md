@@ -29,13 +29,13 @@ This resources are compiled of materials that I consider good and are almost fre
 
 ## Deep Learning Books
 1. [The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginners, it is free, short, yet comprehensive. Folks with experience can also benefit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, it has simple language, tons of real-world ML examples which can take you far.
-2. [Deep Learning With python(2nd Edition Upcoming)](https://www.manning.com/books/deep-learning-with-python-second-edition) by the creator of Keras covers building blocks of Deep Learning with easy language and code supplied thoughtout is a very nice package overall. Also this is upcoming new edition, you can read for free on Manning.
+2. [Deep Learning With python(2nd Edition Upcoming)](https://www.manning.com/books/deep-learning-with-python-second-edition) by the creator of Keras covers building blocks of Deep Learning with easy language and code supplied throughtout is a very nice package overall. Also this is upcoming new edition, you can read for free on Manning.
 3. [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk) by Aurelien Geron is an excellent primer, yet provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. It supplies sufficient code for using them with sklearn, Tensorflow.
 4. [Deep Learning with PyTorch](https://www.manning.com/books/deep-learning-with-pytorch) takes the approach of Deep Learing with Python but using Pytorch. Pytorch is very popular among ML reseachers and my favorite, so it's wise to invest time in Pytorch. Also it is free to read on Manning.
 5. [Dive into Deep Learning](https://d2l.ai/) is well thought and written overall. This book has a wide array of techniques starting with basic mathematics to GANs, providing code for almost everything(has pytorch and tensorflow 2 both). Contents are continually updated by the authors. Overall this book is a old-mine for a ML-Engineer and is free.
 
 ## Deep Learning Courses
-* [FastAi: Deep Learning by Jeremy Howard](https://www.fast.ai/) certainly best place to kick-start deep learing journey.
+* [FastAi: Deep Learning by Jeremy Howard](https://www.fast.ai/) certainly best place to kick-start deep learning journey.
 * [Deep Learing with Pytorch](https://youtube.com/playlist?list=PLLHTzKZzVU9eaEyErdV26ikyolxOsz6mq)
 * [MIT 6.S191: Introduction to Deep Learning](https://youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
 * [Deep Learning Course by DeepMind](https://youtube.com/playlist?list=PLqYmG7hTraZCkftCvihsG2eCTH2OyGScc)
