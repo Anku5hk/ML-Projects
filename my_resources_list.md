@@ -67,6 +67,9 @@ This resources are compiled of materials that I consider good and are almost fre
 
 ## Exciting Topics
 
+## Projects
+* [500+ Machine-learning Projects](https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code)
+
 ## Youtube Channels
 * [Two Minute Papers](https://www.youtube.com/user/keeroyz)
 * [AI Poscast by Lex Fridman](https://www.youtube.com/user/lexfridman)
