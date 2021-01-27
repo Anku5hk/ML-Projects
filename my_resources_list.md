@@ -54,7 +54,7 @@ This resources are compiled of materials that I consider good and are almost fre
 * [MLOPS basic](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDBDuCkFbcyjnZQrdskFsBz)
 
 ## Other Resources
-* [Learn Numpy](https://cs231n.github.io/python-numpy-tutorial/)
+* [Learn Numpy](https://cs231n.github.io/python-numpy-tutorial/), [More Numpy Tutorials](https://numpy.org/learn/)
 * [AI,ML,DL overview](https://stanford.edu/~shervine/teaching/cs-230/)
 * [Practice ML Questionaries](https://www.confetti.ai/)
 * [Linear_Algebra_With_Python](https://github.com/MacroAnalyst/Linear_Algebra_With_Python)
