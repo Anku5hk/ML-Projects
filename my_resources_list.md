@@ -12,7 +12,7 @@ This resources are compiled of materials that I consider good and are almost fre
 
 ## Learn Pytorch
 * [Deep Learning with PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) basic workaround pytorch.
-* [Eat Pytorch in 20 days](https://github.com/Anku5hk/eat_pytorch_in_20_days_English) builds a strong hands-on of syntax and general usage of Pytorch.
+* [Eat Pytorch in 20 days](https://github.com/Anku5hk/eat_pytorch_in_20_days_English)(Translated to English version) builds a strong hands-on of syntax and general usage of Pytorch.
 * [Neural Network Programming - Deep Learning with PyTorch](https://deeplizard.com/learn/video/v5cngxo4mIg) easy to understand course by DeepLizard.
 * [Deep Neural Networks with PyTorch](https://www.coursera.org/learn/deep-neural-networks-with-pytorch) good course by coursera.
 
