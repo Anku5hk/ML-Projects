@@ -4,7 +4,7 @@ This resources are compiled of materials that I consider good and are almost fre
 * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
 * [Byte of Python](https://python.swaroopch.com/) beginner for python.
 * [Automate the Boring Stuff By Al Sweigart](https://automatetheboringstuff.com/) takes you from basic to someone good.
-* [WTF Python(Exploring and understanding Python through surprising snippets)](https://github.com/satwikkansal/wtfpython#-strings-can-be-tricky-sometimes)
+* [WTF Python](https://github.com/satwikkansal/wtfpython#-strings-can-be-tricky-sometimes) exploring and understanding Python through surprising snippets.
 * Practice Python at [Hackerrank](https://www.hackerrank.com/), [Leetcode](https://leetcode.com/).
 
 ## Learn Tensorflow
