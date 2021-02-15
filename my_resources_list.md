@@ -55,6 +55,7 @@ This resources are compiled of materials that I consider good and are almost fre
 * [MLOPS basic](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDBDuCkFbcyjnZQrdskFsBz)
 
 ## Zero to Hero
+* [ML from scratch book](https://dafriedman97.github.io/mlbook/content/introduction.html)
 * [ML from scratch](https://github.com/eriklindernoren/ML-From-Scratch)
 * [NN from scratch](https://github.com/lab-ml/nn)
 
