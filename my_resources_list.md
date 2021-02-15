@@ -4,6 +4,7 @@ This resources are compiled of materials that I consider good and are almost fre
 * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
 * [Byte of Python](https://python.swaroopch.com/) beginner for python.
 * [Automate the Boring Stuff By Al Sweigart](https://automatetheboringstuff.com/) takes you from basic to someone good.
+* [WTF Python(Exploring and understanding Python through surprising snippets)](https://github.com/satwikkansal/wtfpython#-strings-can-be-tricky-sometimes)
 * Practice Python at [Hackerrank](https://www.hackerrank.com/), [Leetcode](https://leetcode.com/).
 
 ## Learn Tensorflow
@@ -53,6 +54,10 @@ This resources are compiled of materials that I consider good and are almost fre
 * [Full Stack Deep Learning(upcoming 2021)](https://fullstackdeeplearning.com/)
 * [MLOPS basic](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDBDuCkFbcyjnZQrdskFsBz)
 
+## Zero to Hero
+* [ML from scratch](https://github.com/eriklindernoren/ML-From-Scratch)
+* [NN from scratch](https://github.com/lab-ml/nn)
+
 ## Other Resources
 * [Learn Numpy](https://cs231n.github.io/python-numpy-tutorial/), [More Numpy Tutorials](https://numpy.org/learn/)
 * [AI,ML,DL overview](https://stanford.edu/~shervine/teaching/cs-230/)
@@ -73,3 +78,4 @@ This resources are compiled of materials that I consider good and are almost fre
 ## Youtube Channels
 * [Two Minute Papers](https://www.youtube.com/user/keeroyz)
 * [AI Poscast by Lex Fridman](https://www.youtube.com/user/lexfridman)
+* [Yannic Kilcher](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew)
