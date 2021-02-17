@@ -1,15 +1,16 @@
 """
-Detect global motion 
+This program detects global motion in a video file
 
 """
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture("C:/Users/Nikhil/Downloads/vidd(0).mp4") # just change the path 
+cap = cv2.VideoCapture("C:/Users/Downloads/vidd(0).mp4") # just change the path 
 _, old_frame = cap.read()
 old_frame_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
 
-fb_params = dict(flow=None, pyr_scale = 0.5,
+fb_params = dict(
+flow=None, pyr_scale = 0.5,
 levels = 5, winsize = 9,
 iterations = 5, poly_n = 5,
 poly_sigma = 1.1, flags = 0
