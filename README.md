@@ -7,7 +7,7 @@ Goal: Build cool Deep Learning, Computer Vision applications/tutorials while mai
 * [Corner Detection](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Corner_Detection.ipynb): Harris, Shi-Tomasi, FAST Corner Detection.
 * [Keypoints detection and matching](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Keypoints_detection_and_matching.ipynb): Using ORB to detect keypoints and descriptors, then match with other images.
 * [Image Pyramid And Reconstructing Image](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Pyramid_And_Reconstructing_Image.ipynb): Gaussian Pyramids, Laplacian Pyramid and Image reconstruction.
-* [Optical flow demo notebook](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Optical_flow_demo.ipynb): Little demo.
+* [Optical flow demo notebook[Extra]](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Optical_flow_demo.ipynb): Little demo.
 * [Optical flow](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/optical_flow.py): Find flow of particular object. 
 * [Dense flow](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Dense_flow.py): Find global motion, process is to track all pixels to estimate motion.
 * [Bag of visual words](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Bag_of_visual_words.ipynb): Make BOVW features to train an image classifier on.
@@ -16,7 +16,7 @@ Goal: Build cool Deep Learning, Computer Vision applications/tutorials while mai
 * [Face & Facial landmarks Detection](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Face%20Recognition/Face_Detection_methods.ipynb): Using Haarcascades, Face Detection library, dlib.
 * [Face recognition using dimension reduction](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Face%20Recognition/Face_recognition_pca.ipynb): Make features using PCA/LDA which are dimension reduction algorithms and then use a classifier on top to classify the face.
 * [Face_recognition using deep learning](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Face%20Recognition/Face_recognition_deep_learning.ipynb): A more modern and prefered way using deep learning library for faces called Face Detection library.
-* [Extract faces](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/extract_faces.py): Extract faces from a folder just by running this .py file into the folder containing images using Haarcascades.
+* [Extract faces[Extra]](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/extract_faces.py): Extract faces from a folder just by running this .py file into the folder containing images using Haarcascades.
 
 ## Applications
 * [Image Classfication using BOWV](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Classfication_using_BOWV.ipynb): Use BOVW to classify images.
