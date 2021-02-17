@@ -11,7 +11,7 @@ Goal: Build cool Deep Learning, Computer Vision applications/tutorials while mai
 * [Bag of visual words](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Bag_of_visual_words.ipynb)
 * [Corner Detection](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Corner_Detection.ipynb)
 * [Edge detection](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Edge_detection.ipynb)
-* [Optical flow notebook](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Optical_flow.ipynb)
+* [Optical flow demo notebook](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Optical_flow_demo.ipynb)
 * [Optical flow](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/optical_flow.py)
 * [Dense flow](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Dense_flow.py)
 * [Image Classfication using BOWV](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Classfication_using_BOWV.ipynb)
