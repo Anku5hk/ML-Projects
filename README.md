@@ -1,5 +1,5 @@
 # Welcome to The_ML_Workflow
-Goal: Build cool Deep Learning, Computer Vision applciations/tutorials while maintaining code explainability. 
+Goal: Build cool Deep Learning, Computer Vision applications/tutorials while maintaining code explainability. 
 
 ## Face Applications
 * [Face & Facial landmarks Detection](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Face%20Recognition/Face_Detection_methods.ipynb): Using Haarcascades, Face Detection library, dlib.
@@ -17,7 +17,7 @@ Goal: Build cool Deep Learning, Computer Vision applciations/tutorials while mai
 * [Image Classfication using BOWV](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Classfication_using_BOWV.ipynb)
 * [Image Pyramid And Reconstructing Image](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Pyramid_And_Reconstructing_Image.ipynb)
 * [Image filtering](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_filtering.ipynb)
-* [Keypoints detection and matching](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Keypoints%20detection%20and%20matching.ipynb)
+* [Keypoints detection and matching](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Keypoints_detection_and_matching.ipynb)
 
 ## Kaggle Solutions
 ##
