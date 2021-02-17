@@ -9,9 +9,12 @@ cap = cv2.VideoCapture("C:/Users/Home/Downloads/vid.mp4") # just change the path
 _, old_frame = cap.read()
 old_frame_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
 
-lk_params = dict(winSize = (10, 10)
-maxLevel = 4
-criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
+lk_params = dict(
+winSize = (10, 10),
+maxLevel = 4,
+criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03)
+)
+
 point_selected = False
 mask = np.zeros_like(old_frame) # empty mask for drawing line
 
