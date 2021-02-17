@@ -22,7 +22,7 @@ Goal: Build cool Deep Learning, Computer Vision applications/tutorials while mai
 * [Image Classfication using BOWV](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Classfication_using_BOWV.ipynb): Use BOVW to classify images.
 
 ## Kaggle Solutions
-* [Petals to the Metal: FLower Classification on TPU](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Kaggle%20competitions%20solutions/Petals%20to%20the%20Metal_%20Flower%20Classification%20on%20TPU): Image classification using effnets with Tensorflow.
+* [Petals to the Metal: FLower Classification on TPU](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Kaggle%20competitions%20solutions/Petals%20to%20the%20Metal_%20Flower%20Classification%20on%20TPU): Image classification using effnets on TPU with Tensorflow.
 * [Wheat Detection](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Kaggle%20competitions%20solutions/Wheat%20Detection): Object detection using efficient-det and faster-rcnn with Pytorch.
 
 ##
