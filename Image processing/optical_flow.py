@@ -1,18 +1,17 @@
 """
-THis simple program allows to select a point, then track its motion/optical flow.
+THis simple program allows to select a point, then track its motion/optical flow. Press escape to stop.
 
 """
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture("C:/Users/Nikhil/Downloads/vid.mp4") # just change the path 
+cap = cv2.VideoCapture("C:/Users/Home/Downloads/vid.mp4") # just change the path 
 _, old_frame = cap.read()
 old_frame_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
 
-lk_params = dict(winSize = (10, 10),
-maxLevel = 4,
+lk_params = dict(winSize = (10, 10)
+maxLevel = 4
 criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
-
 point_selected = False
 mask = np.zeros_like(old_frame) # empty mask for drawing line
 
@@ -32,15 +31,15 @@ while 1:
     new_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     if point_selected:
-        new_points, status, error = cv2.calcOpticalFlowPyrLK(old_frame_gray, new_frame, old_points, None, **lk_params)
+        current_points, status, error = cv2.calcOpticalFlowPyrLK(old_frame_gray, new_frame, old_points, None, **lk_params)
 
-        x, y = new_points.ravel()
+        x, y = current_points.ravel()
         mask = cv2.line(mask, points, (x,y), [0,0,255], 1)    
 
         old_frame_gray = new_frame.copy()
-        old_points = new_points
+        old_points = current_points
 
-        frame = cv2.add(frame, mask) 
+        frame = cv2.add(frame, mask) # add to original frame
 
     cv2.imshow("Select point", frame)
     key = cv2.waitKey(1)
