@@ -19,8 +19,8 @@ Goal: Build cool Deep Learning, Computer Vision applications/tutorials while mai
 * [Extract faces[Extra]](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/extract_faces.py): Extract faces from a folder just by running this .py file into the folder containing images using Haarcascades.
 
 ## Applications
-* [Image Classfication using BOWV](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Classfication_using_BOWV.ipynb): Use BOVW to classify images.
-* [Audio Classification](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Environmental_Sound_Classification_PT.ipynb)
+* [Image Classfication using BOWV](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Classfication_using_BOWV.ipynb): Use BOVW features to classify images using SVM.
+* [Audio Classification](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Environmental_Sound_Classification_PT.ipynb): Convert audio files to spectograms and train image classifiers with them.
 
 ## Kaggle Solutions
 * [Petals to the Metal: FLower Classification on TPU](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Kaggle%20competitions%20solutions/Petals%20to%20the%20Metal_%20Flower%20Classification%20on%20TPU): Image classification using effnets on TPU with Tensorflow.
