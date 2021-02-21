@@ -7,15 +7,15 @@ This resources are compiled of materials that I consider good and are almost fre
 * [WTF Python](https://github.com/satwikkansal/wtfpython#-strings-can-be-tricky-sometimes) exploring and understanding Python through surprising snippets.
 * Practice Python at [Hackerrank](https://www.hackerrank.com/), [Leetcode](https://leetcode.com/).
 
-## Learn Tensorflow
-* [Keras - Deep Learning beginner's course](https://youtube.com/playlist?list=PLZbbT5o_s2xrwRnXk_yCPtnqqo4_u2YGL) very easy language, rewarding for beginner.
-* [Eat TF 2.0 in 30 days](https://github.com/lyhue1991/eat_tensorflow2_in_30_days?s=03) builds a strong hands-on of syntax and general usage of Tensorflow.
-
 ## Learn Pytorch
 * [Deep Learning with PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) basic workaround pytorch.
 * [Eat Pytorch in 20 days](https://github.com/Anku5hk/eat_pytorch_in_20_days_English)(Translated to English version) builds a strong hands-on of syntax and general usage of Pytorch.
 * [Neural Network Programming - Deep Learning with PyTorch](https://deeplizard.com/learn/video/v5cngxo4mIg) easy to understand course by DeepLizard.
 * [Deep Neural Networks with PyTorch](https://www.coursera.org/learn/deep-neural-networks-with-pytorch) good course by coursera.
+
+## Learn Tensorflow
+* [Keras - Deep Learning beginner's course](https://youtube.com/playlist?list=PLZbbT5o_s2xrwRnXk_yCPtnqqo4_u2YGL) very easy language, rewarding for beginner.
+* [Eat TF 2.0 in 30 days](https://github.com/lyhue1991/eat_tensorflow2_in_30_days?s=03) builds a strong hands-on of syntax and general usage of Tensorflow.
 
 ## Learn Computer Vision
 * [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation.
@@ -30,10 +30,10 @@ This resources are compiled of materials that I consider good and are almost fre
 
 ## Deep Learning Books
 1. [The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginners, it is free, short, yet comprehensive. Folks with experience can also benefit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, it has simple language, tons of real-world ML examples which can take you far.
-2. [Deep Learning With python(2nd Edition Upcoming)](https://www.manning.com/books/deep-learning-with-python-second-edition) by the creator of Keras covers building blocks of Deep Learning with easy language and code supplied throughtout is a very nice package overall. Also this is upcoming new edition, you can read for free on Manning.
-3. [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk) by Aurelien Geron is an excellent primer, yet provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. It supplies sufficient code for using them with sklearn, Tensorflow.
-4. [Deep Learning with PyTorch](https://www.manning.com/books/deep-learning-with-pytorch) takes the approach of Deep Learing with Python but using Pytorch. Pytorch is very popular among ML reseachers and my favorite, so it's wise to invest time in Pytorch. Also it is free to read on Manning.
-5. [Dive into Deep Learning](https://d2l.ai/) is well thought and written overall. This book has a wide array of techniques starting with basic mathematics to GANs, providing code for almost everything(has pytorch and tensorflow 2 both). Contents are continually updated by the authors. Overall this book is a old-mine for a ML-Engineer and is free.
+2. [Dive into Deep Learning](https://d2l.ai/) is well thought and written overall. This book has a wide array of techniques starting from basic mathematics to GANs, providing code for almost everything(has pytorch and tensorflow 2 both). Contents are continually updated by the authors. Overall this book is a gold-mine for a ML-Engineer and is free.
+3. [Deep Learning With python(2nd Edition Upcoming)](https://www.manning.com/books/deep-learning-with-python-second-edition) by the creator of Keras covers building blocks of Deep Learning with easy language and code supplied throughtout is a very nice package overall. Also this is upcoming new edition, you can read for free on Manning.
+4. [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk) by Aurelien Geron is an excellent primer, yet provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. It supplies sufficient code for using them with sklearn, Tensorflow.
+5. [Deep Learning with PyTorch](https://www.manning.com/books/deep-learning-with-pytorch) takes the approach of Deep Learing with Python but using Pytorch. Pytorch is very popular among ML reseachers and my favorite, so it's wise to invest time in Pytorch. Also it is free to read on Manning.
 
 ## Deep Learning Courses
 * [FastAi: Deep Learning by Jeremy Howard](https://www.fast.ai/) certainly best place to kick-start deep learning journey.
