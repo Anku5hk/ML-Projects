@@ -27,6 +27,7 @@ Goal: Build cool Deep Learning, Computer Vision applications/tutorials while mai
 * [Environment Sound Classification](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Environmental_Sound_Classification_PT.ipynb): Using spectorgrams as features to train image classifier.
 * AutoEncoders: </br>
 1.[Image denoising](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Auto_encoders_with_Pytroch.ipynb): Image reconstruction and image denoising using autoencoders.
+* [Image-Image Translation](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Image_Image_Translation_using_CycleGans.ipynb): Unpaired Image-Image translation using CycleGans.
 
 ## Kaggle Solutions
 * [Petals to the Metal: FLower Classification on TPU](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Kaggle%20competitions%20solutions/Petals%20to%20the%20Metal_%20Flower%20Classification%20on%20TPU): Image classification using effnets on TPU with Tensorflow.
