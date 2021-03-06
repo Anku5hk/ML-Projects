@@ -20,7 +20,7 @@ Goal: Build cool Deep Learning, Computer Vision applications/tutorials while mai
 
 ## Applications
 * [Image Classfication using BOWV](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Classfication_using_BOWV.ipynb): Use BOVW features to classify images using SVM.
-* [Image_Classification_Using_HOG](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Image_Classification_Using_HOG%2BSVM.ipynb): Use HOG Features to classify using SVM.
+* [Image Classification using HOG](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Image_Classification_Using_HOG%2BSVM.ipynb): Use HOG Features to classify using SVM.
 * [Environment Sound Classification](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Environmental_Sound_Classification_PT.ipynb): Using spectorgrams as features to train image classifier.
 * [Image denoising using AutoEncoders](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Auto_encoders_with_Pytroch.ipynb): Image reconstruction and image denoising using autoencoders.
 * [Image-Image Translation](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Image_Image_Translation_using_CycleGans.ipynb): Unpaired Image-Image translation using CycleGans.
