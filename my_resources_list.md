@@ -9,7 +9,7 @@ This resources are compiled of materials that I consider good and are almost fre
 
 ## Learn Pytorch
 * [Deep Learning with PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) basic workaround pytorch.
-* [Eat Pytorch in 20 days](https://github.com/Anku5hk/eat_pytorch_in_20_days_English)(I have translated this to English) builds a strong hands-on of syntax and general usage of Pytorch.
+* [Eat Pytorch in 20 days](https://github.com/Anku5hk/eat_pytorch_in_20_days_English) (I have translated this to English) builds a strong hands-on of syntax and general usage of Pytorch.
 * [Neural Network Programming - Deep Learning with PyTorch](https://deeplizard.com/learn/video/v5cngxo4mIg) easy to understand course by DeepLizard.
 * [Deep Neural Networks with PyTorch](https://www.coursera.org/learn/deep-neural-networks-with-pytorch) good course by coursera.
 
@@ -18,7 +18,7 @@ This resources are compiled of materials that I consider good and are almost fre
 * [Eat TF 2.0 in 30 days](https://github.com/lyhue1991/eat_tensorflow2_in_30_days?s=03) builds a strong hands-on of syntax and general usage of Tensorflow.
 
 ## Learn Computer Vision
-* [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation. I have created notebooks accompanying some material in this course [here](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Image processing).
+* [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation. I have created notebooks accompanying some material in this course [here](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Image processing)
 * [First Principles of Computer Vision](https://www.youtube.com/channel/UCf0WB91t8Ky6AuYcQV0CcLw/featured) new take on Traditional Computer Vision techniques.
 * [Image Processing with Opencv])(https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) perform images processing with opencv.
 * [Deep Learning for Computer Vision](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) covers the modern techniques of using Deep Learning to tackle Computer Vision challenges. Also provides fruitful Deep Learning knowledge.
