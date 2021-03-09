@@ -9,7 +9,7 @@ This resources are compiled of materials that I consider good and are almost fre
 
 ## Learn Pytorch
 * [Deep Learning with PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) basic workaround pytorch.
-* [Eat Pytorch in 20 days](https://github.com/Anku5hk/eat_pytorch_in_20_days_English)(Translated to English version) builds a strong hands-on of syntax and general usage of Pytorch.
+* [Eat Pytorch in 20 days](https://github.com/Anku5hk/eat_pytorch_in_20_days_English)(I have translated this to English) builds a strong hands-on of syntax and general usage of Pytorch.
 * [Neural Network Programming - Deep Learning with PyTorch](https://deeplizard.com/learn/video/v5cngxo4mIg) easy to understand course by DeepLizard.
 * [Deep Neural Networks with PyTorch](https://www.coursera.org/learn/deep-neural-networks-with-pytorch) good course by coursera.
 
@@ -18,13 +18,16 @@ This resources are compiled of materials that I consider good and are almost fre
 * [Eat TF 2.0 in 30 days](https://github.com/lyhue1991/eat_tensorflow2_in_30_days?s=03) builds a strong hands-on of syntax and general usage of Tensorflow.
 
 ## Learn Computer Vision
-* [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation.
+* [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation. I have created notebooks accompanying some material in this course [here](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Image processing).
+* [First Principles of Computer Vision](https://www.youtube.com/channel/UCf0WB91t8Ky6AuYcQV0CcLw/featured) new take on Traditional Computer Vision techniques.
+* [Image Processing with Opencv])(https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) perform images processing with opencv.
 * [Deep Learning for Computer Vision](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) covers the modern techniques of using Deep Learning to tackle Computer Vision challenges. Also provides fruitful Deep Learning knowledge.
 * [PyimageSearch](https://www.pyimagesearch.com/start-here/) has curated list of tutorials which are totally worth checking out.
 
 ## Learn NLP
 * [Natural Language Processing](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw)
 * [A Code-First Introduction to NLP by fast.ai](https://www.fast.ai/2019/07/08/fastai-nlp/)
+* [CMU Neural Nets for NLP 2021](https://www.youtube.com/playlist?list=PL8PYTP1V4I8AkaHEJ7lOOrlex-pcxS-XV)
 * [NLP for Developers](https://youtube.com/playlist?list=PL75e0qA87dlFJiNMeKltWImhQxfFwaxvv)
 * [CS224N: Natural Language Processing with Deep Learning](https://youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 
@@ -50,8 +53,8 @@ This resources are compiled of materials that I consider good and are almost fre
 
 ## Applied ML
 * [Kaggle](https://www.kaggle.com/) best place to learn/apply deep learning skills.
-* [Applied ML in Production](https://madewithml.com/courses/applied-ml/)
-* [Full Stack Deep Learning(upcoming 2021)](https://fullstackdeeplearning.com/)
+* [ML Foundations + Applied ML](https://madewithml.com/courses/ml-foundations/) neat ML basics and Applied ML techniques.
+* [Full Stack Deep Learning(new 2021)](https://fullstackdeeplearning.com/) deep learning to production.
 * [MLOPS basic](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDBDuCkFbcyjnZQrdskFsBz)
 
 ## Zero to Hero
@@ -74,9 +77,10 @@ This resources are compiled of materials that I consider good and are almost fre
 ## Exciting Topics
 
 ## Projects
-* [500+ Machine-learning Projects](https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code)
+* [Some of my projects](https://github.com/Anku5hk/The_ML_Workflow)
 
 ## Youtube Channels
 * [Two Minute Papers](https://www.youtube.com/user/keeroyz)
 * [AI Poscast by Lex Fridman](https://www.youtube.com/user/lexfridman)
 * [Yannic Kilcher](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew)
+* [AI Coffee Break with Letitia](https://www.youtube.com/channel/UCobqgqE4i5Kf7wrxRxhToQA)
