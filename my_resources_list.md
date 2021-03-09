@@ -20,7 +20,7 @@ This resources are compiled of materials that I consider good and are almost fre
 ## Learn Computer Vision
 * [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation. I have created notebooks accompanying some material in this course [here](https://github.com/Anku5hk/The_ML_Workflow/) in Image Processing.
 * [First Principles of Computer Vision](https://www.youtube.com/channel/UCf0WB91t8Ky6AuYcQV0CcLw/featured) new take on Traditional Computer Vision techniques.
-* [Image Processing with Opencv])(https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) perform images processing with opencv.
+* [Image Processing with Opencv](https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) perform images processing with opencv.
 * [Deep Learning for Computer Vision](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) covers the modern techniques of using Deep Learning to tackle Computer Vision challenges. Also provides fruitful Deep Learning knowledge.
 * [PyimageSearch](https://www.pyimagesearch.com/start-here/) has curated list of tutorials which are totally worth checking out.
 
