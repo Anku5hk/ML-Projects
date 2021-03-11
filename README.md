@@ -25,12 +25,12 @@ Goal: Build cool Deep Learning, Computer Vision, NLP applications/tutorials whil
 * [Image denoising using AutoEncoders](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Auto_encoders_with_Pytroch.ipynb): Image reconstruction and image denoising using autoencoders.
 * [Image-Image Translation](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Image_Image_Translation_using_CycleGans.ipynb): Unpaired Image-Image translation using CycleGans.
 * [Semantic Segmentation Using U-Net](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Semantic_Segmentaion_Using_U_Net.ipynb): Semantic Segmentation using U-Nets on Oxford-Pets dataset.
-* Object Detection using HOG:
+* Object Detection using HOG:</br>
   1. [Train SVM car classifier](https://github.com/Anku5hk/ML-Projects/blob/master/Vehicle_Detection/Vehicle_Detector_Using_HOG.ipynb): Train car/non-car classifier.</br>
   2. [Object Detector using sliding window](https://github.com/Anku5hk/ML-Projects/blob/master/Vehicle_Detection/Vehicle_Detector_Using_HOG_2.ipynb): Train object detector with sliding window approach.</br>
 * Object Detection using Faster R-CNN: </br>
   1.[Train Feature extractor](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Train_Feature_extractor.ipynb): Train car/non-car classifier. </br>
-  2.[Train Object Detector](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Train_Object_Detector.ipynb): Train object detector with car classifier backbone.
+  2.[Train Object Detector](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Train_Object_Detector.ipynb): Train object detector with car classifier backbone.</br>
 
 ## Kaggle Solutions
 * [Petals to the Metal: FLower Classification on TPU](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Kaggle%20competitions%20solutions/Petals%20to%20the%20Metal_%20Flower%20Classification%20on%20TPU): Image classification using effnets on TPU with Tensorflow.
