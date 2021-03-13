@@ -34,7 +34,7 @@ Goal: Build cool Deep Learning, Computer Vision, NLP applications/tutorials whil
   1. [Semantic Segmentation Using U-Net](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Semantic_Segmentaion_Using_U_Net.ipynb): Semantic Segmentation using U-Nets on Oxford-Pets dataset.
 * Auto-Encoders:
   1. [Image denoising using AutoEncoders](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Auto_encoders_with_Pytroch.ipynb): Image reconstruction and image denoising using autoencoders.
-  2. [Image coloring using autoencoders](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Image_coloring_with_auto_encoders.ipynb): Image colorization using cnn autoencoders.
+  2. [Image coloring using AutoEncoders](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Image_coloring_with_auto_encoders.ipynb): Image colorization using cnn autoencoders.
 * Image Translation:
   1. [Unpaired Image-Image Translation](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Image_Image_Translation_using_CycleGans.ipynb): Unpaired Image-Image translation using CycleGans.
 
