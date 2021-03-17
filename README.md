@@ -39,7 +39,10 @@ Goal: Build cool Deep Learning, Computer Vision, NLP applications/tutorials whil
   1. [Unpaired Image-Image Translation](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Image_Image_Translation_using_CycleGans.ipynb): Unpaired Image-Image translation using CycleGans.
 
 ## Pytorch Bag Of Tricks
-* [Knowledge Distillation pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Knowledge_Distillation_pytorch.ipynb): Train Teacher & Student models to reduce model size/improve some accuracy.
+* [Knowledge Distillation pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Knowledge_Distillation_pytorch.ipynb): Train Teacher model, then train Student model with same or smaller model size. Also Improves generalization.
+* [Stochastic Weight Averaging pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/SWA_pytorch.ipynb): Improve generalization by Weight Averaging after training, by training for ~25% more with SWA. 
+* [Gradient accumulation pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Gradient_Accumulation_pytorch.ipynb): Update weights with bigger batch size, by updating weights after some number of iteration.
+* [Automatic Precision Training pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Automatic_Precision_Training_pytorch.ipynb): Fit a bigger batch, improve training speed using Automatic Precision(Mixed Precision Training), basically doing multiplications with fp16 and addition with fp32.
 
 ## Kaggle Solutions
 * [Petals to the Metal: FLower Classification on TPU](https://github.com/Anku5hk/The_ML_Workflow/tree/master/Kaggle%20competitions%20solutions/Petals%20to%20the%20Metal_%20Flower%20Classification%20on%20TPU): Image classification using effnets on TPU with Tensorflow.
