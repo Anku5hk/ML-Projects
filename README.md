@@ -24,12 +24,11 @@ Goal: Build cool Deep Learning, Computer Vision, NLP applications/tutorials whil
   1. [Image Classfication using BOVW](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_Classfication_using_BOWV.ipynb): Use Bag Of Visual Words(BOVW) features to classify images using SVM.
   2. [Image Classification using HOG](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Image_Classification_Using_HOG%2BSVM.ipynb): Use Histogram Of Gradients Features to classify images using SVM.
   3. [Using Deep learning + Clean pipeline](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Pytroch_GPU_Pipeline.ipynb): Using resnet18 to classify flowers, also a clean pytorch training pipeline.
-* Object Detection using HOG:
-  1. [Train SVM car classifier](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Vehicle_Detector_Using_HOG.ipynb): Train car/non-car using HOG featues and SVM classifier.
-  2. [Object Detector using sliding window](https://github.com/Anku5hk/ML-Projects/blob/master/Vehicle_Detection/Vehicle_Detector_Using_HOG_2.ipynb): Create object detector with sliding window approach.
-* Object Detection using Deep learning:
-  1. [Train Feature extractor](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Train_Feature_extractor.ipynb): Train a resnet18 car/non-car classifier.
-  2. [Train Object Detector](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Train_Object_Detector.ipynb): Train Faster-RCNN object detector with resnet car classifier as backbone.
+* Object Detection:
+  1. [Object Detection Using HOG(part 1)](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Vehicle_Detector_Using_HOG.ipynb): Train car/non-car using HOG featues and SVM classifier.
+  2. [Object Detection Using HOG(part 2)](https://github.com/Anku5hk/ML-Projects/blob/master/Vehicle_Detection/Vehicle_Detector_Using_HOG_2.ipynb): Create object detector with sliding window approach.
+  3. [Object Detection Using Faster R-CNN(part 1 optional)](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Train_Feature_extractor.ipynb): Train a resnet18 car/non-car classifier.
+  4. [Object Detection Using Faster R-CNN(part 2)](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Train_Object_Detector.ipynb): Train Faster-RCNN object detector with resnet car classifier as backbone.
 * Image Segmentation:
   1. [Semantic Segmentation Using U-Net](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Semantic_Segmentaion_Using_U_Net.ipynb): Semantic Segmentation using U-Nets on Oxford-Pets dataset.
 * Auto-Encoders:
