@@ -1,5 +1,5 @@
 # Welcome to ML-Projects
-Goal: Build cool Deep Learning, Computer Vision, NLP applications/tutorials while maintaining code readability. 
+Here I build Deep Learning, Computer Vision, NLP, General Machine Learning applications/tutorials while maintaining code readability.
 
 ## Image Processing
 * [Image filtering](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_filtering.ipynb): To  blur, add/remove nosie, sharpen image.
@@ -38,7 +38,7 @@ Goal: Build cool Deep Learning, Computer Vision, NLP applications/tutorials whil
 * Image Translation:
   1. [Unpaired Image-Image Translation](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Some_deep_learning/Image_Image_Translation_using_CycleGans.ipynb): Unpaired Image-Image translation using CycleGans.
 
-## Pytorch Bag Of Tricks
+## Deep Learning Bag Of Tricks
 * [Knowledge Distillation pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Knowledge_Distillation_pytorch.ipynb): Train Teacher model, then train Student model with same or smaller model size. Also Improves generalization.
 * [Stochastic Weight Averaging pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/SWA_pytorch.ipynb): Improve generalization by Weight Averaging after training, by training for ~25% more with SWA. 
 * [Gradient accumulation pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/Some_deep_learning/Gradient_Accumulation_pytorch.ipynb): Update weights with bigger batch size, by updating weights after some number of iteration.
