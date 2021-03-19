@@ -1,5 +1,5 @@
 # Welcome to ML-Projects
-Here I build Deep Learning, Computer Vision, NLP, General Machine Learning applications/tutorials while maintaining code readability.
+Here I build Deep Learning, Computer Vision, NLP, General Machine Learning applications/tutorials while maintaining code readability. If you're looking for learning ML resources, [this](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md) is what you are looking for.
 
 ## Image Processing
 * [Image filtering](https://github.com/Anku5hk/The_ML_Workflow/blob/master/Image%20processing/Image_filtering.ipynb): To  blur, add/remove nosie, sharpen image.
