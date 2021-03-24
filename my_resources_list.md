@@ -25,7 +25,7 @@ This resources are compiled of materials that I consider good and are mostly fre
 * [PyimageSearch](https://www.pyimagesearch.com/start-here/) has curated list of tutorials which are totally worth checking out.
 
 ## Learn NLP
-* [Natural Language Processing by Amazon](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw) A soft Introduction intro NLP.
+* [Natural Language Processing by Amazon](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw) A soft Introduction into NLP.
 * [Natural Language Processing Specialization](https://www.coursera.org/specializations/natural-language-processing) Comprehensive course put up by deeplearning.ai, which builds  a solid ground to start building your NLP applications.
 * [A Code-First Introduction to NLP by fast.ai](https://www.fast.ai/2019/07/08/fastai-nlp/)
 * [CMU Neural Nets for NLP 2021](https://www.youtube.com/playlist?list=PL8PYTP1V4I8AkaHEJ7lOOrlex-pcxS-XV)
