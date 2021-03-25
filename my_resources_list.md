@@ -1,7 +1,7 @@
 This resources are compiled of materials that I consider good and are mostly freely accessible to everyone. I hope anyone taking thier journey into ML/DL world to have a smooth ride with top-class study material without burning thier pockets. I'll keep updating as new resources are build/found. And if you are still confused between Tensorflow and Pytorch just learn both. But thier is also [TRAX](https://github.com/google/trax). So keep learning..
 
 Index:
-* [Python](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#python), [Pytorch](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#pytorch), [Tensorflow](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#tensorflow).
+* [Python](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#python), [Pytorch](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#pytorch), [Tensorflow](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#tensorflow).
 * [General ML](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#general-ml), [Deep Learning](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#deep-learning), [Computer Vision](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#computer-vision), [NLP](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#nlp), [Applied ML](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#applied-ml).
 
 ## Python
