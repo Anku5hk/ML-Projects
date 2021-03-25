@@ -1,13 +1,17 @@
 This resources are compiled of materials that I consider good and are mostly freely accessible to everyone. I hope anyone taking thier journey into ML/DL world to have a smooth ride with top-class study material without burning thier pockets. I'll keep updating as new resources are build/found. And if you are still confused between Tensorflow and Pytorch just learn both. But thier is also [TRAX](https://github.com/google/trax). So keep learning..
 
-## Learn Python
+Index:
+* [Python](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#python), [Pytorch](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#pytorch), [Tensorflow](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#tensorflow).
+* [General ML](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#general-ml), [Deep Learning](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#deep-learning), [Computer Vision](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#computer-vision), [NLP](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#nlp), [Applied ML](https://github.com/Anku5hk/ML-Projects/edit/master/my_resources_list.md#applied-ml).
+
+## Python
 * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
 * [Byte of Python](https://python.swaroopch.com/) beginner for python.
 * [Automate the Boring Stuff By Al Sweigart](https://automatetheboringstuff.com/) takes you from basic to someone good.
 * [WTF Python](https://github.com/satwikkansal/wtfpython#-strings-can-be-tricky-sometimes) exploring and understanding Python through surprising snippets.
 * Practice Python at [Hackerrank](https://www.hackerrank.com/), [Leetcode](https://leetcode.com/).
 
-## Learn Computer Vision
+## Computer Vision
  ### Courses
    * [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation. I have created notebooks accompanying some material in this course [here](https://github.com/Anku5hk/The_ML_Workflow/) in Image Processing.
    * [First Principles of Computer Vision](https://www.youtube.com/channel/UCf0WB91t8Ky6AuYcQV0CcLw/featured) new take on Traditional Computer Vision techniques.
@@ -17,7 +21,7 @@ This resources are compiled of materials that I consider good and are mostly fre
    * [Image Processing with Opencv](https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) learn images processing tutorials from opencv.
    * [PyimageSearch](https://www.pyimagesearch.com/start-here/) has curated list of tutorials which are totally worth checking out.
 
-## Learn NLP
+## NLP
  ### Courses
    * [Natural Language Processing by Amazon](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw) A soft Introduction into NLP.
    * [Natural Language Processing Specialization](https://www.coursera.org/specializations/natural-language-processing) Comprehensive course put up by deeplearning.ai, which    builds  a solid ground to start building your NLP applications.
@@ -30,7 +34,7 @@ This resources are compiled of materials that I consider good and are mostly fre
    * [NLP course for you](https://lena-voita.github.io/nlp_course.html) fair introduction to NLP techniques using clear diagrams.
    * [NLP by jacob eisenstein](https://github.com/jacobeisenstein/gt-nlp-class/tree/master/notes)
 
-## Learn Pytorch
+## Pytorch
  ### Courses
   * [Neural Network Programming - Deep Learning with PyTorch](https://deeplizard.com/learn/video/v5cngxo4mIg) easy to understand course by DeepLizard.
   * [Deep Neural Networks with PyTorch](https://www.coursera.org/learn/deep-neural-networks-with-pytorch) good course by coursera.
@@ -39,7 +43,7 @@ This resources are compiled of materials that I consider good and are mostly fre
   * [Deep Learning with PyTorch](https://www.manning.com/books/deep-learning-with-pytorch) takes the approach of Deep Learing with Python but using Pytorch. Also it is free to read on Manning.
   * [Deep Learning with PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) basic workaround pytorch.
 
-## Learn Tensorflow
+## Tensorflow
  ### Courses
   * [Keras - Deep Learning beginner's course](https://youtube.com/playlist?list=PLZbbT5o_s2xrwRnXk_yCPtnqqo4_u2YGL) very easy language, rewarding for beginner.
  ### Reading
@@ -51,18 +55,20 @@ This resources are compiled of materials that I consider good and are mostly fre
 3. [Deep Learning With python(2nd Edition Upcoming)](https://www.manning.com/books/deep-learning-with-python-second-edition) by the creator of Keras covers building blocks of Deep Learning with easy language and code supplied throughtout is a very nice package overall. Also this is upcoming new edition, you can read for free on Manning.
 4. [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk) by Aurelien Geron is an excellent primer, yet provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. It supplies sufficient code for using them with sklearn, Tensorflow.
 
-## Deep Learning Courses
-* [FastAi: Deep Learning by Jeremy Howard](https://www.fast.ai/) certainly best place to kick-start deep learning journey.
-* [Deep Learing with Pytorch](https://youtube.com/playlist?list=PLLHTzKZzVU9eaEyErdV26ikyolxOsz6mq)
-* [MIT 6.S191: Introduction to Deep Learning](https://youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
-* [Deep Learning Course by DeepMind](https://youtube.com/playlist?list=PLqYmG7hTraZCkftCvihsG2eCTH2OyGScc)
-* [Deep Learning spcialization by Andrew NG](https://www.coursera.org/specializations/deep-learning) Youtube version ->[1](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0),[2](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc),[3](https://www.youtube.com/playlist?list=PLkDaE6sCZn6E7jZ9sN_xHwSHOdjUxUW_b),[4](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF),[5](https://www.youtube.com/playlist?list=PLkDaE6sCZn6F6wUI9tvS_Gw1vaFAx6rd6)
+## Deep Learning 
+### Courses
+ * [FastAi: Deep Learning by Jeremy Howard](https://www.fast.ai/) certainly best place to kick-start deep learning journey.
+ * [Deep Learing with Pytorch](https://youtube.com/playlist?list=PLLHTzKZzVU9eaEyErdV26ikyolxOsz6mq) best deep learing practices using pytorch.
+ * [MIT 6.S191: Introduction to Deep Learning](https://youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
+ * [Deep Learning Course by DeepMind](https://youtube.com/playlist?list=PLqYmG7hTraZCkftCvihsG2eCTH2OyGScc)
+ * [Deep Learning spcialization by Andrew NG](https://www.coursera.org/specializations/deep-learning) Youtube version ->[1](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0),[2](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc),[3](https://www.youtube.com/playlist?list=PLkDaE6sCZn6E7jZ9sN_xHwSHOdjUxUW_b),[4](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF),[5](https://www.youtube.com/playlist?list=PLkDaE6sCZn6F6wUI9tvS_Gw1vaFAx6rd6)
 
-## General ML Courses
-* [Machine Learning by Andrew NG](https://www.coursera.org/learn/machine-learning) legendary course to get started.
-* [ML Course by ODS](https://mlcourse.ai/) has very well designed curriculum to boost/build your ML intuition.
-* [Stat 451: Intro to Machine Learning (Fall 2020) by Sebastian Raschka](https://youtube.com/playlist?list=PLTKMiZHVd_2KyGirGEvKlniaWeLOHhUF3)
-* [Elements of AI](https://www.elementsofai.com/) kind of AI for everyone course, easy and covers overview of AI concepts.
+## General ML 
+### Courses
+ * [Elements of AI](https://www.elementsofai.com/) kind of AI for everyone course, easy and covers overview of AI concepts.
+ * [Machine Learning by Andrew NG](https://www.coursera.org/learn/machine-learning) legendary course to get started.
+ * [ML Course by ODS](https://mlcourse.ai/) has very well designed curriculum to boost/build your ML intuition.
+ * [Stat 451: Intro to Machine Learning (Fall 2020) by Sebastian Raschka](https://youtube.com/playlist?list=PLTKMiZHVd_2KyGirGEvKlniaWeLOHhUF3)
 
 ## Applied ML
 * [Kaggle](https://www.kaggle.com/) best place to learn/apply deep learning skills.
