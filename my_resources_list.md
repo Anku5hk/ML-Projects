@@ -7,6 +7,29 @@ This resources are compiled of materials that I consider good and are mostly fre
 * [WTF Python](https://github.com/satwikkansal/wtfpython#-strings-can-be-tricky-sometimes) exploring and understanding Python through surprising snippets.
 * Practice Python at [Hackerrank](https://www.hackerrank.com/), [Leetcode](https://leetcode.com/).
 
+## Learn Computer Vision
+ ### Courses
+  * [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation. I have created notebooks accompanying some material in this course [here](https://github.com/Anku5hk/The_ML_Workflow/) in Image Processing.
+  * [First Principles of Computer Vision](https://www.youtube.com/channel/UCf0WB91t8Ky6AuYcQV0CcLw/featured) new take on Traditional Computer Vision techniques.
+  * [Deep Learning for Computer Vision](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) covers the modern techniques of using Deep Learning to tackle Computer Vision challenges. Also provides fruitful Deep Learning knowledge.
+  
+ ### Reading
+  * [Image Processing with Opencv](https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) learn images processing tutorials from opencv.
+  * [PyimageSearch](https://www.pyimagesearch.com/start-here/) has curated list of tutorials which are totally worth checking out.
+
+## Learn NLP
+ ### Courses
+  * [Natural Language Processing by Amazon](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw) A soft Introduction into NLP.
+  * [Natural Language Processing Specialization](https://www.coursera.org/specializations/natural-language-processing) Comprehensive course put up by deeplearning.ai, which    builds  a solid ground to start building your NLP applications.
+  * [CS224N: Natural Language Processing with Deep Learning 2020](https://youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z) 
+  * [CMU Neural Nets for NLP 2021](https://www.youtube.com/playlist?list=PL8PYTP1V4I8AkaHEJ7lOOrlex-pcxS-XV)
+  * [A Code-First Introduction to NLP by fast.ai](https://www.fast.ai/2019/07/08/fastai-nlp/)
+  * [NLP for Developers](https://youtube.com/playlist?list=PL75e0qA87dlFJiNMeKltWImhQxfFwaxvv)
+
+ ### Reading
+  * [NLP course for you](https://lena-voita.github.io/nlp_course.html) fair introduction to NLP techniques using clear diagrams.
+  * [NLP by jacob eisenstein](https://github.com/jacobeisenstein/gt-nlp-class/tree/master/notes)
+
 ## Learn Pytorch
 * [Deep Learning with PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) basic workaround pytorch.
 * [Eat Pytorch in 20 days](https://github.com/Anku5hk/eat_pytorch_in_20_days_English) (I have translated this to English) builds a strong hands-on of syntax and general usage of Pytorch.
@@ -16,21 +39,6 @@ This resources are compiled of materials that I consider good and are mostly fre
 ## Learn Tensorflow
 * [Keras - Deep Learning beginner's course](https://youtube.com/playlist?list=PLZbbT5o_s2xrwRnXk_yCPtnqqo4_u2YGL) very easy language, rewarding for beginner.
 * [Eat TF 2.0 in 30 days](https://github.com/lyhue1991/eat_tensorflow2_in_30_days?s=03) builds a strong hands-on of syntax and general usage of Tensorflow.
-
-## Learn Computer Vision
-* [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation. I have created notebooks accompanying some material in this course [here](https://github.com/Anku5hk/The_ML_Workflow/) in Image Processing.
-* [First Principles of Computer Vision](https://www.youtube.com/channel/UCf0WB91t8Ky6AuYcQV0CcLw/featured) new take on Traditional Computer Vision techniques.
-* [Image Processing with Opencv](https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) perform images processing with opencv.
-* [Deep Learning for Computer Vision](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) covers the modern techniques of using Deep Learning to tackle Computer Vision challenges. Also provides fruitful Deep Learning knowledge.
-* [PyimageSearch](https://www.pyimagesearch.com/start-here/) has curated list of tutorials which are totally worth checking out.
-
-## Learn NLP
-* [Natural Language Processing by Amazon](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw) A soft Introduction into NLP.
-* [Natural Language Processing Specialization](https://www.coursera.org/specializations/natural-language-processing) Comprehensive course put up by deeplearning.ai, which builds  a solid ground to start building your NLP applications.
-* [A Code-First Introduction to NLP by fast.ai](https://www.fast.ai/2019/07/08/fastai-nlp/)
-* [CMU Neural Nets for NLP 2021](https://www.youtube.com/playlist?list=PL8PYTP1V4I8AkaHEJ7lOOrlex-pcxS-XV)
-* [NLP for Developers](https://youtube.com/playlist?list=PL75e0qA87dlFJiNMeKltWImhQxfFwaxvv)
-* [CS224N: Natural Language Processing with Deep Learning](https://youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 
 ## Deep Learning Books
 1. [The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginners, it is free, short, yet comprehensive. Folks with experience can also benefit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, it has simple language, tons of real-world ML examples which can take you far.
