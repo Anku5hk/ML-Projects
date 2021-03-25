@@ -3,6 +3,7 @@ This resources are compiled of materials that I consider good and are mostly fre
 Index:
 * [Python](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#python), [Pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#pytorch), [Tensorflow](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#tensorflow).
 * [General ML](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#general-ml), [Deep Learning](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#deep-learning), [Computer Vision](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#computer-vision), [NLP](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#nlp), [Applied ML](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#applied-ml).
+* [ML from scratch](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#zero-to-hero), [Other Resources](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#other-resources), [Newsletters](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#newsletters), [Youtube Channels](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#newsletters), [Projects](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#projects).
 
 ## Python
 * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
@@ -16,7 +17,6 @@ Index:
    * [Computer Vision by M.Shah](https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9) covers Classic/Traditional Computer Vision techniques and builds a strong foundation. I have created notebooks accompanying some material in this course [here](https://github.com/Anku5hk/The_ML_Workflow/) in Image Processing.
    * [First Principles of Computer Vision](https://www.youtube.com/channel/UCf0WB91t8Ky6AuYcQV0CcLw/featured) new take on Traditional Computer Vision techniques.
    * [Deep Learning for Computer Vision](https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r) covers the modern techniques of using Deep Learning to tackle Computer Vision challenges. Also provides fruitful Deep Learning knowledge.
-
  ### Reading
    * [Image Processing with Opencv](https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) learn images processing tutorials from opencv.
    * [PyimageSearch](https://www.pyimagesearch.com/start-here/) has curated list of tutorials which are totally worth checking out.
@@ -29,7 +29,6 @@ Index:
    * [CMU Neural Nets for NLP 2021](https://www.youtube.com/playlist?list=PL8PYTP1V4I8AkaHEJ7lOOrlex-pcxS-XV)
    * [A Code-First Introduction to NLP by fast.ai](https://www.fast.ai/2019/07/08/fastai-nlp/)
    * [NLP for Developers](https://youtube.com/playlist?list=PL75e0qA87dlFJiNMeKltWImhQxfFwaxvv)
-
  ### Reading
    * [NLP course for you](https://lena-voita.github.io/nlp_course.html) fair introduction to NLP techniques using clear diagrams.
    * [NLP by jacob eisenstein](https://github.com/jacobeisenstein/gt-nlp-class/tree/master/notes)
@@ -49,12 +48,6 @@ Index:
  ### Reading
   * [Eat TF 2.0 in 30 days](https://github.com/lyhue1991/eat_tensorflow2_in_30_days?s=03) builds a strong hands-on of syntax and general usage of Tensorflow.
 
-## Deep Learning Books
-1. [The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginners, it is free, short, yet comprehensive. Folks with experience can also benefit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, it has simple language, tons of real-world ML examples which can take you far.
-2. [Dive into Deep Learning](https://d2l.ai/) is well thought and written overall. This book has a wide array of techniques starting from basic mathematics to GANs, providing code for almost everything(has pytorch and tensorflow 2 both). Contents are continually updated by the authors. Overall this book is a gold-mine for a ML-Engineer and is free.
-3. [Deep Learning With python(2nd Edition Upcoming)](https://www.manning.com/books/deep-learning-with-python-second-edition) by the creator of Keras covers building blocks of Deep Learning with easy language and code supplied throughtout is a very nice package overall. Also this is upcoming new edition, you can read for free on Manning.
-4. [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk) by Aurelien Geron is an excellent primer, yet provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. It supplies sufficient code for using them with sklearn, Tensorflow.
-
 ## Deep Learning 
 ### Courses
  * [FastAi: Deep Learning by Jeremy Howard](https://www.fast.ai/) certainly best place to kick-start deep learning journey.
@@ -62,14 +55,20 @@ Index:
  * [MIT 6.S191: Introduction to Deep Learning](https://youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
  * [Deep Learning Course by DeepMind](https://youtube.com/playlist?list=PLqYmG7hTraZCkftCvihsG2eCTH2OyGScc)
  * [Deep Learning spcialization by Andrew NG](https://www.coursera.org/specializations/deep-learning) Youtube version ->[1](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0),[2](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc),[3](https://www.youtube.com/playlist?list=PLkDaE6sCZn6E7jZ9sN_xHwSHOdjUxUW_b),[4](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF),[5](https://www.youtube.com/playlist?list=PLkDaE6sCZn6F6wUI9tvS_Gw1vaFAx6rd6)
-
+### Reading 
+ * [Dive into Deep Learning](https://d2l.ai/) is well thought and written overall. This book has a wide array of techniques starting from basic mathematics to GANs, providing code for almost everything(has pytorch and tensorflow 2 both). Contents are continually updated by the authors. Overall this book is a gold-mine for a ML-Engineer and is free.
+ * [Deep Learning With python(2nd Edition Upcoming)](https://www.manning.com/books/deep-learning-with-python-second-edition) by the creator of Keras covers building blocks of Deep Learning with easy language and code supplied throughtout is a very nice package overall. Also this is upcoming new edition, you can read for free on Manning.
+ 
 ## General ML 
 ### Courses
  * [Elements of AI](https://www.elementsofai.com/) kind of AI for everyone course, easy and covers overview of AI concepts.
  * [Machine Learning by Andrew NG](https://www.coursera.org/learn/machine-learning) legendary course to get started.
  * [ML Course by ODS](https://mlcourse.ai/) has very well designed curriculum to boost/build your ML intuition.
  * [Stat 451: Intro to Machine Learning (Fall 2020) by Sebastian Raschka](https://youtube.com/playlist?list=PLTKMiZHVd_2KyGirGEvKlniaWeLOHhUF3)
-
+### Reading
+ * [The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginners, it is free, short, yet comprehensive. Folks with experience can also benefit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, tons of real-world ML examples which can take you far.
+ * [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk) by Aurelien Geron is an excellent primer, yet provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. It supplies sufficient code for using them with sklearn, Tensorflow.
+ 
 ## Applied ML
 * [Kaggle](https://www.kaggle.com/) best place to learn/apply deep learning skills.
 * [ML Foundations + Applied ML](https://madewithml.com/courses/ml-foundations/) neat ML basics and Applied ML techniques.
