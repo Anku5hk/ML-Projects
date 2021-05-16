@@ -1,13 +1,21 @@
-This resources are compiled of materials that I consider good and are mostly freely accessible to everyone. I hope anyone taking thier journey into ML/DL world to have a smooth ride with top-class study material without burning thier pockets. I'll keep updating as new resources are build/found. And if you are still confused between Tensorflow and Pytorch just learn both. But thier is also [TRAX](https://github.com/google/trax). So keep learning..
+This resources are compiled of materials that I consider good and are mostly freely accessible to everyone. I hope anyone taking thier journey into learning ML/DL or other to have a smooth ride with top-class study material without burning thier pockets. I'll keep updating as new resources are build/found.
 
 Index:
 * [Python](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#python), [Pytorch](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#pytorch), [Tensorflow](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#tensorflow).
-* [General ML](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#general-ml), [Deep Learning](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#deep-learning), [Computer Vision](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#computer-vision), [NLP](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#nlp), [Applied ML](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#applied-ml).
-* [ML from scratch](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#zero-to-hero), [Other Resources](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#other-resources), [Newsletters](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#newsletters), [Youtube Channels](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#newsletters), [Projects](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#projects).
+* [General ML](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#general-ml), [Deep Learning](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#deep-learning), [Computer Vision](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#computer-vision), [NLP](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#nlp).
+* [Applied ML](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#applied-ml), [ML Competitions](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#ml-competitions), [ML Interview prep]((https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#ml-interview-prep), [ML from scratch](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#zero-to-hero), [Projects](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#projects), [Other Resources](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#other-resources)
+* [Web Development](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#web-development), [Coding Interview prep](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#coding-interview-prep)
+* [Newsletters](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#newsletters), [Youtube Channels](https://github.com/Anku5hk/ML-Projects/blob/master/my_resources_list.md#newsletters).
+
 
 ## Python
-* [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
-* [Byte of Python](https://python.swaroopch.com/) beginner for python.
+### Introductory
+ * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
+ * [Programiz](https://www.programiz.com/python-programming) just like Slither into python.
+ * [Simple One page Overview](https://learnxinyminutes.com/docs/python/) like a cheatsheet.
+ * [Byte of Python](https://python.swaroopch.com/) beginner for python.
+ 
+### Advance
 * [Automate the Boring Stuff By Al Sweigart](https://automatetheboringstuff.com/) takes you from basic to someone good.
 * [WTF Python](https://github.com/satwikkansal/wtfpython#-strings-can-be-tricky-sometimes) exploring and understanding Python through surprising snippets.
 * Practice Python at [Hackerrank](https://www.hackerrank.com/), [Leetcode](https://leetcode.com/).
@@ -68,23 +76,55 @@ Index:
 ### Reading
  * [The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginners, it is free, short, yet comprehensive. Folks with experience can also benefit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, tons of real-world ML examples which can take you far.
  * [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk) by Aurelien Geron is an excellent primer, yet provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. It supplies sufficient code for using them with sklearn, Tensorflow.
- 
+ * 
 ## Applied ML
-* [Kaggle](https://www.kaggle.com/) best place to learn/apply deep learning skills.
 * [ML Foundations + Applied ML](https://madewithml.com/courses/ml-foundations/) neat ML basics and Applied ML techniques.
 * [Full Stack Deep Learning(new 2021)](https://fullstackdeeplearning.com/) deep learning to production.
 * [MLOPS basic](https://www.youtube.com/playlist?list=PL7WG7YrwYcnDBDuCkFbcyjnZQrdskFsBz)
 
-## Zero to Hero
+## Zero to Hero ML
 * [ML from scratch book](https://dafriedman97.github.io/mlbook/content/introduction.html)
 * [ML from scratch](https://github.com/eriklindernoren/ML-From-Scratch)
 * [NN from scratch](https://github.com/lab-ml/nn)
 
-## Other Resources
-* [Learn Numpy](https://cs231n.github.io/python-numpy-tutorial/), [More Numpy Tutorials](https://numpy.org/learn/)
-* [AI,ML,DL overview](https://stanford.edu/~shervine/teaching/cs-230/)
+## ML Competitions
+* [Kaggle](https://www.kaggle.com/) best place to learn/apply deep learning skills.
+* [mlcontests](https://mlcontests.com/) list of all ongoing competitions.
+* [Omdena](https://omdena.com/) platform to create projects, get paid, get hired.
+* [Zindi](https://zindi.africa/hackathons) participate in competitions.
+
+## ML Interview prep
+* [Awesome Data Science Interview Resources](https://github.com/alexeygrigorev/data-science-interviews/blob/master/awesome.md)
+* [Question Answers](https://github.com/alexeygrigorev/data-science-interviews), [More Question Answer](https://github.com/ShuaiW/data-science-question-answer)
 * [Practice ML Questionaries](https://www.confetti.ai/)
+
+## Coding Interview prep
+* [Interview prep by Freecodecamp](https://www.freecodecamp.org/learn/coding-interview-prep/)
+* [Interviewcake](https://www.interviewcake.com/table-of-contents)
+
+## Web Development
+### Complete Courses
+* [Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners) simple begineer for web-dev.
+* [Fullstackopen](https://fullstackopen.com/en/) learn modern web development practices.
+* [FullStackPython](https://www.fullstackpython.com/) quick walkthrough into python web-development. 
+### Specifics
+ #### Front-End
+  * [Front-End](https://www.freecodecamp.org/learn/front-end-libraries/#react-and-redux)
+  * [Javascript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
+  * [Responsive-web-design](https://www.freecodecamp.org/learn/responsive-web-design/)
+
+  #### Back-End
+  * [Flask](https://pythonise.com/categories/flask), [Mega FLask Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-a-better-application-structure).
+  * [Node.js](https://www.freecodecamp.org/learn/apis-and-microservices/)
+
+## Other Resources
+* [Learn Git](https://www.youtube.com/watch?v=RGOj5yH7evk&pbjreload=101)
+* [Introduction to SQL](https://mode.com/sql-tutorial/introduction-to-sql/)
+* [Matplotlib, Pandas, Numpy, Seaborn crash course](https://www.youtube.com/watch?v=r-uOLxNrNk8)
+* [AI,ML,DL overview](https://stanford.edu/~shervine/teaching/cs-230/)
 * [Linear_Algebra_With_Python](https://github.com/MacroAnalyst/Linear_Algebra_With_Python)
+* [Crash Course Numpy](https://www.youtube.com/watch?v=QUT1VHiLmmI), [Learn Numpy](https://cs231n.github.io/python-numpy-tutorial/), [More Numpy Tutorials](https://numpy.org/learn/)
+* [Learn Pandas](https://dshahid380.github.io/Data-analysis-with-pandas/)
 
 ## Newsletters
 * [The Batch by deeplearning.ai](https://www.deeplearning.ai/thebatch/)
