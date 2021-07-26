@@ -11,7 +11,7 @@ Index:
 ## Python
 ### Introductory
  * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
- * [Programiz](https://www.programiz.com/python-programming) just like Slither into python.
+ * [Programiz](https://www.programiz.com/python-programming) similar to Slither into python.
  * [Simple One page Overview](https://learnxinyminutes.com/docs/python/) like a cheatsheet.
  * [Byte of Python](https://python.swaroopch.com/) beginner for python.
  
@@ -33,6 +33,7 @@ Index:
  ### Courses
    * [Natural Language Processing by Amazon](https://www.youtube.com/playlist?list=PL8P_Z6C4GcuWfAq8Pt6PBYlck4OprHXsw) A soft Introduction into NLP.
    * [Natural Language Processing Specialization](https://www.coursera.org/specializations/natural-language-processing) Comprehensive course put up by deeplearning.ai, which    builds  a solid ground to start building your NLP applications.
+   * [HuggingFace Course](https://huggingface.co/course/chapter1) great intro to use transformers library.
    * [CS224N: Natural Language Processing with Deep Learning 2020](https://youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z) 
    * [CMU Neural Nets for NLP 2021](https://www.youtube.com/playlist?list=PL8PYTP1V4I8AkaHEJ7lOOrlex-pcxS-XV)
    * [A Code-First Introduction to NLP by fast.ai](https://www.fast.ai/2019/07/08/fastai-nlp/)
@@ -100,6 +101,8 @@ Index:
 
 ## Coding Interview prep
 * [Interview prep by Freecodecamp](https://www.freecodecamp.org/learn/coding-interview-prep/)
+* [Data Structures](https://www.youtube.com/watch?v=RBSGKlAvoiM)
+* [Blind-75 Coding Problems](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions) and [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/)
 * [Interviewcake](https://www.interviewcake.com/table-of-contents)
 
 ## Web Development
@@ -120,6 +123,7 @@ Index:
 ## Other Resources
 * [Learn Git](https://www.youtube.com/watch?v=RGOj5yH7evk&pbjreload=101)
 * [Introduction to SQL](https://mode.com/sql-tutorial/introduction-to-sql/)
+* [Introduction to Pandas](https://www.youtube.com/playlist?list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS)
 * [Matplotlib, Pandas, Numpy, Seaborn crash course](https://www.youtube.com/watch?v=r-uOLxNrNk8)
 * [AI,ML,DL overview](https://stanford.edu/~shervine/teaching/cs-230/)
 * [Linear_Algebra_With_Python](https://github.com/MacroAnalyst/Linear_Algebra_With_Python)
@@ -129,6 +133,7 @@ Index:
 ## Newsletters
 * [The Batch by deeplearning.ai](https://www.deeplearning.ai/thebatch/)
 * [Deep learning weekly](https://www.deeplearningweekly.com/)
+* [HuggingFace Newsletter](https://huggingface.curated.co/)
 * [Andriy Burkov - True Positive Weekly](https://aiweekly.substack.com/people/1236224-andriy-burkov)
 * [NLP News by Sabastian Ruder](http://newsletter.ruder.io/)
 
@@ -141,4 +146,6 @@ Index:
 * [Two Minute Papers](https://www.youtube.com/user/keeroyz)
 * [AI Poscast by Lex Fridman](https://www.youtube.com/user/lexfridman)
 * [Yannic Kilcher](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew)
+* [Corey Schafer](https://www.youtube.com/c/Coreyms/featured)
+* [Engineer Man](https://www.youtube.com/channel/UCrUL8K81R4VBzm-KOYwrcxQ)
 * [AI Coffee Break with Letitia](https://www.youtube.com/channel/UCobqgqE4i5Kf7wrxRxhToQA)
