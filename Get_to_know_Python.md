@@ -15,7 +15,7 @@ Are raw data given to variable, litrals are constant fix values eg integer 4, th
 Ordered collection of sequence of items, which can be of any literal type. They are Mutable (values can be changed). Indexing is allowed and are iterable.
 * Usage:
 
-```
+```Python
  # create list
  my_list = [1,2,3,'a','this way','cab',1.0,2.0]
  my_list = list(tuple)
@@ -55,20 +55,20 @@ Ordered collection of sequence of items. They are Immutable(values cannot be cha
 Indexing is allowed and are iterable. They are used to store different items, unlike list which are mostly used for similar items.
 * Usage:
 
+```Python
+my_tuple = (1,2,3,'we','are','one',5.0)
+
+# acessing element
+my_tuple[0] = my_var # not okay, TypeError
+my_var = my_tuple[0] # okay
+
+# slicing list
+my_tuple[3:5] # ['a','this way']
+my_tuple[5:] # ['cab',1.0,2.0]
+my_tuple[:3] # [1,2,3]
+my_tuple[:] # to create a copy
+
 ```
- my_tuple = (1,2,3,'we','are','one',5.0)
-
- # acessing element
- my_tuple[0] = my_var # not okay, TypeError
- my_var = my_tuple[0] # okay
-
- # slicing list
- my_tuple[3:5] # ['a','this way']
- my_tuple[5:] # ['cab',1.0,2.0]
- my_tuple[:3] # [1,2,3]
- my_tuple[:] # to create a copy
-
-  ```
 
 * Has methods count(), index().
 * BigO: Indexing and get_length are O(1), all other are O(n).
@@ -78,7 +78,7 @@ Unordered collection of non repeating sequence of items. Items in set should be 
 Set are used to maintain unique variables and to check if the variable is already present in the set.
 * Usage:
 
-```
+```Python
 # create set
 my_set = set() or {3,45,5,3} or dict like parenthesis but without keys it becomes set.
 my_set = set(my_list) # here my_list is mutable, but set() unpacks the items in my_list, 
@@ -109,7 +109,7 @@ Dict are very fast and efficient Data structure in Python. Instead if indexing, 
 They are used for efficient storage and retrival operations, preferably in Dynamic Programming.
 * Usage:
 
-```
+```Python
 # create dict
 my_dict = dict()
 my_dict = {}
@@ -153,11 +153,11 @@ The difference is map returns None if some condition is not met( or nothing can 
 * A function is used to perform some operation on some variable/sequence or to perform some task, it can or cannot return something(returns None by itself).
 * Usage:
 
-``` 
+```Python
 def my_function1(): # Non-parameter function, returns nothing 
   # do something
 
-def my_function2(var1, var2): # fucntion with parameter, returns nothing
+def my_function2(var1, var2): # function with parameter, returns nothing
   # do something  
 
 def my_function3(var1, var2): # Parameter function, returns var3 
@@ -168,7 +168,7 @@ def my_function3(var1, var2): # Parameter function, returns var3
 * Anonymous functions(function that is defined without a name, without using def keyword in python) can be created using lambda keyword, it is a single line function. 
 * Usage:
 
-```
+```Python
 # define function
 my_function = labmda a,b: a+b  # function to add value with itself and returns it(a+b is return statement).   
 
@@ -186,7 +186,7 @@ self is nothing but instance of that class. When a instance calls a method, the 
 * Arguments: can be any object, literals or Literal Collections. 
 * Usage:
 
-```
+```Python
 # define class
 class MyClass: # python defines constructor automatically in background, if not provided
   def myfunction(self): # class method
@@ -222,7 +222,7 @@ class MyClass2:
 
 ### Extras
 * Class methods that begin & end with double underscore "__" are called special functions in Python
-* Function Overloading: is changing the default fucntionality of a function for that particular object.
+* Function Overloading: is changing the default functionality of a function for that particular object.
 eg def __len__(self) if a special function, when overriden the functionality changes will reflect on calling len(my_instance).
 * Operator Overloading: similar to Function Overloading but for a operator, when a class implements a particular operator function
 (which is a special function in python) and changes its functionality(does something and returns something), that functionality is applicable to that object/instance.
@@ -248,7 +248,7 @@ super() method can instantiate parent class inside child class, so parent's meth
 The yeild keyword saves state and function values changes over the function's lifetime, so it can be intertupted and resumed whenever inside a program
 The same is not true for return, it removes the function as soon as execution is finished/interupted. 
 For longer iteration(larger data) generators are prefered because they are memory efficint(like in torch and tensorflow dataloader objects).
-* Decorators: Functions decorated get called before the underlying function. eg @function_name before def my_fucntion() will execute function_name then my_function() on call of my_function.
+* Decorators: Functions decorated get called before the underlying function. eg @function_name before def my_function() will execute function_name then my_function() on call of my_function.
 
 ### Regex in python(Work in Progress)
 
