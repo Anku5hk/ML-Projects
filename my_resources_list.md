@@ -12,6 +12,7 @@ Index:
 ### Introductory
  * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
  * [Programiz](https://www.programiz.com/python-programming) similar to Slither into python.
+ * [Get to Know Python by me](https://github.com/Anku5hk/ML-Projects/blob/master/Get_to_know_Python.md) takes you to a python ride (some work is still under progress).
  * [Simple One page Overview](https://learnxinyminutes.com/docs/python/) like a cheatsheet.
  * [Byte of Python](https://python.swaroopch.com/) beginner for python.
  
