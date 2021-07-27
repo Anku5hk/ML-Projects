@@ -55,18 +55,18 @@ Ordered collection of sequence of items. They are Immutable(values cannot be cha
 Indexing is allowed and are iterable. They are used to store different items, unlike list which are mostly used for similar items.
 * Usage:
 
-  ```
-   my_tuple = (1,2,3,'we','are','one',5.0)
+```
+ my_tuple = (1,2,3,'we','are','one',5.0)
 
-   # acessing element
-   my_tuple[0] = my_var # not okay, TypeError
-   my_var = my_tuple[0] # okay
+ # acessing element
+ my_tuple[0] = my_var # not okay, TypeError
+ my_var = my_tuple[0] # okay
 
-   # slicing list
-   my_tuple[3:5] # ['a','this way']
-   my_tuple[5:] # ['cab',1.0,2.0]
-   my_tuple[:3] # [1,2,3]
-   my_tuple[:] # to create a copy
+ # slicing list
+ my_tuple[3:5] # ['a','this way']
+ my_tuple[5:] # ['cab',1.0,2.0]
+ my_tuple[:3] # [1,2,3]
+ my_tuple[:] # to create a copy
 
   ```
 
