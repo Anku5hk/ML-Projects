@@ -1,15 +1,99 @@
 # Get to know Python (Work in Progress).
+Everything in python is an Object.
 
-## Data types(Literals)
+## Basics
 
-Are raw data given to variable, litrals are constant fix values eg integer 4, there is no other value replacement for int 4, so its a integer literal.
-* Numeric: int(eg 42), float(eg 3.0), complex(eg 3.14j).
-* String: r"\n raw string no escaping characters", "normal str, escaping characters" are immutable, items cannot be changed/deleted.
-  Has methods such as lower(), upper(), capitalize(), split(), join(), find(), replace().
-* Boolean: True (is also 1, so 4 + True is 5), False (is 0, so 4 + False is 4).
-* Special: None (use "if" to check whether an object is None, eg if my_object:)
+* Literals: Are raw data given to variable, litrals are constant fix values eg integer 4, there is no other value replacement for int 4, so its a integer literal.
+* Operands/Variable: Are objects that hold values, it has its unique user-defined name, say eg. my_int, some_var, my_string12, my_list.
+* Keywords: Are reserved words which are defined inside python, so they can't be used as operands, say eg. if,else,for,while,is,as,or,not,and.
+* Operators: Are used to perform operations on operands. say eg. +,-,/,\*,is,in,=,!,<,>,not,and,or.
+* Data Types: Are used to define the type of data a variable holds. Below are Data types in python.
+
+### Numeric: 
+Hold integer values. int in python.
+```Python
+# here my_int is an operand, 42 is a literal and its data type is int(integer)
+my_int = 42 # int
+
+my_float = 3.0 # float
+my_complex = 3.14j # complex
+```
+
+### String: 
+Are immutable(items/values(here characters) cannot be changed/deleted). str in python.
+```Python
+print(r"\n raw string no escaping characters")
+>>> \n raw string no escaping characters
+print("normal str,\t escaping characters")
+>>> normal str,  escaping characters
+
+# Use formarted strings to pass python expression/varaible inside a string using curly braces
+n = 1
+text = f"This is a String number {n}" # n becomes string and merges to the string
+text = f"This is a String number {20-19}" # generates same output
+>>> This is a String number 1
+
+# concatenate 2 strings
+string1 = "This is 1."
+string2 = "This is 2."
+print(string1 + string2) 
+>>> This is 1.This is 2.
+
+# slicing string
+ string1[5:7] # is 
+ string1[5:] # is 1.
+ string1[:4] # This 
+ string1[:] # unlike list, string does not create a copy 
+```
+Has methods such as lower(), upper(), capitalize(), split(), join(), find(), replace().
+
+### Boolean: 
+Has only 2 values, one is True (is also 1, so 4 + True is 5) and other False (is 0, so 4 + False is 4).
+```Python
+my_bool = True
+my_bool = my_bool + 4 # becomes 5
+
+my_bool = False
+my_bool = my_bool + 4 # stays 4
+```
+
+### Special: 
+None 
+```Python
+n = None
+
+# to check whether an object is not None
+if n: # same as if n != None:
+  # will not enter this condition
+
+if not n:
+  # will enter this condition, as n is None
+  # assign value to n
   
-## Data Structures(Literal Collections)
+```
+
+### Extras:
+* is operator:
+```Python
+# 'is' in python checks if 2 objects are refering to same object 
+some_var1 = 42
+some_var2 = 42
+if some_var1 is some_var2:
+  # true
+  
+# check with id  
+print(id(some_var1))
+>>> 2587096149584
+print(id(some_var2))
+>>> 2587096149584
+
+if some_var1 == some_var2:
+  # this also is true, here values are checked
+```
+
+
+## Data Structures
+Data Structure is a way to store and organize data so that it can be used efficiently. They are used to store/retrive data from. Data can be data types or other data structure. Different data structures have thier advantages/disadvantages in terms of accessing/storing data speed, so they should be used as per the task.
 
 ### List
 Ordered collection of sequence of items, which can be of any literal type. They are Mutable (values can be changed). Indexing is allowed and are iterable.
