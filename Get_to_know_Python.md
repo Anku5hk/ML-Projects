@@ -13,7 +13,7 @@ Everything in python is an Object.
 * Three Numeric Types: 
 1. int(interger): Numbers without that do not have decimal values.
 2. float: Numbers that hold decimal values.
-3. complex: Numbers that have two parts, real and imaginary. First part is normal number(int/float), the second part is imaginary, it should be follwed by j. 
+3. complex: Numbers that have two parts, real and imaginary. First part is normal number, the second part is imaginary number which should be follwed by j. 
 ```Python
 # here my_int is an operand, 42 is a literal and its data type is int(integer)
 my_int = 42 # int
@@ -125,9 +125,8 @@ type(a) # str
 b = 5.0
 type(b) # float
 ```
-* is operator:
+* is operator: Checks if 2 objects are refering to same object. 
 ```Python
-# 'is' in python checks if 2 objects are refering to same object 
 some_var1 = 42
 some_var2 = 42
 if some_var1 is some_var2:
@@ -171,8 +170,8 @@ Ordered collection of sequence of items, which can be of any data type. They are
  my_list[5:] # ['cab',1.0,2.0]
  my_list[:3] # [1,2,3]
  my_list[:5:2] # [1, 3, 'this way']
- my_list[:-4] # [1, 2, 3, 'a']
- my_list[::-1] # reverse a array [2.0, 1.0, 'cab', 'this way', 'a', 3, 2, 1]
+ my_list[:-4] # [1, 2, 3, 'a'] # this is negative index which begins from end of list from 1
+ my_list[::-1] # reverse a list [2.0, 1.0, 'cab', 'this way', 'a', 3, 2, 1]
  my_list[:] # or my_list.copy() to create a copy, which does not stays the same reference
 
  # list comprehension
@@ -180,11 +179,11 @@ Ordered collection of sequence of items, which can be of any data type. They are
  my_list = [x for x in range(10) if x > 5] # if condition
  my_list = [True if x > 5 else False for x in range(10)] # if with else condition
  
- # Some functions
- sorted(my_list, reversed=True) # returns sorted list of items in ascending order by default, sorting is O(nLogn)
+ # Some functions on list
+ sorted(my_list, reverse=True) # returns sorted list of items in ascending order by default, sorting is O(nLogn)
  len(my_list) # return length of list
  
- # Some methods
+ # Some methods of list
  my_list.append() # adds value to the list 
  my_list.reverse() # reverses list
  my_list.sort() # sorts list
@@ -201,7 +200,7 @@ Ordered collection of sequence of items, which can be of any data type. They are
 
 ### Tuple
 Ordered collection of sequence of items. They are Immutable(values cannot be changed), so they are prefered when data should not be changed and so iterating is slightly faster than list.
-Indexing is allowed and are iterable. They are used to store different items, unlike list which are mostly used for similar items.
+Indexing is allowed and are iterable. They are used to store different items, unlike list which are mostly used for similar items. 
 * Usage:
 
 ```Python
@@ -211,57 +210,68 @@ my_tuple = (1,2,3,'we','are','one',5.0)
 my_tuple[0] = my_var # not okay, TypeError
 my_var = my_tuple[0] # okay
 
-# slicing list
-my_tuple[3:5] # ['a','this way']
-my_tuple[5:] # ['cab',1.0,2.0]
-my_tuple[:3] # [1,2,3]
-my_tuple[:] # to create a copy
-```
+# slicing tuple
+my_tuple[3:5] # ('we','are')
+my_tuple[5:] # ('one',5.0)
+my_tuple[:3] # (1,2,3)
+my_tuple[:5:2] # (1, 3, 'are')
+my_tuple[:-4] # (1, 2, 3) # this is negative index which begins from end of tuple from 1
+my_tuple[::-1] # reverse a tuple (5.0, 'one', 'are', 'we', 3, 2, 1)
 
-* Has methods count(), index().
+# unpacking tuple
+a,b,c = (1,2,3) # unpacking values to a,b,c
+a,b,c = 1,2,3 # even this does the same, 1,2,3 become tuple and unpacks into a,b,c 
+a,b = b,a # this behaviour further aids swaping without using extra variable
+
+# Some functions on tuple
+sorted(my_tuple, reverse=True) # returns sorted tuple of items in ascending order by default, sorting is O(nLogn)
+len(my_tuple) # return length of tuple
+ 
+# Some methods of tuple
+my_tuple.count(5.0) # Returns number of occurrences of value.
+my_tuple.index(3) # Returns first index of value.
+
+```
 * BigO: Indexing and get_length are O(1), all other are O(n).
 
 ### Set
-Unordered collection of non repeating sequence of items. Items in set should be immutable. It is iterable, but Indexing/Slicing doesn't work as order does not matter.
-Set are used to maintain unique variables and to check if the variable is already present in the set.
+Unordered collection of non repeating sequence of items. Items/Members inside a set should be hashable, which means its hash value must never changes during its lifetime, immutable objects are hashable. This behaviour allows set to check if an object is unique from other members and also to perform operations like intersection, union. Sets are iterable, but Indexing/Slicing doesn't work as order does not matter. Sets are mostly used to maintain unique variables and to quickly check if the variable is already present in the set.
 * Usage:
-
 ```Python
 # create set
-my_set = set() or {3,45,5,3} or dict like parenthesis but without keys it becomes set.
-my_set = set(my_list) # here my_list is mutable, but set() unpacks the items in my_list, 
+my_set = set() or {3,45,5,3} or dict like parenthesis but without keys, it becomes set
+my_set = set(my_list) # here my_list is mutable, but set() function unpacks the items from my_list
 # but if my_list contained list inside it, TypeError: unhashable type: 'list' is raised.
 
 # add, remove
 my_set.add(my_var) # if repeated value, it will not be added again 
-my_set.remove(my_var)
+my_set.remove(my_var) # removes a member, raises KeyError if not found
 
 # acessing element
 my_set[0] # not allowed, TypeError: 'set' object is not subscriptable.
 for var in my_set:
    # do something with var
-
-# other operations
 if my_var in my_set: # check if my_var is inside my_set
+
+# Some methods of sets
 my_set1.intersection(my_set2) # find intersection        # or my_set1 & my_set2 
 my_set1.union(my_set2) # to find union                   # or my_set1 | my_set2
 my_set1.update(my_set2) # concat my_set12 to my_set1
+my_set1.copy() # returns a copy of a set
+my_set1.clear() # removes all members of set
+my_set1.issubset(my_set2) # checks if my_set2 is a subset of my_set1
+my_set1.issuperset(my_set2) # checks if my_set2 is a supersubset of my_set1
 ```
-
-* Has methods such as copy(), clear(), issubset(), issuperset().
 * BigO: O(n) almost all operations.
 
 ### Dict
-Uses Hashtable to store data with key & value. They contain key and values, keys are indexes and values are values to-be/are stored. 
-Dict are very fast and efficient Data structure in Python. Instead if indexing, keys are used to access values.
-They are used for efficient storage and retrival operations, preferably in Dynamic Programming.
+Uses Hashtable to store data with a key & value. A hashtable uses a hash function which given a key generates a index to an array like Data Structure. This behaviour help hashmap do almost all operations in O(1). So, instead of indexing, keys are used to access values. They are used for efficient storage and retrival operations, preferably in Dynamic Programming and where values are to have some key associated with them.
 * Usage:
-
 ```Python
 # create dict
 my_dict = dict()
 my_dict = {}
-my_dict = dict(my_list) # dict([[1,2],[2,3]]) = {1:2,2:3}
+my_dict = dict([[1,2],[2,3]]) # {1:2,2:3}
 
 # dict comprehension 
 my_dict = {key:value for k,v in zip(my_list1, my_list2)}
@@ -270,33 +280,82 @@ my_dict = {x: x\*x for x in range(6)}
 # acessing element
 my_var = my_dict[key] # can raise KeyError if not present
 my_dict.get(key, None) # to avoid KeyError, None is default, can be set to anything else
-for k,v in my_dict.items():
+for k,v in my_dict.items(): # traverse all items
    # do something with v
 
 # add,remove
 my_dict[key] = my_var # add item at key
 del my_dict[key] # remove item at key
 
-# other operations
-my_dict1.update(my_dict2) # concat 2 dicts
+# Some methods of dicts
+my_dict1.update(my_dict2) # concata 2 dicts
 my_dict.keys() # keys inside my_dict, returns iterable object
 my_dict.values() # values inside my_dict, returns iterable object
 my_dict.items() # keys and values inside my_dict, returns iterable object
+my_dict.pop(key) # removes item(key,value) given key
+my_dict.clear() # removes all items of dict
 ```
-
-* Has other methods pop(), clear().
 * BigO: Insert, Add, Delete is O(1), only iteration is O(n).
 
 ### Extras
-* range(int) # returns iterable sequence to the integer, syntax range(start_index, end_index, step)
-* enumerate(int) # returns iterable sequence to the integer and also thier 0-length indexes
+* range() function: Returns sequence of length start_index(0 by default) to end_index, syntax range(start_index:optional, end_index, step:optional). range() function returns range object, which is iterable and supports indexing. It is used in loops, where a certain number of times a loop should work.
+```Python
+range(20) # return [0:20] sequence 
+range(5,20) # return [5:20] sequence 
+range(6,20,2) # return [6, 8, 10, 12, 14, 16, 18] sequence 
+range(20)[0] # indexing a range
+range(20)[0:10] # also slicing but its not prefered/recommended
+list(range(5,20)) # makes range sequence a list sequence
 
+for var in range(20):
+  # 0 t0 19 var loop
+```
+* enumerate() function: Returns a iterable object given a list, each item is a tuple and has (index, value). Indexes of list variables(0-length) and value is item from the list. enumerate() function returns a enumerate object which is iterable but Indexing/slicing is not supported.
+```Python
+my_list = [100,200,500,100]
+enumerate(my_list) # returns a iterable object
+list(enumerate(my_list))[0] # converts to list and so indexing first value gives a tuple which is (0,100) 
+
+for i,val in enumerate(my_list):
+  # i values are in 0-3
+  # val values are 100,200,500,100
+```
 * Type Cast/Conversion can be performed between (int & float), (str & int) only if str contains numbers. 
 * Conversion of Sequences(list,set,dict,tuple), eg dict([[1,2],[2,3]]) gives {1:2,2:3}
-* filter() takes (function, list) and applies function on every list item. Returns a function object, can be converted to list.
-* map() takes (function, list) and applies function on every list item. 
-The difference is map returns None if some condition is not met( or nothing can be returned), whereas filter returns only some condition is met, does not returns None.
-* ord() converts value to Unicode value and chr() takes the object to convert it back to value.  
+* filter() function: Takes a function, a list and applies that function on every list item. filter() returns a filter object which iterable but Indexing/slicing is not supported. 
+```Python
+def my_func(var):
+  # do something
+  return var+2  # return something
+  
+filter(my_func, [100,200,500,100]) # returns filter object
+list(filter(my_func, [100,200,500,100])) # returns [102,202,502,102]
+
+for val in filter(my_func, [100,200,500,100]): # iterable
+  # do something to val
+```
+* map() function: Takes a function, a list and applies that function on every list item. The difference is map() returns None if some condition is not met(or nothing can be returned), whereas filter returns only if return is provided/some condition is met that makes a return call and else nothing is returned.
+```Python
+def my_func(var):
+  # do something
+  return var+2  # return something
+  
+map(my_func, [100,200,500,100]) # returns filter object
+list(map(my_func, [100,200,500,100])) # returns [102,202,502,102]
+
+for val in filter(map, [100,200,500,100]): # iterable
+  # do something to val
+
+# the difference
+def myfun(val):
+    if val == 2:
+        return val+2
+        
+print(list(map(myfun, [1,2,3,4]))) # returns [None, 4, None, None] 
+print(list(filter(myfun, [1,2,3,4]))) # returns [4] 
+```
+* ord(): Converts value to Unicode value.
+* chr(): Takes Unicode value and convert it back to a normal value.  
 
 ## Classes and Functions
 
