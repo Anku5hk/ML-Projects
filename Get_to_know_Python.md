@@ -13,7 +13,7 @@ Everything in python is an Object.
 * Three Numeric Types: 
 1. int(interger): Numbers without that do not have decimal values.
 2. float: Numbers that hold decimal values.
-3. complex: Numbers that have two parts, real and imaginary. First part is normal number(int/float), the second part is imaginary that doesn't change once defined, it should be follwed by j. 
+3. complex: Numbers that have two parts, real and imaginary. First part is normal number(int/float), the second part is imaginary, it should be follwed by j. 
 ```Python
 # here my_int is an operand, 42 is a literal and its data type is int(integer)
 my_int = 42 # int
