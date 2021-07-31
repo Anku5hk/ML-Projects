@@ -10,13 +10,33 @@ Everything in python is an Object.
 * Data Types: Are used to define the type of data a variable holds. Below are Data types in python.
 
 ### Numeric: 
-Hold integer values. int in python.
+* Three Numeric Types: 
+1. int(interger): Numbers without that do not have decimal values.
+2. float: Numbers that hold decimal values.
+3. complex: Numbers that have two parts, real and imaginary. First part is normal number(int/float), the second part is imaginary that doesn't change once defined, it should be follwed by j. 
 ```Python
 # here my_int is an operand, 42 is a literal and its data type is int(integer)
 my_int = 42 # int
 
 my_float = 3.0 # float
-my_complex = 3.14j # complex
+
+my_complex = 4.22 + 20j # complex
+print(my_complex)
+>>> 4.22+20j
+my_complex += 30 # same as my_complex = my_complex + 30
+print(my_complex) # only first part changes
+>>> 34.22+20j
+my_complex1 = 0+10j
+print(my_complex + my_complex1) # add two complex numbers
+>>> 34.22+30j
+
+# Functions supported
+max(30, 20) # returns maximum from numbers
+min(30, 20) # returns minimum from numbers
+abs(-50) # returns absolute value
+sum(10, 20) # returns sum of numbers
+id(my_float) # return object id
+round(my_float) # returns a rounded to decimal value
 ```
 
 ### String: 
@@ -39,14 +59,32 @@ string2 = "This is 2."
 print(string1 + string2) 
 >>> This is 1.This is 2.
 
-# slicing string
- string1[5:7] # is 
- string1[5:] # is 1.
- string1[:4] # This 
- string1[:] # unlike list, string does not create a copy 
-```
-Has methods such as lower(), upper(), capitalize(), split(), join(), find(), replace().
+# slicing string syntax is [start_index:end_index:step]
+string1[5:7] # is 
+string1[5:] # is 1.
+string1[:4] # This 
+string1[:5:2] # Ti 
+string1[:-4] # This i
+string1[::-1] # reverse a string
+string1[:] # unlike list, string does not create a copy 
 
+# Some methods
+my_string = "this IS it."
+my_string.lower() # Returns Lowercases all characters string
+my_string.upper() # Returns Uppercases all characters string
+my_string.capitalize() # Returns Capitalizes first character string
+my_string.split(" ") # Splits at given a string key(which is whitespace here) and return it
+my_string.strip() # Removes whitespace from beginning, also can strip given a key/string 
+my_string.index("it") # Searches given key/string(which is 'it' here) and returns starting index if found
+my_string.replace("it","not") # Searches given key/string(which is 'is' here), replaces with second key/string and returns final string
+print(".".join(['hey','this','it'])) # joins a list to a single string
+>>> hey.this.it
+
+# Some functions
+len(my_string) # Returns length of string
+ord("b") # Returns a Unicode of a character
+chr(ord("b")) # Returns Converted the Unicode to a character
+```
 ### Boolean: 
 Has only 2 values, one is True (is also 1, so 4 + True is 5) and other False (is 0, so 4 + False is 4).
 ```Python
@@ -69,10 +107,24 @@ if n: # same as if n != None:
 if not n:
   # will enter this condition, as n is None
   # assign value to n
-  
 ```
 
 ### Extras:
+* isinstance() function: Checks if an object is a instance of a particular class. Returns True/False.
+```Python
+a = 23
+isinstance(a, int) # True
+isinstance(a, float) # Flase
+isinstance(a, str) # Flase
+```
+* type() function: Returns the type(class) of an object.
+```Python
+a = "What?"
+type(a) # str
+
+b = 5.0
+type(b) # float
+```
 * is operator:
 ```Python
 # 'is' in python checks if 2 objects are refering to same object 
@@ -91,14 +143,12 @@ if some_var1 == some_var2:
   # this also is true, here values are checked
 ```
 
-
 ## Data Structures
-Data Structure is a way to store and organize data so that it can be used efficiently. They are used to store/retrive data from. Data can be data types or other data structure. Different data structures have thier advantages/disadvantages in terms of accessing/storing data speed, so they should be used as per the task.
+Data Structure is a way to store and organize data so that it can be used efficiently. They are used to store/retrive data from. Data can be data types or other data structure. Different data structures have thier advantages/disadvantages in terms of accessing/storing data speed, so they should be used as per the task. They can also be called literal collections.
 
 ### List
-Ordered collection of sequence of items, which can be of any literal type. They are Mutable (values can be changed). Indexing is allowed and are iterable.
+Ordered collection of sequence of items, which can be of any data type. They are Mutable (values can be changed). Indexing is allowed and are iterable. They are array like implementation in python. They are generally prefered in most cases. Where indexing, looping over some items is reqiured lists are used.
 * Usage:
-
 ```Python
  # create list
  my_list = [1,2,3,'a','this way','cab',1.0,2.0]
@@ -120,18 +170,33 @@ Ordered collection of sequence of items, which can be of any literal type. They 
  my_list[3:5] # ['a','this way']
  my_list[5:] # ['cab',1.0,2.0]
  my_list[:3] # [1,2,3]
- my_list[:] # or my_list.copy() to create a copy
+ my_list[:5:2] # [1, 3, 'this way']
+ my_list[:-4] # [1, 2, 3, 'a']
+ my_list[::-1] # reverse a array [2.0, 1.0, 'cab', 'this way', 'a', 3, 2, 1]
+ my_list[:] # or my_list.copy() to create a copy, which does not stays the same reference
 
  # list comprehension
  my_list = [x for x in range(10)] # without condition
  my_list = [x for x in range(10) if x > 5] # if condition
  my_list = [True if x > 5 else False for x in range(10)] # if with else condition
+ 
+ # Some functions
+ sorted(my_list, reversed=True) # returns sorted list of items in ascending order by default, sorting is O(nLogn)
+ len(my_list) # return length of list
+ 
+ # Some methods
+ my_list.append() # adds value to the list 
+ my_list.reverse() # reverses list
+ my_list.sort() # sorts list
+ my_list.clear() # empty's list
+ my_list.index() # returns index of first arival of value passed 
+ my_list.pop() # removes value from a list given index
+ my_list.remove() # removes value from a list given value
 ```
 
 * Some other usage:
-  1. use as stack: append(value) and pop().
-  2. use as queue: append(value) and pop(0).
-* Has methods such as reverse(), sort(), clear(), copy(), index().
+  1. Use as stack: my_list.append(value) and my_list.pop().
+  2. Use as queue: my_list.append(value) and my_list.pop(0).
 * BigO: Indexing and get_length are O(1), all other are O(n).
 
 ### Tuple
@@ -151,7 +216,6 @@ my_tuple[3:5] # ['a','this way']
 my_tuple[5:] # ['cab',1.0,2.0]
 my_tuple[:3] # [1,2,3]
 my_tuple[:] # to create a copy
-
 ```
 
 * Has methods count(), index().
@@ -224,6 +288,9 @@ my_dict.items() # keys and values inside my_dict, returns iterable object
 * BigO: Insert, Add, Delete is O(1), only iteration is O(n).
 
 ### Extras
+* range(int) # returns iterable sequence to the integer, syntax range(start_index, end_index, step)
+* enumerate(int) # returns iterable sequence to the integer and also thier 0-length indexes
+
 * Type Cast/Conversion can be performed between (int & float), (str & int) only if str contains numbers. 
 * Conversion of Sequences(list,set,dict,tuple), eg dict([[1,2],[2,3]]) gives {1:2,2:3}
 * filter() takes (function, list) and applies function on every list item. Returns a function object, can be converted to list.
