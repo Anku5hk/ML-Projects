@@ -1,8 +1,12 @@
-# Get to know Python (Work in Progress).
+# Programmer's guide to Python (Work in Progress).
+What is this: Is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. Also for the one who have taken python course from somewhere else and now wants to solidfy the learning. This guide will take you through most required/essential concepts of python saving you tons of time. But ofcourse you should practice on your own. I would suggest typing and running your own programs.  
+
+What's not this: Somewhat not beginer friendly, some concepts I consider are better explained on the internet already. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the fundamentals here.  
+
+## Fundamentals
 Everything in python is an Object.
 
 ## Basics
-
 * Literals: Are raw data given to variable, litrals are constant fix values eg integer 4, there is no other value replacement for int 4, so its a integer literal.
 * Operands/Variable: Are objects that hold values, it has its unique user-defined name, say eg. my_int, some_var, my_string12, my_list.
 * Keywords: Are reserved words which are defined inside python, so they can't be used as operands, say eg. if,else,for,while,is,as,or,not,and.
@@ -360,27 +364,95 @@ print(list(filter(myfun, [1,2,3,4]))) # returns [4]
 ## Classes and Functions
 
 ### Functions
-* A function is used to perform some operation on some variable/sequence or to perform some task, it can or cannot return something(returns None by itself).
+* A function can be defined to perform some operation/task on some data/variables/sequences, it can or cannot return something (in Python, None is returned by default). 
+* Functions in python are first class which means they behave just like an object, they can be stored as vairable or passed as argument to other functions.
+* [Quick] Parameters vs arguments: Parameters are the ones which are defined in function defination, arguments are passed when function is called. 
+* Functions support Packing and Unpacking varaibles into tuple/dict, Packing is when we pass more than number of defined variables to a function. It is used when we are not sure of number of arguments/want to pass some extra, they should always be the last parameters in function(or they'll contain all the values). Unpacking is when a list/tuple/dict is passed which then unpacks as arguments to a function. Now passing tuple/list can be done with * (which are called passing args) and passing dict requires ** (which are called passing kwargs), follwed by seqeunce's name. Eg /*my_tuple and /*/*my_dict.
 * Usage:
 
 ```Python
-def my_function1(): # Non-parameter function, returns nothing 
+# defining functions
+def my_function1(): # Non-parameterize function which returns nothing 
   # do something
 
-def my_function2(var1, var2): # function with parameter, returns nothing
+def my_function2(var1, var2): # function with parameter which returns nothing
   # do something  
 
-def my_function3(var1, var2): # Parameter function, returns var3 
-  # do something  
-  return var3
+def my_function3(var1, var2, var3, do_something=False): # default parameters should always follow later
+  if do_something:
+    # did something
+    return var1 + var2 + var3
+
+# calling a function
+my_var = my_function1() # returns None by default
+print(my_var)  
+>>> None
+print(my_function3(30, 20, 10, do_something=True)) # returns output
+>>> 60
+
+
+# first class functions behaviour
+def my_fun1(number, some_fun=None):
+  output=number**2
+  if some_fun:
+    output = some_fun(number)
+  return output
+
+def my_fun2(n):
+  return n**3
+  
+my_var = my_fun2 # function as var
+print(my_var) 
+>>> <function my_funtion at 0x000001C1FDFAF0D0>
+
+my_fun1(2) # 4 
+# pass function as argument
+my_fun1(2,my_var) # 8
+
+
+# packing variables into tuple functions
+def my_test(*my_args, **my_kwargs):
+  print(type(my_args)) # tuple
+  print(type(my_kwargs)) # dict
+
+def my_fun1(a,b, *my_args):
+  total = a+b
+  if args:
+    for n in args:
+      total+=n
+  return total
+
+# passing only 2 arguments
+my_fun1(2,3) # 5   
+# passing more than 2 arguments
+my_fun1(2,3,3,4,2,1,1,4) # 20
+
+def my_fun2(a,b,**my_kwargs):
+  total = a+b
+  if my_kwargs:
+    for v in my_kwargs.values():
+      total+=v
+  return total
+  
+# passing only 2 arguments
+my_fun2(2,3) # 5   
+# passing more than 2 arguments, however arguments should have its name
+my_fun2(2, 3, c=2, d=4, e=4, any_name=5, my_var=5) # 25
+
+# unpacking variables into tuple functions
+def my_fun1(a,b,c,d):
+  return a+b+c+d
+
+my_list = [1,2,3,4]
+my_dict = {a:1,b:2,c:3,d:4}
+my_fun1(*my_list) # passing from list, can also be tuple
+my_fun1(**my_dict) # passing from dcit
 ```
-    
 * Anonymous functions(function that is defined without a name, without using def keyword in python) can be created using lambda keyword, it is a single line function. 
 * Usage:
-
 ```Python
 # define function
-my_function = labmda a,b: a+b  # function to add value with itself and returns it(a+b is return statement).   
+my_function = labmda a,b: a+b  # function to add values and returns it(a+b is return statement).   
 
 # calling function
 my_var = my_function(1,1) # returns 2 inside my_var  
