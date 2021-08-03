@@ -467,7 +467,6 @@ A default constructor does not have parameters and parameterized constructor has
 self is nothing but instance of that class. When a instance calls a method, the calling instance gets passed automatically by python as self object to that method.
 * Arguments: can be any object, literals or Literal Collections. 
 * Usage:
-
 ```Python
 # define class
 class MyClass: # python defines constructor automatically in background, if not provided
