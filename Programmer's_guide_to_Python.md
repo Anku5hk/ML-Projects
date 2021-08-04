@@ -540,8 +540,118 @@ my_var = math() # this math does something else
 ## OOP concepts
 
 ### Inheritance
-Inherit a base class to use its methods inside child's class. Multilevel and Multiple inheritence are supported in python.
-super() method can instantiate parent class inside child class, so parent's methods can be used inside child's class/instance also. Method Resolution Order ensures that the child class always appears first than parent class.
+Inherit a base class to use its methods inside child's class and not the other way. Multilevel and Multiple inheritence are also supported in python. super() method can be used to access parent's methods inside child class, it returns a temporary object of parent class which can be used to access to all of its methods. Method Resolution Order (MRO) is the order in which Python looks for a method in a hierarchy of classes. The general order is child, parent1, parent2..., when a method/variable is to searched, it is looked for in this order. Any name collision is avoided using this order.
+```Python
+## Single Inheritance
+class MyParent:
+  def __init__(self, para1):
+      self.para1 = para1
+  def some_func(self, num):
+      return num**2
+  def other_method(num):
+      return self.para1 - num
+  
+class MyChild(MyParent): # inherite MyParent class
+  def __init__(self, arg1):
+    self.arg1 = arg1
+    super().__init__(arg1) # instantiate parent class inside child class
+  def my_func(self, num):
+    output1 = super().some_func(num) # This's call parent's method, calling with self(like self.some_func()) will result in child's method
+    output2 = self.other_method(num) # can call parent's method, as this class doesn't have other_method(), parent method is called
+    return output1 + self.arg1
+  def some_func(self, num):    
+    return num**3
+
+child_instance = MyChild(38)
+# calling this will return 42
+output = child_instance.my_func(2)
+
+# calling same named method, child class is returned as expected 
+output = child_instance.some_func(2)
+
+# Also can call parents class's method as expected 
+output = child_instance.other_method(20)
+
+
+## Multilevel Inheritance
+class MyClass1:
+  def __init__(self):
+      self.para1 = 5
+  def doing_something1(self, num):
+      return self.para1 - num
+  def other_method(self, num):
+      return num**2
+  
+class MyClass2(MyClass1):
+  def __init__(self):
+      self.para1 = 10
+      self.para2 = 20
+  def doing_something2(self, num):
+      return self.para1 - num
+  def other_method(self, num):
+      return num**3
+  
+class MyClass3(MyClass2):
+  def __init__(self):
+      self.para1 = 42
+      self.para2 = 42
+  def doing_something2(self, num):
+      return self.para1 - num
+  def other_method(self, num):
+      return num**3
+
+parent1 = MyClass1() # can access MyClass1 variables/methods
+parent2 = MyClass2() # can access MyClass2, MyClass1 variables/methods
+child = MyClass3() # can access MyClass3, MyClass2, MyClass1 variables/methods
+
+
+## Multiple Inhetirance
+class MyParent1:
+  def __init__(self):
+      self.para1 = 10
+  def doing_something1(self, num):
+      return self.para1 - num
+  def other_method(self, num):
+      return num**2
+  
+class MyParent2:
+  def __init__(self):
+      self.para1 = 20
+      self.para2 = 42
+  def doing_something2(self, num):
+      return self.para1 - num
+  def other_method(self, num):
+      return num**3
+  
+class MyChild(MyParent1, MyParent2): # inherite MyParent1 and MyParent2 class
+  def __init__(self, arg1):
+      self.arg1 = arg1
+      super().__init__()
+      print(self.para1) # 10
+      
+      # initialize MyParent2 with class name and passing MyChild(i.e self)
+      # super() initializes each parent on its own when child's instance is created, so this step is optional
+      # but this can be done when MyParent2's is to be acessed in MyChild's init 
+      MyParent2.__init__(self)
+      print(self.para1) # 20
+      print(self.para2) # can be accessed right here 
+
+  def my_func(self, num):
+    output1 = self.other_method(num) # here MyParent1 will be called, due to MRO
+    return output1
+
+parent1 = MyParent1()
+parent2 = MyParent2()
+child = MyChild(30)
+my_var = child.para1 # access para1 of MyParent1
+my_var = child.para2 # access para2 of MyParent2
+print(child.other_method(2)) # same as before, calling MyParent1's method
+
+# to call MyParent2's same method using child instance
+output1 = MyParent2.other_method(child, 2) # 8
+output2 = MyParent1.other_method(child, 2) # 4
+```
+
 ### Encapsulation
 Restrict access to methods and variables inside class. Inside a class, use "/_" underscroll for private, and "/_/_" double underscroll for protected. use global keyword and more.
 ### Polymorphism
@@ -550,17 +660,17 @@ The ability of an object to take on many forms.
   2. Method overriding: Use same function name but on/in different objects/classes. Like 2 clases can have same named of functions, but thier functionality differ as the object.
 * Class methods that begin & end with double underscore "/_/_" are called special functions in Python
 * Function Overloading: is changing the default functionality of a function for that particular object.
-eg def __len__(self) if a special function, when overriden the functionality changes will reflect on calling len(my_instance).
+eg def /_/_len/_/_(self) if a special function, when overriden the functionality changes will reflect on calling len(my_instance).
 * Operator Overloading: similar to Function Overloading but for a operator, when a class implements a particular operator function
 (which is a special function in python) and changes its functionality(does something and returns something), that functionality is applicable to that object/instance.
-eg for '+' operator __add__() can be defined inside a class and the functionality is change will reflect to the instance.
+eg for '+' operator /_/_add/_/_() can be defined inside a class and the functionality is change will reflect to the instance.
 
 ### Abstraction
 Hiding internal details and showing only functionality. Such as importing from a module and using a function inside your class's method using decorator.
 
 ### Extras
 
-* Iterators: Objects that can be iterated using loops. It implements __iter__() and __next__() special functions. These can be implemented in custom class to make that object iterable.
+* Iterators: Objects that can be iterated using loops. It implements /_/_iter/_/_() and /_/_next/_/_() special functions. These can be implemented in custom class to make that object iterable.
 * Generators: Are lazy iterators, they return value when they are called. A loop inside a generator uses yeild instead of return.
 The yeild keyword saves state and function values changes over the function's lifetime, so it can be intertupted and resumed whenever inside a program
 The same is not true for return, it removes the function as soon as execution is finished/interupted. 
