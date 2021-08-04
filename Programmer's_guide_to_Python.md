@@ -4,7 +4,7 @@ What is this: Is meant for a programmer who's already familiar with other langau
 What's not this: Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the concepts here in a simplest possible manner.  
 
 ## Fundamentals
-Everything in python is an Object.
+Everything in python is an Object. A object has its own attributes and properties.  
 
 ## Basics
 * Literals: Are raw data given to variable, litrals are constant fix values eg integer 4, there is no other value replacement for int 4, so its a integer literal.
@@ -457,14 +457,22 @@ my_function = labmda a,b: a+b  # function to add values and returns it(a+b is re
 # calling function
 my_var = my_function(1,1) # returns 2 inside my_var  
 ```    
-    
+* Docstrings: Holds the hints/suggesstion working of a function/class provided by the developer. It begins just at the start of a function/class defination.
+```Python 
+class MyClass:
+"""This is a docString"""
+  def my_fun():
+  """This is what this method does..."""
+```
+
+
 ### Class
 * Class: Is a blueprint of object. Which defines what the object holds(which variables/data types), what methods/operations can be performed on that object. 
 * Instance: Is a object of a class, it is created using the class. This instance or object then is used to perform operations/tasks that class is designed to.  
-* Constructor: class does/not have a constructor, which is a function that is called when the class's object is instantiated(when instance is created), 
+* Constructor:  Class does/not have a constructor, which is a function that is called when the class's object is instantiated(when instance is created), 
 A default constructor does not have parameters and parameterized constructor does.
 * Methods: Functions inside class are called as methods. They should have 'self' object as the first parameter inside defination, not required when calling that method.
-self is nothing but instance of that class. When a instance calls a method, the calling instance gets passed automatically by python as self object to that method.
+self is resembles the instance of that class. When a instance calls a method, the calling instance gets passed automatically by python as self object to that method, explained more below.
 * Usage:
 ```Python
 # define class
@@ -497,6 +505,11 @@ class MyClass2:
  # create instance
  my_instance = MyClass2(22,34,42) # create instance, pass arguments for parameterized constructor
  new_var = my_instance.my_func(40) # calling my_func() of my_instance, 62 is returned to new_var
+ 
+ # in python the invocation of the instance method is operated via the class calling a method 
+ # by passing the instance as an argument, so
+ new_var = MyClass2.my_func(my_instance, 40) # this is same as above instance calling method
+ # the 'self' keyword ressembles the instance object, which is here 'my_instance'
 ```
 
 ### Extras
@@ -591,8 +604,10 @@ class MyChild(MyParent): # inherite MyParent class
     self.arg1 = arg1
     super().__init__(arg1) # instantiate parent class inside child class
   def my_func(self, num):
-    output1 = super().some_func(num) # This's call parent's method, calling with self(like self.some_func()) will result in child's method
-    output2 = self.other_method(num) # can call parent's method, as this class doesn't have other_method(), parent method is called
+    # This's call parent's method, calling with self(like self.some_func()) will result in child's method
+    output1 = super().some_func(num) 
+    # can call parent's method, as this class doesn't have other_method(), parent method is called
+    output2 = self.other_method(num) 
     return output1 + self.arg1
   def some_func(self, num):    
     return num**3
@@ -693,6 +708,7 @@ output2 = MyParent1.other_method(child, 2) # 4
   1. Public: Can be accessed anywhere in the program.
   2. Protected: Only the current class and derived class can access them.
   3. Private: Only the current class can acecss them, not even instance can access them.
+In python, all variables are public by default, the way private/protected are implemented they don't really work as one would expect.
 * Use global keyword and more.
 ```Python
 class MyClass:
@@ -705,23 +721,29 @@ class MyClass1(MyClass):
   def __init__(self):
       super().__init__()
 
-# instance 
+# access by instance 
 my_instance = MyClass()
 print(my_instance.my_var1) # can be accessed
 print(my_instance._my_var2) # can be accessed
 print(my_instance.__my_var3) # can't be accessed, private variable
 
-# inherited class
+# access by inherited class
 my_instance = MyClass1()
 print(my_instance.my_var1) # can be accessed
 print(my_instance._my_var2) # can be accessed
 print(my_instance.__my_var3) # can't be accessed, private variable
+
+# __dict__ a special variable in python keeps track of variables/functions of an object/class
+# this process is name mangling, which uses _CLASSNAME prefix for private variable 
+print(my_instance.__dict__) # this shows even shows private variables
+print(my_instance._MyClass__my_var3) # which then further can be accessed using the naming convention
 ```
+
 ### Polymorphism
-The ability of an object to take on many forms. 
-  1. Method overloading: Use same function name but have different input parameters, this functionality is not supported in python.
-  2. Method overriding: Use same function name but on/in different objects/classes. Like 2 clases can have same named of functions, but thier functionality differ as the object.
-* Class methods that begin & end with double underscore "\_\_" are called special functions in Python
+* [Quick] The ability of an object to take on many forms. 
+  1. Method overloading: A class can have same named methods but have distinct input parameters, this functionality is not supported in python.
+  2. Method overriding: Use same named functions but inside different classes. Like 2 clases can have same named of functions, but thier functionality differ as the class.
+* Class methods/variables that begin & end with double underscore "\_\_" are special variables/methods(also called dunder methods) in Python. 
 * Function Overloading: is changing the default functionality of a function for that particular object.
 eg def \_\_len\_\_(self) if a special function, when overriden the functionality changes will reflect on calling len(my_instance).
 * Operator Overloading: similar to Function Overloading but for a operator, when a class implements a particular operator function
