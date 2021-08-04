@@ -1,7 +1,7 @@
 # Programmer's guide to Python (Work in Progress).
-What is this: Is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. Also for the one who have taken python course from somewhere else and now wants to solidfy the learning. This guide will take you through most required/essential concepts of python saving you tons of time. But ofcourse you should practice on your own. I would suggest typing and running your own programs.  
+What is this: Is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python to cover almost everything of python while saving you tons of time. Also the one who have taken python course from somewhere else and now wants to solidfy the learning can benefit. But ofcourse you should practice on your own. I would suggest typing and running your own programs while going through.  
 
-What's not this: Somewhat not beginer friendly, some concepts I consider are better explained on the internet already. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the fundamentals here.  
+What's not this: Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the concepts here in a simplest possible manner.  
 
 ## Fundamentals
 Everything in python is an Object.
@@ -460,67 +460,103 @@ my_var = my_function(1,1) # returns 2 inside my_var
     
 ### Class
 * Class: Is a blueprint of object. Which defines what the object holds(which variables/data types), what methods/operations can be performed on that object. 
-* Instance: Is a object of a class, it is created using the class. This instance or object then is used to perform operations/tasks that class is intended to.  
+* Instance: Is a object of a class, it is created using the class. This instance or object then is used to perform operations/tasks that class is designed to.  
 * Constructor: class does/not have a constructor, which is a function that is called when the class's object is instantiated(when instance is created), 
-A default constructor does not have parameters and parameterized constructor has constructor.
+A default constructor does not have parameters and parameterized constructor does.
 * Methods: Function inside class are called as methods. They should have 'self' object as the first parameter inside defination, not required when calling that method.
 self is nothing but instance of that class. When a instance calls a method, the calling instance gets passed automatically by python as self object to that method.
-* Arguments: can be any object, literals or Literal Collections. 
 * Usage:
 ```Python
 # define class
-class MyClass: # python defines constructor automatically in background, if not provided
+class MyClass: # python defines empty constructor automatically in background, if not provided
   def myfunction(self): # class method
     # do something  
 
 class MyClass1: # class with default constructor
   def __init__(self): # default constructor
-    self.my_var = 30
+    self.my_var = 30 # default variables
+    self.other_var = 10
 
   def my_fun1(self):
-    new_var = self.my_var # use default values using self object
-    self.my_var = 42 # change value
+    new_var = self.my_var # access default values using self object
+    self.my_var = 42 # change/define new variables inside any method using self
 
   def my_fun2(self):
     print(self.my_var) # will print 42 if my_fun2() is called after calling my_fun1() else 30
 
 class MyClass2:
-  def __init__(self, para1, para2, para3): # parmeter constructor
-    self.para1 = para1 # save variable inside instance's para1 variable
+  def __init__(self, para1, para2, para3): # parameterized constructor
+    self.para1 = para1 # need to save variable under instance's(self) variable
     self.para2 = para2
     self.para3 = para3
+    # some more variables
 
-    # some variables
-
-  def my_func(self, var1): # var1 is a method argument
-    # do something  
-    return var3
+  def my_func(self, var1): # var1 is a method parameter
+    return var1 + self.para1
 
  # create instance
  my_instance = MyClass2(22,34,42) # create instance, pass arguments for parameterized constructor
- new_var = my_instance.my_func() # calling my_func() on my_instance, var3 is returned to new_var
+ new_var = my_instance.my_func(40) # calling my_func() of my_instance, 62 is returned to new_var
 ```
 
 ### Extras
-* Class methods that begin & end with double underscore "__" are called special functions in Python
+* Namespaces are collection of names, python maintain namespaces and thier scopes automatically just like in any programming language. There are built-in(readily available functions like print,len), global(which user defines outside of any function/class), local(user defines inside a function/class) namespaces.
+* Module is simply a python file(with .py extension), dir() can be used to find variables/fucntions/class inside module. Python looks for modules in a sequence, local dir(where current .py is located), PYTHONPATH(given python dir path, PYTHONPATH is a env var which is used to define python dirs), then lastly inside python installation directory. This does means any module with repeating name will be given priority according to this sequecnce.
+* Packages are folder with /_/_init/_/_().py file in them.
+```Python
+## Namespaces
+# built-in namespace
+print("something") # print belongs to build-in namespace, as it is readily available without any import
+len(my_list) # same goes with len function, map(), filter(), etc. Also they can be acessed in any program the same
+
+# global namespaces
+import math # math now once defined it can be used anywhere in this program, belongs to from global namespace
+my_var = 42 # my_var is also inside global namespace, it can be used anywhere inside this program
+
+# local namespace
+def my_fun():
+  my_local_var = 42 # this is inside local namespace, as it is decalared inside a function
+
+
+## Modules
+import math #  math is built-in module, now the name 'math' refers to module math
+# any functions/classes/varibles of math can be accessed using '.' operator
+my_var = math.sqrt(8) # acessing function from math
+
+# import specific functions/classes/varibles from module using 'from' keyword, which is registered in... you guessed it, built-in namespace 
+from math import sqrt
+my_var = sqrt(16)
+
+# import with a different access name in order to avoid names collusion
+def math():
+  # this is my math, this math is different
+
+# import can be made anywhere in a program, but is prefered in the beginning
+import math as maths 
+my_var = maths.sqrt(8) # acessing function from math
+my_var = math() # this math does something else
+```
+
+## OOP concepts
+
+### Inheritance
+Inherit a base class to use its methods inside child's class. Multilevel and Multiple inheritence are supported in python.
+super() method can instantiate parent class inside child class, so parent's methods can be used inside child's class/instance also. Method Resolution Order ensures that the child class always appears first than parent class.
+### Encapsulation
+Restrict access to methods and variables inside class. Inside a class, use "/_" underscroll for private, and "/_/_" double underscroll for protected. use global keyword and more.
+### Polymorphism
+The ability of an object to take on many forms. 
+  1. Method overloading: Use same function name but have different input parameters, this functionality is not supported in python.
+  2. Method overriding: Use same function name but on/in different objects/classes. Like 2 clases can have same named of functions, but thier functionality differ as the object.
+* Class methods that begin & end with double underscore "/_/_" are called special functions in Python
 * Function Overloading: is changing the default functionality of a function for that particular object.
 eg def __len__(self) if a special function, when overriden the functionality changes will reflect on calling len(my_instance).
 * Operator Overloading: similar to Function Overloading but for a operator, when a class implements a particular operator function
 (which is a special function in python) and changes its functionality(does something and returns something), that functionality is applicable to that object/instance.
 eg for '+' operator __add__() can be defined inside a class and the functionality is change will reflect to the instance.
-* Namespaces are collection of names, there are built-in(built-in imported module), global(user imported module), local(user defined function/class) namespaces.
-* Module is simply a python file(with .py extension), dir() van be used to find names/methods inside module. 
-* Packages are folder with __init__().py file in them.
-    
-## OOP concepts
 
-* Inheritance: Inherit a base class to use its methods inside child's class. Multilevel and Multiple inheritence are supported in python.
-super() method can instantiate parent class inside child class, so parent's methods can be used inside child's class/instance also. Method Resolution Order ensures that the child class always appears first than parent class.
-* Encapsulation: Restrict access to methods and variables inside class. Inside a class, use "_" underscroll for private, and "__" double underscroll for protected.
-* Polymorphism: The ability of an object to take on many forms. 
-  1. Method overloading: Use same function name but have different input parameters, this functionality is not supported in python.
-  2. Method overriding: Use same function name but on/in different objects/classes. Like 2 clases can have same named of functions, but thier functionality differ as the object.
-* Abstraction: Hiding internal details and showing only functionality. Such as importing from a module and using a function inside your class's method using decorator.
+### Abstraction
+Hiding internal details and showing only functionality. Such as importing from a module and using a function inside your class's method using decorator.
 
 ### Extras
 
