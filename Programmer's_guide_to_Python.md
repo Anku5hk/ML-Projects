@@ -367,7 +367,7 @@ print(list(filter(myfun, [1,2,3,4]))) # returns [4]
 * A function can be defined to perform some operation/task on some data/variables/sequences, it can or cannot return something (in Python, None is returned by default). 
 * Functions in python are first class which means they behave just like an object, they can be stored as vairable or passed as argument to other functions.
 * [Quick] Parameters vs arguments: Parameters are the ones which are defined in function defination, arguments are passed when function is called. 
-* Functions support Packing and Unpacking varaibles into tuple/dict, Packing is when we pass more than number of defined variables to a function. It is used when we are not sure of number of arguments/want to pass some extra, they should always be the last parameters in function(or they'll contain all the values). Unpacking is when a list/tuple/dict is passed which then unpacks as arguments to a function. Now passing tuple/list can be done with * (which are called passing args) and passing dict requires ** (which are called passing kwargs), follwed by seqeunce's name. Eg /*my_tuple and /*/*my_dict.
+* Functions support Packing and Unpacking varaibles into tuple/dict, Packing is when we pass more than number of defined variables to a function. It is used when we are not sure of number of arguments/want to pass some extra, they should always be the last parameters in function(or they'll contain all the values). Unpacking is when a list/tuple/dict is passed which then unpacks as arguments to a function. Now passing tuple/list can be done with * (which are called passing args) and passing dict requires ** (which are called passing kwargs), follwed by seqeunce's name. Eg \*my_tuple and \*\*my_dict.
 * Usage:
 
 ```Python
@@ -502,7 +502,7 @@ class MyClass2:
 ### Extras
 * Namespaces are collection of names, python maintain namespaces and thier scopes automatically just like in any programming language. There are built-in(readily available functions like print,len), global(which user defines outside of any function/class), local(user defines inside a function/class) namespaces.
 * Module is simply a python file(with .py extension), dir() can be used to find variables/fucntions/class inside module. Python looks for modules in a sequence, local dir(where current .py is located), PYTHONPATH(given python dir path, PYTHONPATH is a env var which is used to define python dirs), then lastly inside python installation directory. This does means any module with repeating name will be given priority according to this sequecnce.
-* Packages are folder with /_/_init/_/_().py file in them.
+* Packages are folder with \_\_init\_\_().py file in them.
 ```Python
 ## Namespaces
 # built-in namespace
@@ -653,24 +653,24 @@ output2 = MyParent1.other_method(child, 2) # 4
 ```
 
 ### Encapsulation
-Restrict access to methods and variables inside class. Inside a class, use "/_" underscroll for private, and "/_/_" double underscroll for protected. use global keyword and more.
+Restrict access to methods and variables inside class. Inside a class, use "\_" underscroll for private, and "\_\_" double underscroll for protected. use global keyword and more.
 ### Polymorphism
 The ability of an object to take on many forms. 
   1. Method overloading: Use same function name but have different input parameters, this functionality is not supported in python.
   2. Method overriding: Use same function name but on/in different objects/classes. Like 2 clases can have same named of functions, but thier functionality differ as the object.
-* Class methods that begin & end with double underscore "/_/_" are called special functions in Python
+* Class methods that begin & end with double underscore "\_\_" are called special functions in Python
 * Function Overloading: is changing the default functionality of a function for that particular object.
-eg def /_/_len/_/_(self) if a special function, when overriden the functionality changes will reflect on calling len(my_instance).
+eg def \_\_len\_\_(self) if a special function, when overriden the functionality changes will reflect on calling len(my_instance).
 * Operator Overloading: similar to Function Overloading but for a operator, when a class implements a particular operator function
 (which is a special function in python) and changes its functionality(does something and returns something), that functionality is applicable to that object/instance.
-eg for '+' operator /_/_add/_/_() can be defined inside a class and the functionality is change will reflect to the instance.
+eg for '+' operator \_\_add\_\_() can be defined inside a class and the functionality is change will reflect to the instance.
 
 ### Abstraction
 Hiding internal details and showing only functionality. Such as importing from a module and using a function inside your class's method using decorator.
 
 ### Extras
 
-* Iterators: Objects that can be iterated using loops. It implements /_/_iter/_/_() and /_/_next/_/_() special functions. These can be implemented in custom class to make that object iterable.
+* Iterators: Objects that can be iterated using loops. It implements \_\_iter\_\_() and \_\_next\_\_() special functions. These can be implemented in custom class to make that object iterable.
 * Generators: Are lazy iterators, they return value when they are called. A loop inside a generator uses yeild instead of return.
 The yeild keyword saves state and function values changes over the function's lifetime, so it can be intertupted and resumed whenever inside a program
 The same is not true for return, it removes the function as soon as execution is finished/interupted. 
