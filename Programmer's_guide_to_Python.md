@@ -463,7 +463,7 @@ my_var = my_function(1,1) # returns 2 inside my_var
 * Instance: Is a object of a class, it is created using the class. This instance or object then is used to perform operations/tasks that class is designed to.  
 * Constructor: class does/not have a constructor, which is a function that is called when the class's object is instantiated(when instance is created), 
 A default constructor does not have parameters and parameterized constructor does.
-* Methods: Function inside class are called as methods. They should have 'self' object as the first parameter inside defination, not required when calling that method.
+* Methods: Functions inside class are called as methods. They should have 'self' object as the first parameter inside defination, not required when calling that method.
 self is nothing but instance of that class. When a instance calls a method, the calling instance gets passed automatically by python as self object to that method.
 * Usage:
 ```Python
@@ -500,6 +500,39 @@ class MyClass2:
 ```
 
 ### Extras
+* [Quick] Class and Instance variables/methods: Class variables/methods can be accessed by instance/class, only one copy is created so every instance/class refers to this copy. Instance variables/methods can be accessed by instances only and not class.
+```Python
+class MyClass: 
+  # class variables
+  my_var1 = 20
+  my_var2 = 10
+  
+  # instance methods
+  def __init__(self):
+    # instance variables
+    self.other_var1 = 30 
+    self.other_var2 = 40
+  def fun1(self):
+    print("This is instance method")
+  
+  # class method
+  @classmethod
+  def fun2(self):
+    print("This is class method")
+ 
+# instance access    
+my_instance = MyClass()
+print(my_instance.my_var1) # can access
+print(my_instance.other_var1) # can access
+print(my_instance.fun1()) # can access
+print(my_instance.fun2()) # can access
+ 
+# class access
+print(MyClass.my_var1) # can access
+print(MyClass.fun2()) # can access
+print(MyClass.other_var1) # can't access
+print(MyClass.fun1()) # can't access
+```
 * Namespaces are collection of names, python maintain namespaces and thier scopes automatically just like in any programming language. There are built-in(readily available functions like print,len), global(which user defines outside of any function/class), local(user defines inside a function/class) namespaces.
 * Module is simply a python file(with .py extension), dir() can be used to find variables/fucntions/class inside module. Python looks for modules in a sequence, local dir(where current .py is located), PYTHONPATH(given python dir path, PYTHONPATH is a env var which is used to define python dirs), then lastly inside python installation directory. This does means any module with repeating name will be given priority according to this sequecnce.
 * Packages are folder with \_\_init\_\_().py file in them.
@@ -540,7 +573,9 @@ my_var = math() # this math does something else
 ## OOP concepts
 
 ### Inheritance
-Inherit a base class to use its methods inside child's class and not the other way. Multilevel and Multiple inheritence are also supported in python. super() method can be used to access parent's methods inside child class, it returns a temporary object of parent class which can be used to access to all of its methods. Method Resolution Order (MRO) is the order in which Python looks for a method in a hierarchy of classes. The general order is child, parent1, parent2..., when a method/variable is to searched, it is looked for in this order. Any name collision is avoided using this order.
+* Inherit a base class to use its methods inside child's class and not the other way. Multilevel and Multiple inheritence are also supported in python.
+* super() method can be used to access parent's methods inside child class, it returns a temporary object of parent class which can be used to access to all of its methods. 
+* Method Resolution Order (MRO) is the order in which Python looks for a method in a hierarchy of classes. The general order is child, parent1, parent2..., when a method/variable is to searched, it is looked for in this order. Any name collision is avoided using this order.
 ```Python
 ## Single Inheritance
 class MyParent:
@@ -653,7 +688,35 @@ output2 = MyParent1.other_method(child, 2) # 4
 ```
 
 ### Encapsulation
-Restrict access to methods and variables inside class. Inside a class, use "\_" underscroll for private, and "\_\_" double underscroll for protected. use global keyword and more.
+* Restrict access to methods and variables inside class using access modifier. Inside a class, use "\_" underscroll for protected, and "\_\_" double underscroll for private. 
+* [Quick] Access modifiers: 
+  1. Public: Can be accessed anywhere in the program.
+  2. Protected: Only the current class and derived class can access them.
+  3. Private: Only the current class can acecss them, not even instance can access them.
+* Use global keyword and more.
+```Python
+class MyClass:
+  def __init__(self):
+      self.my_var1 = 10 # public variable
+      self._my_var2 = 20 # protected variable
+      self.__my_var3 = 30 # private variable
+
+class MyClass1(MyClass):
+  def __init__(self):
+      super().__init__()
+
+# instance 
+my_instance = MyClass()
+print(my_instance.my_var1) # can be accessed
+print(my_instance._my_var2) # can be accessed
+print(my_instance.__my_var3) # can't be accessed, private variable
+
+# inherited class
+my_instance = MyClass1()
+print(my_instance.my_var1) # can be accessed
+print(my_instance._my_var2) # can be accessed
+print(my_instance.__my_var3) # can't be accessed, private variable
+```
 ### Polymorphism
 The ability of an object to take on many forms. 
   1. Method overloading: Use same function name but have different input parameters, this functionality is not supported in python.
