@@ -737,14 +737,36 @@ print(my_instance.__my_var3) # can't be accessed, private variable
 print(my_instance.__dict__) # this shows even shows private variables
 print(my_instance._MyClass__my_var3) # which then further can be accessed using the naming convention
 ```
-* Extras: Some keyword to modify scope of variables.
-1. local:
-2. non-local:
-3. global: Acesses/modify variable with global scope inside a funtion/method. 
-```Python
-## local, non-local and global
+* Extras: Some keywords to modify scope of variables.
+1. nonlocal: To modify variable of local scope inside a nested function.
+2. global: To modify variable with global scope inside a funtion. 
+```Python 
+## global
+# my_var1 and my_var2 have global scope 
+my_var1 = 10 
+my_var2 = 20
+def some_fun():
+  global my_var1 # declaring my_var1 as global, so now it can be modified for global scope
+  my_var1 = 30
+  my_var2 = 40
+  
+some_fun()
+print(my_var1, my_var2) # 10, 40
 
 
+## non-local 
+def some_fun():
+  # my_var1 and my_var2 have local scope 
+  my_var1 = 10
+  my_var2 = 20
+  
+  def some_nested_fun():
+    nonlocal my_var2 # declaring my_var2 as nonlocal, so now it can be modified for some_fun's scope
+    my_var1 = 30
+    my_var2 = 40
+
+some_nested_fun()
+print(my_var1, my_var2) # 10, 40    
 ```
 
 ### Polymorphism
