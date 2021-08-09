@@ -468,12 +468,13 @@ class MyClass:
 
 ### Class
 * Class: Is a blueprint of object. Which defines what the object holds(which variables/data types), what methods/operations can be performed on that object. 
-* Instance: Is a object of a class, it is created using the class. This instance or object then is used to perform operations/tasks that class is designed to.  
+* Instance: Is a object of a class, it is created using the class. This instance or object then is used to perform operations/tasks that class is designed to. A instance has its own state, so modifying some variables will only reflect changes for that particular instance only.  
 * Constructor:  Class does/not have a constructor, which is a function that is called when the class's object is instantiated(when instance is created), 
 A default constructor does not have parameters and parameterized constructor does.
 * Methods: Functions inside class are called as methods. They should have 'self' object as the first parameter inside defination, not required when calling that method.
 self is resembles the instance of that class. When a instance calls a method, the calling instance gets passed automatically by python as self object to that method, explained more below.
 * Usage:
+
 ```Python
 # define class
 class MyClass: # python defines empty constructor automatically in background, if not provided
@@ -512,8 +513,10 @@ class MyClass2:
  # the 'self' keyword ressembles the instance object, which is here 'my_instance'
 ```
 
-### Extras
-* [Quick] Class and Instance variables/methods: Class variables/methods can be accessed by instance/class, only one copy is created so every instance/class refers to this copy. Instance variables/methods can be accessed by instances only and not class.
+* Types of methods/variables in class:
+1. Class: Class variables/methods can be accessed by instance/class, only one copy is created so every instance/class refers to this copy. They are defined using classmethod as decoration, these methods take class as first argument(which like self is passed by python in background). These methods have access to class state, the changes are reflected into these methods.
+2. Static: 
+3. Instance: Instance variables/methods can be accessed by instances only and not class. They have access to instance state, so changes in instance variables can be reflected in its methods.  
 ```Python
 class MyClass: 
   # class variables
@@ -533,6 +536,9 @@ class MyClass:
   def fun2(self):
     print("This is class method")
  
+ 
+ 
+ 
 # access using instance    
 my_instance = MyClass()
 print(my_instance.my_var1) # can access
@@ -545,6 +551,12 @@ print(MyClass.my_var1) # can access
 print(MyClass.fun2()) # can access
 print(MyClass.other_var1) # can't access
 print(MyClass.fun1()) # can't access
+```
+### Extras
+
+* Decorators: Are used wrap another function to basically extend its functionality. It is simply running a function just before a wraped function. This allows to extend the wraped function's behaviour without actually modifying the function itself. Using @ prefix a fucntion can be decorated.
+```Python
+
 ```
 * Namespaces are collection of names, python maintain namespaces and thier scopes automatically just like in any programming language. There are built-in(readily available functions like print,len), global(which user defines outside of any function/class), local(user defines inside a function/class) namespaces.
 * Module is simply a python file(with .py extension), dir() can be used to find variables/fucntions/class inside module. Python looks for modules in a sequence, local dir(where current .py is located), PYTHONPATH(given python dir path, PYTHONPATH is a env var which is used to define python dirs), then lastly inside python installation directory. This does means any module with repeating name will be given priority according to this sequecnce.
@@ -738,30 +750,32 @@ print(my_instance.__dict__) # this shows even shows private variables
 print(my_instance._MyClass__my_var3) # which then further can be accessed using the naming convention
 ```
 * Extras: Some keywords to modify scope of variables.
-1. nonlocal: To modify variable of local scope inside a nested function.
-2. global: To modify variable with global scope inside a funtion. 
+1. global: To modify variable with global scope inside a funtion.  
+2. nonlocal: To modify variable of local scope inside a nested function.
 ```Python 
 ## global
 # my_var1 and my_var2 have global scope 
 my_var1 = 10 
 my_var2 = 20
 def some_fun():
-  global my_var1 # declaring my_var1 as global, so now it can be modified for global scope
-  my_var1 = 30
-  my_var2 = 40
+  # declaring my_var1 as global, so now it can be modified for global scope
+  global my_var1 
+  my_var1 = 30 # modifying for 
+  my_var2 = 40 # modifying only for local scope
   
 some_fun()
 print(my_var1, my_var2) # 10, 40
 
 
-## non-local 
+## nonlocal 
 def some_fun():
   # my_var1 and my_var2 have local scope 
   my_var1 = 10
   my_var2 = 20
   
   def some_nested_fun():
-    nonlocal my_var2 # declaring my_var2 as nonlocal, so now it can be modified for some_fun's scope
+    # declaring my_var2 as nonlocal, so now it can be modified for some_fun's scope
+    nonlocal my_var2 
     my_var1 = 30
     my_var2 = 40
 
