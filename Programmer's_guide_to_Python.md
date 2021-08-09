@@ -1,5 +1,5 @@
 # Programmer's guide to Python (Work in Progress).
-What is this: Is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python to cover almost everything of python while saving you tons of time. Also the one who have taken python course from somewhere else and now wants to solidfy the learning can benefit. But ofcourse you should practice on your own. I would suggest typing and running your own programs while going through.  
+What is this: Is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python, to check almost all boxes requirements of python while saving you tons of time. The one who have taken python course from somewhere else can also use this as to solidfy their learning. But ofcourse you should practice on your own. I would suggest typing & running your own programs and maintain your own notes.  
 
 What's not this: Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the concepts here in a simplest possible manner.  
 
@@ -533,14 +533,14 @@ class MyClass:
   def fun2(self):
     print("This is class method")
  
-# instance access    
+# access using instance    
 my_instance = MyClass()
 print(my_instance.my_var1) # can access
 print(my_instance.other_var1) # can access
 print(my_instance.fun1()) # can access
 print(my_instance.fun2()) # can access
  
-# class access
+# access using class
 print(MyClass.my_var1) # can access
 print(MyClass.fun2()) # can access
 print(MyClass.other_var1) # can't access
@@ -680,8 +680,8 @@ class MyChild(MyParent1, MyParent2): # inherite MyParent1 and MyParent2 class
       print(self.para1) # 10
       
       # initialize MyParent2 with class name and passing MyChild(i.e self)
-      # super() initializes each parent on its own when child's instance is created, so this step is optional
-      # but this can be done when MyParent2's is to be acessed in MyChild's init 
+      # super().__init__() initializes each parent on its own when child's instance is created, so this step is optional
+      # but this can also be done when MyParent2's is to be acessed inside MyChild's init 
       MyParent2.__init__(self)
       print(self.para1) # 20
       print(self.para2) # can be accessed right here 
@@ -709,7 +709,6 @@ output2 = MyParent1.other_method(child, 2) # 4
   2. Protected: Only the current class and derived class can access them.
   3. Private: Only the current class can acecss them, not even instance can access them.
 In python, all variables are public by default, the way private/protected are implemented they don't really work as one would expect.
-* Use global keyword and more.
 ```Python
 class MyClass:
   def __init__(self):
@@ -721,13 +720,13 @@ class MyClass1(MyClass):
   def __init__(self):
       super().__init__()
 
-# access by instance 
+# access by parent's instance 
 my_instance = MyClass()
 print(my_instance.my_var1) # can be accessed
 print(my_instance._my_var2) # can be accessed
 print(my_instance.__my_var3) # can't be accessed, private variable
 
-# access by inherited class
+# access by child's instance class
 my_instance = MyClass1()
 print(my_instance.my_var1) # can be accessed
 print(my_instance._my_var2) # can be accessed
@@ -737,6 +736,15 @@ print(my_instance.__my_var3) # can't be accessed, private variable
 # this process is name mangling, which uses _CLASSNAME prefix for private variable 
 print(my_instance.__dict__) # this shows even shows private variables
 print(my_instance._MyClass__my_var3) # which then further can be accessed using the naming convention
+```
+* Extras: Some keyword to modify scope of variables.
+1. local:
+2. non-local:
+3. global: Acesses/modify variable with global scope inside a funtion/method. 
+```Python
+## local, non-local and global
+
+
 ```
 
 ### Polymorphism
