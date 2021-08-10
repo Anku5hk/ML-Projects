@@ -902,6 +902,7 @@ my_ins1 = MyClass(10, 20, 30, 40)
 my_ins2 = MyClass(10, 20, 30, 40)
 print(my_ins1 + my_ins2)
 ```
+
 ### Abstraction
 Hiding internal details and showing/accessing only functionality. Such as importing from a module and using that function in current module. Now without looking inside that module the code/algorithm of working would be unknown. Python does not have 'abstract' keyword like java, so for class abstraction we cannot declare methods that need to be implemented. But similar can be achieved anyway.   
 ```Python
@@ -920,6 +921,7 @@ class MyBaseClass:
     # check if __len__() function is implemented, if not raise NotImplementedError
     if '__len__' not in dir(MyClass):
       raise NotImplementedError("Implementaion of __len__ is required")
+    # or   
   
   # or the base class will raise NotImplementedErroron on call
   def __str__(self):
@@ -928,11 +930,68 @@ class MyBaseClass:
 
 ### Extras
 
-* Iterators: Objects that can be iterated using loops. It implements \_\_iter\_\_() and \_\_next\_\_() special functions. These can be implemented in custom class to make that object iterable.
-* Generators: Are lazy iterators, they return value when they are called. A loop inside a generator uses yeild instead of return.
-The yeild keyword saves state and function values changes over the function's lifetime, so it can be intertupted and resumed whenever inside a program
-The same is not true for return, it removes the function as soon as execution is finished/interupted. 
-For longer iteration(larger data) generators are prefered because they are memory efficint(like in torch and tensorflow dataloader objects).
+* Iterators: Are objects that can be iterated using loops, these aren't necessarily list. It implements \_\_iter\_\_() and \_\_next\_\_() special functions. These can be implemented inside a class to make it's object iterable.
+* Generators: Generators functions are lazy iterators, they return value when next() function is called upon. They can/cannot have loops in them. yeild makes a function iterable with/without loops. The 'yeild' keyword saves state, iterating value changes over the function's lifetime, so unlike regular loops which removes loop state as soon as execution is finished/interupted, it can be intertupted and resumed whenever inside a program. For longer iteration(larger data) generators are prefered because they are memory efficient, in a sense the can be utilized to generate data required in time and not before time. Generators can also be created using similar to list comprehension, using rounded brackets.
+
+```Python
+## Iterators
+## user-defined iterators
+class SquareIterator:
+  """SquareIterator takes items and returns item's square upon call"""
+  def __init__(self, *args):
+    self.args = args
+    self.iter_len = len(args)-1
+  def __iter__(self):
+    """This method is used to initilize a iterator, it returns an iterator object."""
+    self.idx = -1 # we initialize index
+    return self
+  def __next__(self):
+    """This method is used to fetch next value, it can be called or loops do call it automatically."""
+    self.idx += 1  
+    if self.idx > self.iter_len:
+      raise StopIteration
+    return self.args[self.idx]**2
+
+my_iter = SquareIterator(10,20,30,40,50)  
+# initialize iterator
+my_iter = iter(my_iter) 
+# iterate values using next
+print(next(my_iter)) # 100
+# same as next(my_iter)
+print(my_iter.__next__()) # 400
+
+# for loop call __iter__ and __next__ functions on a iterable
+for v in my_iter:
+  print(v)
+  
+# use hasattr to check if some object has some particular function 
+print(hasattr(my_iter, "__iter__")) # True
+print(hasattr(list, '__iter__')) # True
+print(hasattr(tuple, '__iter__')) # True
+
+
+## Generators
+# basic generator
+def my_generator(*args):
+  for a in args:
+    yield a
+generator = my_generator(10,20,30,40,50)
+# or using comprehension
+generator = (a for a in [10,20,30,40,50])
+print(type(generator)) # <class 'generator'>
+print(next(generator)) # 10
+# loop over all values, stop at StopIteration
+for a in generator:
+  print(a)
+
+# generator without loop
+def my_generator():
+  yield 1
+  yield 2
+  yield 3
+for a in my_generator():
+  print(a)
+```
 
 ### Regex in python(Work in Progress)
 
