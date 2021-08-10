@@ -378,10 +378,15 @@ def my_function1(): # Non-parameterize function which returns nothing
 def my_function2(var1, var2): # function with parameter which returns nothing
   # do something  
 
+# alternative way is to describe the input/return type hints
+# As they are just hints, it does not matter what is send/returned
+def my_function2(var1: int, var2: int) -> None: 
+
 def my_function3(var1, var2, var3, do_something=False): # default parameters should always follow later
   if do_something:
     # did something
     return var1 + var2 + var3
+
 
 # calling a function
 my_var = my_function1() # returns None by default
@@ -593,7 +598,7 @@ def my_fun(a,b):
 print(my_fun(10,20))
 ```
 * Namespaces are collection of names, python maintain namespaces and thier scopes automatically just like in any programming language. There are built-in(readily available functions like print,len), global(which user defines outside of any function/class), local(user defines inside a function/class) namespaces.
-* Module is simply a python file(with .py extension), dir() can be used to find variables/fucntions/class inside module. Python looks for modules in a sequence, local dir(where current .py is located), PYTHONPATH(given python dir path, PYTHONPATH is a env var which is used to define python dirs), then lastly inside python installation directory. This does means any module with repeating name will be given priority according to this sequecnce.
+* Module is simply a python file(with .py extension), dir() can be used to find variables/fucntions/class inside module. Python looks for modules in a sequence local dir(where current .py is located) -> PYTHONPATH(given python dir path, PYTHONPATH is a env var which is used to define python dirs) ->  lastly inside python installation directory. This does means any module with repeating name will be given priority according to this sequecnce.
 * Packages are folder with \_\_init\_\_().py file in them.
 ```Python
 ## Namespaces
@@ -611,6 +616,8 @@ def my_fun():
 
 
 ## Modules
+# modules can be imported anywhere in python, there is no restriction
+# but for readability they are imported at the beginning
 import math #  math is built-in module, now the name 'math' refers to module math
 # any functions/classes/varibles of math can be accessed using '.' operator
 my_var = math.sqrt(8) # acessing function from math
@@ -819,17 +826,105 @@ print(my_var1, my_var2) # 10, 40
 
 ### Polymorphism
 * [Quick] The ability of an object to take on many forms. 
-  1. Method overloading: A class can have same named methods but have distinct input parameters, this functionality is not supported in python.
-  2. Method overriding: Use same named functions but inside different classes. Two clases can have same named functions, but thier functionality differ as the class.
-* Class methods/variables that begin & end with double underscore "\_\_" are special variables/methods(also called dunder methods) in Python. 
-* Function Overloading: is changing the default functionality of a function for that particular object.
-eg def \_\_len\_\_(self) if a special function, when overriden the functionality changes will reflect on calling len(my_instance).
-* Operator Overloading: similar to Function Overloading but for a operator, when a class implements a particular operator function
-(which is a special function in python) and changes its functionality(does something and returns something), that functionality is applicable to that object/instance.
-eg for '+' operator \_\_add\_\_() can be defined inside a class and the functionality is change will reflect to the instance.
+  1. Method overloading: A class can have same named methods but should have distinct input parameters, this functionality is not supported in python. As the methods with same name are overwritten by the newer ones. Usally other parameters are set to None and are checked thourghout using if..else or isinstance() function for achieving the same, but similar thing can be achieved using [multipledispatch](https://github.com/mrocklin/multipledispatch) or [plum](https://github.com/wesselb/plum).
+  2. Method overriding: Use same named functions but inside different classes. Two clases can have same named functions, but the functionality differ with thier class.
+```Python
+## method overloading
+class MyClass:
+  def my_fun(a):
+    print(a)
+  def my_fun(a,b):
+    print(a+b)  
+my_ins = MyClass()
+my_ins.my_fun(1,2) # 3
+# calling first function, but it is overwritten by second with 2 parameters
+# so will raise error, missing argument
+# simple workaround will be to use if..else
+my_ins.my_fun(1) 
 
+
+## method overriding
+class A:
+  my_list = [10, 20, 30, 40]
+  def return_addition():
+    """Returns addition of list elements"""
+    return sum(my_list)
+    
+class B:
+  my_dict = {"key1":10, "key2":20, "key3":30, "key4":40}
+  def return_addition():
+    """Returns addition of dict elements"""
+    return sum(my_dict.values())
+
+a = A()
+b = B()
+a.return_number(10) # 100
+b.return_number(10) # 100
+```
+
+* Class methods/variables that begin & end with double underscore "\_\_" are special variables/methods(also called dunder methods) in Python. 
+* Function overriding: Changing the default functionality of a built-in function for that particular object. 
+* Operator Overloading: Make operators work for user-defined classes, when a class implements a particular operator function(which is a special function in python) and changes its functionality(does something and returns something), that functionality is applicable to that class using that operator.
+```Python
+## Function Overriding
+class MyClass:
+  def __init__(self, *args):
+    self.args = args
+
+  def __len__(self):
+    """This is a special function, defining this inside a class enables function overriding."""
+    return len(self.args)
+  
+  # Notice: this method is commented so will not execute
+  # def __str__(self):
+    # """Similarly this is for print functionality for this object"""
+    # return " ".join((str(a) for a in self.args))  
+ 
+my_ins = MyClass(10, 20, 30)
+# now as the __len__ is implemented this will return the output  
+print(len(my_ins)) # 3
+# this will return address of this object by default, 
+print(my_ins) 
+# uncomment __str__() and re-run to see change in its functionality
+
+
+## Operator Overloading
+class MyClass:
+  def __init__(self, *args):
+    self.args = args
+
+  def __add__(self, my_obj):
+    """Define functionality behaviour for + operator inside this method, the input parameter can be any 
+    type as required. Just the functionality defined should support it."""
+    return sum(self.args) + sum(my_obj.args)
+    
+my_ins1 = MyClass(10, 20, 30, 40)
+my_ins2 = MyClass(10, 20, 30, 40)
+print(my_ins1 + my_ins2)
+```
 ### Abstraction
-Hiding internal details and showing only functionality. Such as importing from a module and using that function in current module.
+Hiding internal details and showing/accessing only functionality. Such as importing from a module and using that function in current module. Now without looking inside that module the code/algorithm of working would be unknown. Python does not have 'abstract' keyword like java, so for class abstraction we cannot declare methods that need to be implemented. But similar can be achieved anyway.   
+```Python
+## Abstraction using module
+import math
+
+# here sqrt method is abstracted, we don't know the exact detail of working
+# i.e we dont know about the working code of math.sqrt() inside this current module, we just know what it does
+# similar can be said about user defined module and running it in another module
+print(math.sqrt(16))
+
+
+## Abstraction using class
+class MyBaseClass:
+  def __init__(self):
+    # check if __len__() function is implemented, if not raise NotImplementedError
+    if '__len__' not in dir(MyClass):
+      raise NotImplementedError("Implementaion of __len__ is required")
+  
+  # or the base class will raise NotImplementedErroron on call
+  def __str__(self):
+    raise NotImplementedError("Implementaion of __str__ is required")
+```
 
 ### Extras
 
