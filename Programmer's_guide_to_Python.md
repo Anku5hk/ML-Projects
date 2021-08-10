@@ -364,7 +364,7 @@ print(list(filter(myfun, [1,2,3,4]))) # returns [4]
 ## Classes and Functions
 
 ### Functions
-* A function can be defined to perform some operation/task on some data/variables/sequences, it can or cannot return something (in Python, None is returned by default). 
+* A function can be defined to perform some operation/task on some data/variables/sequences, it can/can't have paramerters, it can/cannot return something (in Python, None is returned by default if not defined). 
 * Functions in python are first class which means they behave just like an object, they can be stored as vairable or passed as argument to other functions.
 * [Quick] Parameters vs arguments: Parameters are the ones which are defined in function defination, arguments are passed when function is called. 
 * Functions support Packing and Unpacking varaibles into tuple/dict, Packing is when we pass more than number of defined variables to a function. It is used when we are not sure of number of arguments/want to pass some extra, they should always be the last parameters in function(or they'll contain all the values). Unpacking is when a list/tuple/dict is passed which then unpacks as arguments to a function. Now passing tuple/list can be done with * (which are called passing args) and passing dict requires ** (which are called passing kwargs), follwed by seqeunce's name. Eg \*my_tuple and \*\*my_dict.
@@ -471,8 +471,7 @@ class MyClass:
 * Instance: Is a object of a class, it is created using the class. This instance or object then is used to perform operations/tasks that class is designed to. A instance has its own state, so modifying some variables will only reflect changes for that particular instance only.  
 * Constructor:  Class does/not have a constructor, which is a function that is called when the class's object is instantiated(when instance is created), 
 A default constructor does not have parameters and parameterized constructor does.
-* Methods: Functions inside class are called as methods. They should have 'self' object as the first parameter inside defination, not required when calling that method.
-self is resembles the instance of that class. When a instance calls a method, the calling instance gets passed automatically by python as self object to that method, explained more below.
+* Methods: Functions that are inside class are called as methods. They should have 'self' object as the first parameter inside defination, not required when calling that method. self is resembles the instance of that class. When a instance calls a method, the calling instance gets passed automatically by python as self object to that method, explained more below.
 * Usage:
 
 ```Python
@@ -513,10 +512,11 @@ class MyClass2:
  # the 'self' keyword ressembles the instance object, which is here 'my_instance'
 ```
 
-* Types of methods/variables in class:
-1. Class: Class variables/methods can be accessed by instance/class, only one copy is created so every instance/class refers to this copy. They are defined using classmethod as decoration, these methods take class as first argument(which like self is passed by python in background). These methods have access to class state, the changes are reflected into these methods.
-2. Static: 
-3. Instance: Instance variables/methods can be accessed by instances only and not class. They have access to instance state, so changes in instance variables can be reflected in its methods.  
+* Types of methods in class:
+1. Class: Class methods are bound to classes and not instances. These methods have access to class state, so they can access class variables/methods and modify class variables. Unlike instance only one copy is created so every instance/class refers to this copy. Class methods can be accessed by both instance and class. They are defined using classmethod as decoration, these methods should have class as first parameter(which unlike self can be of any name, CLS is prefered) which can be used to access other class variables/methods inside these methods.
+2. Instance: Instance methods are bound to instances. They have access to instance and class state, so they can access both class & instance variables/methods and also modify class & instance variables. Instance methods can be only accessed by instances and not class. A normal function inside a class is a instance method, these methods should have self as first parameter, which is used to access the instance's/class's variables/methods inside these methods.
+3. Static: Static methods are also bound to classes. But they don't have access to instance/class state. So they can't access/modify any variables beside its local scope. These methods exist because that function has to belong to the class. They are defined using staticmethod as decoration, these methods are not required to pass class as first argument.
+
 ```Python
 class MyClass: 
   # class variables
@@ -528,16 +528,21 @@ class MyClass:
     # instance variables
     self.other_var1 = 30 
     self.other_var2 = 40
+    print(self.my_var1) # can also access class variable
   def fun1(self):
-    print("This is instance method")
+    print("This is a instance method")
   
   # class method
   @classmethod
-  def fun2(self):
+  def fun2(CLS):
+    print(CLS.my_var1) # access class variable
     print("This is class method")
  
- 
- 
+  # static method
+  @staticmethod
+  def fun3():
+    # can't access instance/class variable/methods, but can do its own task
+    print("This is static method")
  
 # access using instance    
 my_instance = MyClass()
@@ -545,18 +550,47 @@ print(my_instance.my_var1) # can access
 print(my_instance.other_var1) # can access
 print(my_instance.fun1()) # can access
 print(my_instance.fun2()) # can access
+print(my_instance.fun3()) # can access
  
 # access using class
 print(MyClass.my_var1) # can access
-print(MyClass.fun2()) # can access
 print(MyClass.other_var1) # can't access
 print(MyClass.fun1()) # can't access
+print(MyClass.fun2()) # can access
+print(my_instance.fun3()) # can access
 ```
+
 ### Extras
 
-* Decorators: Are used wrap another function to basically extend its functionality. It is simply running a function just before a wraped function. This allows to extend the wraped function's behaviour without actually modifying the function itself. Using @ prefix a fucntion can be decorated.
+* Decorators: Are used to wrap another function to basically extend its functionality. It is simply running a function inside another function, nested function. This allows to extend the wraped function's behaviour without actually modifying the function itself. Using @ prefix a function can be decorated. This functionality is utilized using functions being first class in python.
 ```Python
+def my_outer_func(some_func): # just a container function
 
+  # wrapper function
+  def my_wrapper_func(some_func_para1, some_func_para2): # my_wrapper_func does something before/after some_func 
+    # do something of my_wrapper_func
+    print("Wrapper function was called")
+    output = some_func(some_func_para1, some_func_para2) # call some_func, do something in it and return something if required
+    # do something extra
+    return output # return nothing if not required
+    
+  return my_wrapper_func # but need to return my_wrapper_func 
+
+
+## without using decorators
+def my_fun(a,b):
+  return a+b
+
+my_decorated_fun = my_outer_func(my_fun) 
+print(my_decorated_fun(10, 20))
+
+
+## using decorators
+@my_outer_func
+def my_fun(a,b):
+  return a+b
+
+print(my_fun(10,20))
 ```
 * Namespaces are collection of names, python maintain namespaces and thier scopes automatically just like in any programming language. There are built-in(readily available functions like print,len), global(which user defines outside of any function/class), local(user defines inside a function/class) namespaces.
 * Module is simply a python file(with .py extension), dir() can be used to find variables/fucntions/class inside module. Python looks for modules in a sequence, local dir(where current .py is located), PYTHONPATH(given python dir path, PYTHONPATH is a env var which is used to define python dirs), then lastly inside python installation directory. This does means any module with repeating name will be given priority according to this sequecnce.
@@ -786,7 +820,7 @@ print(my_var1, my_var2) # 10, 40
 ### Polymorphism
 * [Quick] The ability of an object to take on many forms. 
   1. Method overloading: A class can have same named methods but have distinct input parameters, this functionality is not supported in python.
-  2. Method overriding: Use same named functions but inside different classes. Like 2 clases can have same named of functions, but thier functionality differ as the class.
+  2. Method overriding: Use same named functions but inside different classes. Two clases can have same named functions, but thier functionality differ as the class.
 * Class methods/variables that begin & end with double underscore "\_\_" are special variables/methods(also called dunder methods) in Python. 
 * Function Overloading: is changing the default functionality of a function for that particular object.
 eg def \_\_len\_\_(self) if a special function, when overriden the functionality changes will reflect on calling len(my_instance).
@@ -795,7 +829,7 @@ eg def \_\_len\_\_(self) if a special function, when overriden the functionality
 eg for '+' operator \_\_add\_\_() can be defined inside a class and the functionality is change will reflect to the instance.
 
 ### Abstraction
-Hiding internal details and showing only functionality. Such as importing from a module and using a function inside your class's method using decorator.
+Hiding internal details and showing only functionality. Such as importing from a module and using that function in current module.
 
 ### Extras
 
@@ -804,7 +838,6 @@ Hiding internal details and showing only functionality. Such as importing from a
 The yeild keyword saves state and function values changes over the function's lifetime, so it can be intertupted and resumed whenever inside a program
 The same is not true for return, it removes the function as soon as execution is finished/interupted. 
 For longer iteration(larger data) generators are prefered because they are memory efficint(like in torch and tensorflow dataloader objects).
-* Decorators: Functions decorated get called before the underlying function. eg @function_name before def my_function() will execute function_name then my_function() on call of my_function.
 
 ### Regex in python(Work in Progress)
 
