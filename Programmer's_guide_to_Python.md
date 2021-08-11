@@ -193,14 +193,19 @@ my_dt.insert(y=20) # TypeError: Should be a String
 ```
 
 ### Extras
-* isinstance() function: Checks if a object is an instance of a particular class. Returns True/False.
+* Type conversion:
+
+
+
+
+* isinstance(): Checks if a object is an instance of a particular class. Returns True/False.
 ```Python
 a = 23
 isinstance(a, int) # True
 isinstance(a, float) # False
 isinstance(a, str) # False
 ```
-* type() function: Returns the class_name of an object.
+* type(): Returns the class_name of an object.
 ```Python
 a = "What?"
 type(a) # str
@@ -246,9 +251,9 @@ print(id(b)) # 2055638580288
 
 ## 3. Flow Control
 
-Unlike brackets in c,c++,java, Indentations are used for any Flow Control, Functions, Classes in python. Any expression or even comments should follow indentation.
-### if..else
+Unlike using brackets in c/c++/java indentations are used for any Flow Control, Functions, Classes in python. Any expression or even comments should follow indentation rule.
 
+### if...else
 ```Python
 my_var = 20
 my_var1 = None
@@ -258,10 +263,9 @@ if my_var == 20:
 elif my_var == 30:
   # do something else
 else:
-  # do nothing or anything
+  # just do this
   
-# == is used to check values are equal, usual  
-# only if condition after some variable/sequence to check if it is not None
+# using only if after some variable/sequence to check if it is not None
 if my_var:
   # my_var is not 'None', so will print 
   print(my_var)
@@ -281,7 +285,7 @@ if not my_var1:
 ### for loop
 ```Python
 my_list = [10,20,30,40,50]
-# loop by indexes
+# regular looping by indexes
 for i in range(len(my_list)):
   print(my_list[i])
 
@@ -295,7 +299,7 @@ for a in [10,20,30,40,50]:
 
 ### while loop
 ```Python
-# while loops are similar to c/c++/java
+# while loops are similar like in c/c++/java
 i=0
 my_list = [10,20,30,40,50]
 while i<len(my_list):
@@ -307,7 +311,7 @@ while i<len(my_list):
 
 * break: break from loop. 
 * continue: continue to next iteration.
-* pass: move on to next expression.
+* pass: move down to next expression.
 ```Python
 ## break and continue
 i=0
@@ -330,15 +334,14 @@ def my_fun():
 
 ## 4. Data Structures
 
-Data Structure is a way to store and organize data so that it can be used efficiently. They are used to store/retrive data from. Data can be data types or other data structure. Different data structures have thier advantages/disadvantages in terms of accessing/storing data speed, so they should be used as per the task. They can also be called literal collections.
+Data Structure is a way to store and organize data so that it can be used efficiently. They are used to store/retrive data from. Data can be data types or even other data structures. Different data structures have thier advantages/disadvantages in terms of accessing/storing/removing data speed, so they should be used as per the task. They can also be called literal collections.
 
 ### List
-Ordered collection of sequence of items, which can be of any data type. They are Mutable (values can be changed). Indexing is allowed and are iterable. They are array like implementation in python. They are generally prefered in most cases. Where indexing, looping over some items is reqiured lists are used.
+They are array like implementation in python. They are ordered collection of sequence of items, which can be of any data type. They are Mutable(values can be changed). Indexing, Slicing is supported and they are iterable objects. They are prefered in most use cases. Where indexing, looping over some items is reqiured lists are used.
 * Usage:
 ```Python
  # create list
  my_list = [1,2,3,'a','this way','cab',1.0,2.0]
- my_list = list(tuple)
 
  # add,remove
  my_var = 1
@@ -357,9 +360,12 @@ Ordered collection of sequence of items, which can be of any data type. They are
  my_list[5:] # ['cab',1.0,2.0]
  my_list[:3] # [1,2,3]
  my_list[:5:2] # [1, 3, 'this way']
- my_list[:-4] # [1, 2, 3, 'a'] # this is negative index which begins from end of list from 1
- my_list[::-1] # reverse a list [2.0, 1.0, 'cab', 'this way', 'a', 3, 2, 1]
- my_list[:] # or my_list.copy() to create a copy, which does not stays the same reference
+ # this is negative index which begins from end of list from 1
+ my_list[:-4] # [1, 2, 3, 'a']
+ # reverse a list
+ my_list[::-1] # [2.0, 1.0, 'cab', 'this way', 'a', 3, 2, 1]
+ # or my_list.copy() to create a copy, which does not stays the same reference
+ my_list[:] 
 
  # list comprehension
  my_list = [x for x in range(10)] # without condition
@@ -367,70 +373,92 @@ Ordered collection of sequence of items, which can be of any data type. They are
  my_list = [True if x > 5 else False for x in range(10)] # if with else condition
  
  # Some functions on list
- sorted(my_list, reverse=True) # returns sorted list of items in ascending order by default, sorting is O(nLogn)
- len(my_list) # return length of list
+ # returns sorted list of items in ascending order by default, sorting is O(nLogn)
+ sorted(my_list, reverse=True) 
+ # return length of list
+ len(my_list)
  
  # Some methods of list
  my_list.append() # adds value to the list 
- my_list.reverse() # reverses list
- my_list.sort() # sorts list
+ my_list.reverse() # reverses list inplace
+ my_list.sort() # sorts list inplace
  my_list.clear() # empty's list
- my_list.index() # returns index of first arival of value passed 
- my_list.pop() # removes value from a list given index
- my_list.remove() # removes value from a list given value
+ # returns index of first arival of value passed 
+ my_list.index(3) # 2 
+ # removes value from a list given index
+ my_list.pop(0) # 1
+ # removes value from a list given value
+ my_list.remove(2) 
+ 
+ # type conversion
+ my_list = list((1,2,3,4,5)) # tuple to list
+ my_list = list({1,2,3,4,5}) # set to list
 ```
-
-* Some other usage:
-  1. Use as stack: my_list.append(value) and my_list.pop().
-  2. Use as queue: my_list.append(value) and my_list.pop(0).
-* BigO: Indexing and get_length are O(1), all other are O(n).
+* Time Complexity:</br>
+indexing, appending and get_length are O(1).</br>
+deleting, poping, inserting, iteration are O(n).
 
 ### Tuple
-Ordered collection of sequence of items. They are Immutable(values cannot be changed), so they are prefered when data should not be changed and so iterating is slightly faster than list.
-Indexing is allowed and are iterable. They are used to store different items, unlike list which are mostly used for similar items. 
+Are ordered collection of sequence of items similar to lists. But unlike list they are Immutable(values cannot be changed), so they are prefered when data should not be changed and so iterating is slightly faster than list. Indexing, Slicing is supported and they are iterable objects just like lists, but no tuple comprehension(it becomes a generator). They are used to store different data type items, unlike list which are mostly used for sotring similar items, but either way is also valid. 
 * Usage:
-
 ```Python
 my_tuple = (1,2,3,'we','are','one',5.0)
 
 # acessing element
-my_tuple[0] = my_var # not okay, TypeError
+my_var = 10
 my_var = my_tuple[0] # okay
+my_tuple[0] = my_var # not okay because Immutable, raises TypeError
 
 # slicing tuple
 my_tuple[3:5] # ('we','are')
 my_tuple[5:] # ('one',5.0)
 my_tuple[:3] # (1,2,3)
 my_tuple[:5:2] # (1, 3, 'are')
-my_tuple[:-4] # (1, 2, 3) # this is negative index which begins from end of tuple from 1
-my_tuple[::-1] # reverse a tuple (5.0, 'one', 'are', 'we', 3, 2, 1)
+# this is negative index which begins from end of tuple from 1
+my_tuple[:-4] # (1, 2, 3) 
+# reverse a tuple
+my_tuple[::-1] # (5.0, 'one', 'are', 'we', 3, 2, 1)
 
 # unpacking tuple
-a,b,c = (1,2,3) # unpacking values to a,b,c
-a,b,c = 1,2,3 # even this does the same, 1,2,3 become tuple and unpacks into a,b,c 
-a,b = b,a # this behaviour further aids swaping without using extra variable
+a,b,c = (1,2,3) # unpacking values into a,b,c
+# even this does the same, 1,2,3 becomes a tuple and then unpacks into a,b,c 
+# same is true when returing comma seperated values from a function 
+a,b,c = 1,2,3 
+# this behaviour further aids in swaping without using extra variable
+a,b = b,a 
 
 # Some functions on tuple
-sorted(my_tuple, reverse=True) # returns sorted tuple of items in ascending order by default, sorting is O(nLogn)
-len(my_tuple) # return length of tuple
+# returns sorted tuple of items in ascending order by default, sorting is O(nLogn)
+sorted(my_tuple, reverse=True) 
+# returns length of tuple
+len(my_tuple)
  
 # Some methods of tuple
 my_tuple.count(5.0) # Returns number of occurrences of value.
 my_tuple.index(3) # Returns first index of value.
 
+# type conversion
+my_tuple = tuple([1,2,3,4,5]) # list to tuple
+my_tuple = tuple({1,2,3,4,5}) # set to tuple
 ```
-* BigO: Indexing and get_length are O(1), all other are O(n).
+* Time Complexity:</br>
+indexing, appending and get_length are O(1).</br>
+deleting, poping, inserting, iteration are O(n).
 
 ### Set
-Unordered collection of non repeating sequence of items. Items/Members inside a set should be hashable, which means its hash value must never changes during its lifetime, immutable objects are hashable. This behaviour allows set to check if an object is unique from other members and also to perform operations like intersection, union. Sets are iterable, but Indexing/Slicing doesn't work as order does not matter. Sets are mostly used to maintain unique variables and to quickly check if the variable is already present in the set.
+Are unordered collection of non repeating sequence of items. Items/Members inside a set should be hashable, which means its hash value must never changes during its lifetime, immutable objects are hashable. This behaviour allows sets to check if a particular object is unique from other members and also to perform operations like intersection, union. Sets are iterable, but Indexing/Slicing doesn't work as thier order don't matter. Sets are mostly used to maintain unique variables and to quickly check if the variable is already present in the set. Like in BFS/DFS algorithms for checking visited nodes.
 * Usage:
 ```Python
 # create set
-my_set = set() or {3,45,5,3} or dict like parenthesis but without keys, it becomes set
-my_set = set(my_list) # here my_list is mutable, but set() function unpacks the items from my_list
+my_set = set() 
+# or dict like parenthesis but without keys, it becomes set eg. {1,2,3,4,5}
+# here my_list is mutable, but set() function unpacks the items from my_list
+my_list = [1,2,3,4,5]
+my_set = set(my_list) 
 # but if my_list contained list inside it, TypeError: unhashable type: 'list' is raised.
 
 # add, remove
+my_var = 4
 my_set.add(my_var) # if repeated value, it will not be added again 
 my_set.remove(my_var) # removes a member, raises KeyError if not found
 
@@ -438,51 +466,97 @@ my_set.remove(my_var) # removes a member, raises KeyError if not found
 my_set[0] # not allowed, TypeError: 'set' object is not subscriptable.
 for var in my_set:
    # do something with var
-if my_var in my_set: # check if my_var is inside my_set
-
+# check if my_var is inside my_set   
+if my_var in my_set: 
+  # true
+  
 # Some methods of sets
-my_set1.intersection(my_set2) # find intersection        # or my_set1 & my_set2 
-my_set1.union(my_set2) # to find union                   # or my_set1 | my_set2
-my_set1.update(my_set2) # concat my_set12 to my_set1
+my_set1 = {3,5,7,1,8}
+my_set2 = {1,2,3,4,5}
+# find intersection, or my_set1 & my_set2     
+my_set1.intersection(my_set2) # {1, 3, 5}
+# to find union, or my_set1 | my_set2   
+my_set1.union(my_set2) # {1, 2, 3, 4, 5, 7, 8}
+# concat my_set2 into my_set1 inplace
+my_set1.update(my_set2) 
 my_set1.copy() # returns a copy of a set
 my_set1.clear() # removes all members of set
-my_set1.issubset(my_set2) # checks if my_set2 is a subset of my_set1
-my_set1.issuperset(my_set2) # checks if my_set2 is a supersubset of my_set1
+# checks if my_set2 is a subset of my_set1
+my_set1.issubset(my_set2) # False
+# checks if my_set2 is a supersubset of my_set1
+my_set1.issuperset(my_set2) # False
+
+# type conversion
+my_set = set([1,2,3,4,5]) # list to set
+my_set = set((1,2,3,4,5)) # tuple to set
 ```
-* BigO: O(n) almost all operations.
+* Time Complexity: Sets are implemented using hash tables, so pretty much all operations should be O(1) and worst case when 'hash collision' occurs O(n). But the trick is sets are ordered collection of items, so for sorting best time complexity there exist is O(nLogn).</br>
+adding, checking(with 'in' operator) and removing are O(1).</br>
+iterating is O(n).</br>
+printing should be O(nLogn).</br>
+union is O(m+n).</br>
+intersection is O(min(m,n)), worst is O(m\*n).
 
 ### Dict
-Uses Hashtable to store data with a key & value. A hashtable uses a hash function which given a key generates a index to an array like Data Structure. This behaviour help hashmap do almost all operations in O(1). So, instead of indexing, keys are used to access values. They are used for efficient storage and retrival operations, preferably in Dynamic Programming and where values are to have some key associated with them.
+They use Hashtable to store data with a key & value. A hashtable uses a hash function which given a key generates a index to an array like Data Structure, which store the actual values. So instead of indexing, keys are used to access values. This behaviour help hashmap do almost all operations in O(1) making them very efficient for storing and retrival operations. Keys in dict should be hashable(immutable data structures and numeric, string data types). They are used in Dynamic Programming and where values are supposed to have some key associated with them.
 * Usage:
 ```Python
 # create dict
 my_dict = dict()
+# or 
 my_dict = {}
-my_dict = dict([[1,2],[2,3]]) # {1:2,2:3}
 
 # dict comprehension 
-my_dict = {key:value for k,v in zip(my_list1, my_list2)}
-my_dict = {x: x\*x for x in range(6)}
+my_dict = {x:x\*x for x in range(6)} # stand alone, generating keys and values
+# more cleaner way
+my_keys = ['a', 'b', 'c']
+my_values = [1,2,3]
+my_dict = {k:v for k,v in zip(my_keys, my_values)}
 
 # acessing element
+key = 'a'
 my_var = my_dict[key] # can raise KeyError if not present
-my_dict.get(key, None) # to avoid KeyError, None is default, can be set to anything else
-for k,v in my_dict.items(): # traverse all items
-   # do something with v
+# use get() method to avoid KeyError, None is default, can be set to anything else
+my_dict.get(key, None) 
+# traverse all items
+for k,v in my_dict.items(): 
+   # do something with v or k
 
 # add,remove
+my_var = 20
+key = 10
 my_dict[key] = my_var # add item at key
 del my_dict[key] # remove item at key
 
 # Some methods of dicts
-my_dict1.update(my_dict2) # concata 2 dicts
-my_dict.keys() # keys inside my_dict, returns iterable object
-my_dict.values() # values inside my_dict, returns iterable object
-my_dict.items() # keys and values inside my_dict, returns iterable object
-my_dict.pop(key) # removes item(key,value) given key
-my_dict.clear() # removes all items of dict
+my_dict1 = {'a':1, 'b':2, 'c':3}
+my_dict2 = {'z':50, 'y':40, 'x':30}
+# returns keys inside my_dict1, a dict_keys object, which is iterable and can be converted to list
+my_dict1.keys() # dict_keys(['a', 'b', 'c'])
+# returns values inside my_dict1, a dict_values object, which is iterable and can be converted to list
+my_dict1.values() # dict_values([1, 2, 3])
+# returns keys and values inside my_dict1, a dict_items object, which is iterable and can be converted to list
+my_dict1.items() # dict_items([('a', 1), ('b', 2), ('c', 3)])
+my_dict1.update(my_dict2) # concats my_dict2 into my_dict1 inplace
+# removes item(key,value) given key, which is 'a' here
+my_dict1.pop("a") # 1 
+my_dict1.clear() # removes all items of dict
+
+# type conversion
+keys = [1,2]
+values = [2,3]
+my_dict = dict([keys, values]) # list to dict
+my_dict = dict(((1,2), (2,3))) # tuple to dict
 ```
-* BigO: Insert, Add, Delete is O(1), only iteration is O(n).
+* Time Complexity: Dicts are implemented using HashMaps, so most operations are O(1) and depending on implementation worst case O(n).</br>
+insert, add, delete is O(1).</br>
+iteration is O(n).
+
+### Other Data Structures
+
+* Some other usage:
+  1. Use as stack: my_list.append(value) and my_list.pop().
+  2. Use as queue: my_list.append(value) and my_list.pop(0).
 
 ### Extras
 * range() function: Returns sequence of length start_index(0 by default) to end_index, syntax range(start_index:optional, end_index, step:optional). range() function returns range object, which is iterable and supports indexing. It is used in loops, where a certain number of times a loop should work.
@@ -496,6 +570,10 @@ list(range(5,20)) # makes range sequence a list sequence
 
 for var in range(20):
   # 0 t0 19 var loop
+```
+* sorted() function:
+```Python
+
 ```
 * enumerate() function: Returns a iterable object given a list, each item is a tuple and has (index, value). Indexes of list variables(0-length) and value is item from the list. enumerate() function returns a enumerate object which is iterable but Indexing/slicing is not supported.
 ```Python
