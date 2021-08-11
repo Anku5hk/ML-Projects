@@ -4,12 +4,12 @@
 **What's not this:** Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the concepts here in a simplest possible manner.</br>  
 
 **Index**
-1. [Basics](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#basics)
-2. Data Types
-3. Flow Control
-4. Data structures
-5. Function, Class and Object
-6. OOP Concepts
+1. [Basics](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#1-basics)
+2. [Data Types](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#2-data-types)
+3. [Flow Control](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#3-flow-control)
+4. [Data structures](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#4-data-structures)
+5. [Function, Class and Object](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#5-function,-class-and-object)
+6. [OOP Concepts](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#6-oop-concepts)
 
 
 ## 1. Basics
