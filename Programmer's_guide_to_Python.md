@@ -1,17 +1,27 @@
 # Programmer's guide to Python (Work in Progress).
-What is this: Is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python, to check almost all boxes requirements of python while saving you tons of time. The one who have taken python course from somewhere else can also use this as to solidfy their learning. But ofcourse you should practice on your own. I would suggest typing & running your own programs and maintain your own notes.  
+**What is this:** Is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python, to check almost all boxes requirements of python while saving you tons of time. The one who have taken python course from somewhere else can also use this as to solidfy their learning. But ofcourse you should practice on your own. I would suggest typing & running your own programs and maintain your own notes.  
 
-What's not this: Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the concepts here in a simplest possible manner.  
+**What's not this:** Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the concepts here in a simplest possible manner.</br>  
 
-## Fundamentals
-Everything in python is an Object. A object has its own attributes and properties.  
+**Index**
+1. Basics
+2. Data Types
+3. Flow Control
+4. Data structures
+5. Function, Class and Object
+6. OOP Concepts
+
 
 ## Basics
+Everything in python is an Object. A object has its own attributes and properties.  
+
 * Literals: Are raw data given to variable, litrals are constant fix values eg integer 4, there is no other value replacement for int 4, so its a integer literal.
 * Operands/Variable: Are objects that hold values, it has its unique user-defined name, say eg. my_int, some_var, my_string12, my_list.
 * Keywords: Are reserved words which are defined inside python, so they can't be used as operands, say eg. if,else,for,while,is,as,or,not,and.
 * Operators: Are used to perform operations on operands. say eg. +,-,/,\*,is,in,=,!,<,>,not,and,or.
 * Data Types: Are used to define the type of data a variable holds. Below are Data types in python.
+
+## Data Types
 
 ### Numeric: 
 * Three Numeric Types: 
@@ -111,6 +121,69 @@ if n: # same as if n != None:
 if not n:
   # will enter this condition, as n is None
   # assign value to n
+```
+
+### Custom Data Type
+User defined data type, which are used to create a new data type by combining the built-in data types. Unlike in C/C++ language python doesn't have 'struct', but what it does has is objects, which can be utilized to do the same.
+```Python
+# create object of a data type
+class MyDataType:
+  def __init__(self, x, y):
+    # initialize here
+    self.x = x 
+    self.y = y
+  def __str__(self):
+    """This magic method is used to represent print function for this object."""
+    return f"{self.x} {self.y}"
+
+my_dt = MyDataType(10, "Hello")
+# check type
+print(type(my_dt)) # <class '__main__.MyDataType'> 
+# access/change values using '.' operator
+print(my_dt.x, my_dt.y) # 10, Hello
+# or print if __str__ is defined
+print(my_dt) # 10, Hello
+# change values
+my_dt.x = 42 
+my_dt.x = "THis can also become a string" 
+# The problem is you can't define type of data or length of an array(list) in python
+# For such situation you can create your own methods for inserting
+# where you can check the type of data that is fed in
+# But will not that be a Data structure? Nope?
+
+class MyDataType:
+  def __init__(self, x, y):
+    # initialize here
+    if not isinstance(x, int) or not isinstance(y, str):
+      raise TypeError()
+      
+    self.x = x 
+    self.y = y
+    
+  def insert(self, x=None, y=None):
+    """To check values while inserting in custom data types"""
+    if x:
+      if isinstance(x, int):
+        self.x = x
+      else:
+        raise TypeError("Should be a integer")  
+    if y:
+      if isinstance(y, str):
+        self.y = y  
+      else:
+        raise TypeError("Should be a String")
+        
+  def __str__(self):
+    """This magic method is used to represent print function for this object."""
+    return f"{self.x} {self.y}"
+
+my_dt = MyDataType(10, "Hello")  
+my_dt.insert(15, "Foo")
+print(my_dt) # 15 Foo
+my_dt.insert(20) 
+my_dt.insert(y="Bar")
+print(my_dt) # 20 Bar
+my_dt.insert(y=20) # TypeError: Should be a String
 ```
 
 ### Extras:
