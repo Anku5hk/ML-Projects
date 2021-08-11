@@ -6,8 +6,8 @@
 **Index**
 1. [Basics](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#1-basics)
 2. [Data Types](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#2-data-types)
-3. [Flow Control](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#3-flow-control)
-4. [Data structures](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#4-data-structures)
+3. [Data structures](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#4-data-structures)
+4. [Flow Control and Exception Handling](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#3-flow-control-and-exception-handling)
 5. [Functions, Classes and Objects](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#5-functions-classes-and-objects)
 6. [OOP Concepts](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#6-oop-concepts)
 
@@ -269,90 +269,7 @@ print(id(b)) # 2055638580288
 ```
 
 
-## 3. Flow Control
-
-Unlike using brackets in c/c++/java indentations are used for any Flow Control, Functions, Classes in python. Any expression or even comments should follow indentation rule.
-
-### if...else
-```Python
-my_var = 20
-my_var1 = None
-if my_var == 20:
-  # indentation is required
-  # do something
-elif my_var == 30:
-  # do something else
-else:
-  # just do this
-  
-# using only if after some variable/sequence to check if it is not None
-if my_var:
-  # my_var is not 'None', so will print 
-  print(my_var)
-if my_var1:
-  # will not execute, my_var1 is 'None'
-  print(my_var1)
-  
-# negate the condition using 'not'
-if not my_var:
-  # my_var is not 'None', so will not print 
-  print(my_var)
-if not my_var1:
-  # my_var1 is 'None', so will print 
-  print(my_var1)  
-```
-
-### for loop
-```Python
-my_list = [10,20,30,40,50]
-# regular looping by indexes
-for i in range(len(my_list)):
-  print(my_list[i])
-
-# pythonic loops
-for v in my_list:
-  print(v)
-# or 
-for a in [10,20,30,40,50]:
-  print(a)   
-```
-
-### while loop
-```Python
-# while loops are similar like in c/c++/java
-i=0
-my_list = [10,20,30,40,50]
-while i<len(my_list):
-  print(my_list[i])
-  i+=1 # (this is shorthand for i=i+1) i++ is not supported
-```
-
-### Extras
-
-* break: break from loop. 
-* continue: continue to next iteration.
-* pass: move down to next expression.
-```Python
-## break and continue
-i=0
-my_list = [10,20,30,40,50]
-while i<len(my_list):
-  if i == 0:
-    continue
-  if i == 4:
-    break
-  print(my_list[i])
-  i+=1
-  
-## pass
-# pass can used inside empty functions, just to have the function
-# and implement the function later while coding
-def my_fun():
-  pass
-```
-
-
-## 4. Data Structures
+## 3. Data Structures
 
 Data Structure is a way to store and organize data so that it can be used efficiently. They are used to store/retrive data from. Data can be data types or even other data structures. Different data structures have thier advantages/disadvantages in terms of accessing/storing/removing data speed, so they should be used as per the task. They can also be called literal collections.
 
@@ -657,6 +574,90 @@ print(list(filter(myfun, [1,2,3,4]))) # returns [4]
 ```
 * ord(): Converts value to Unicode value.
 * chr(): Takes Unicode value and convert it back to a normal value.  
+
+
+## 3. Flow Control and Exception Handling
+
+Unlike using brackets in c/c++/java indentations are used for any Flow Control, Functions, Classes in python. Any expression or even comments should follow indentation rule.
+
+### if...else
+```Python
+my_var = 20
+my_var1 = None
+if my_var == 20:
+  # indentation is required
+  # do something
+elif my_var == 30:
+  # do something else
+else:
+  # just do this
+  
+# using only if after some variable/sequence to check if it is not None
+if my_var:
+  # my_var is not 'None', so will print 
+  print(my_var)
+if my_var1:
+  # will not execute, my_var1 is 'None'
+  print(my_var1)
+  
+# negate the condition using 'not'
+if not my_var:
+  # my_var is not 'None', so will not print 
+  print(my_var)
+if not my_var1:
+  # my_var1 is 'None', so will print 
+  print(my_var1)  
+```
+
+### for loop
+```Python
+my_list = [10,20,30,40,50]
+# regular looping by indexes
+for i in range(len(my_list)):
+  print(my_list[i])
+
+# pythonic loops
+for v in my_list:
+  print(v)
+# or 
+for a in [10,20,30,40,50]:
+  print(a)   
+```
+
+### while loop
+```Python
+# while loops are similar like in c/c++/java
+i=0
+my_list = [10,20,30,40,50]
+while i<len(my_list):
+  print(my_list[i])
+  i+=1 # (this is shorthand for i=i+1) i++ is not supported
+```
+
+### Extras
+
+* break: break from loop. 
+* continue: continue to next iteration.
+* pass: move down to next expression.
+```Python
+## break and continue
+i=0
+my_list = [10,20,30,40,50]
+while i<len(my_list):
+  if i == 0:
+    continue
+  if i == 4:
+    break
+  print(my_list[i])
+  i+=1
+  
+## pass
+# pass can used inside empty functions, just to have the function
+# and implement the function later while coding
+def my_fun():
+  pass
+```
+
 
 ## 5. Functions, Classes and Objects
 
