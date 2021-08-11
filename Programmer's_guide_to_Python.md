@@ -221,6 +221,87 @@ if some_var1 == some_var2:
 
 ## 3. Flow Control
 
+Unlike brackets in c,c++,java, Indentations are used for any Flow Control, Functions, Classes in python. Any expression or even comments should follow indentation.
+### if..else
+
+```Python
+my_var = 20
+my_var1 = None
+if my_var == 20:
+  # indentation is required
+  # do something
+elif my_var == 30:
+  # do something else
+else:
+  # do nothing or anything
+  
+# == is used to check values are equal, usual  
+# only if condition after some variable/sequence to check if it is not None
+if my_var:
+  # my_var is not 'None', so will print 
+  print(my_var)
+if my_var1:
+  # will not execute, my_var1 is 'None'
+  print(my_var1)
+  
+# negate the condition using 'not'
+if not my_var:
+  # my_var is not 'None', so will not print 
+  print(my_var)
+if not my_var1:
+  # my_var1 is 'None', so will print 
+  print(my_var1)  
+```
+
+### for loop
+```Python
+my_list = [10,20,30,40,50]
+# loop by indexes
+for i in range(len(my_list)):
+  print(my_list[i])
+
+# pythonic loops
+for v in my_list:
+  print(v)
+# or 
+for a in [10,20,30,40,50]:
+  print(a)   
+```
+
+### while loop
+```Python
+# while loops are similar to c/c++/java
+i=0
+my_list = [10,20,30,40,50]
+while i<len(my_list):
+  print(my_list[i])
+  i+=1 # (this is shorthand for i=i+1) i++ is not supported
+```
+
+### Extras
+
+* break: break from loop. 
+* continue: continue to next iteration.
+* pass: move on to next expression.
+```Python
+## break and continue
+i=0
+my_list = [10,20,30,40,50]
+while i<len(my_list):
+  if i == 0:
+    continue
+  if i == 4:
+    break
+  print(my_list[i])
+  i+=1
+  
+## pass
+# pass can used inside empty functions, just to have the function
+# and implement the function later while coding
+def my_fun():
+  pass
+```
+
 
 ## 4. Data Structures
 
