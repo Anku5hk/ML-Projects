@@ -1,7 +1,7 @@
 # Programmer's guide to Python (Work in Progress).
 **What is this:** Is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python, to check almost all boxes requirements of python while saving you tons of time. The one who have taken python course from somewhere else can also use this as to solidfy their learning. But ofcourse you should practice on your own. I would suggest typing & running your own programs and maintain your own notes.  
 
-**What's not this:** Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the concepts here in a simplest possible manner.</br>  
+**What's not this:** Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the concepts in layman terms is pretty essential which I have tried to here.</br>  
 
 **Index**
 1. [Basics](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#1-basics)
@@ -20,6 +20,7 @@ Everything in python is an Object. A object has its own attributes and propertie
 * Keywords: Are reserved words which are defined inside python, so they can't be used as operands, say eg. if,else,for,while,is,as,or,not,and.
 * Operators: Are used to perform operations on operands. say eg. +,-,/,\*,is,in,=,!,<,>,not,and,or.
 * Data Types: Are used to define the type of data a variable holds. Below are Data types in python.
+
 
 ## 2. Data Types
 
@@ -49,6 +50,18 @@ abs(-50) # # returns absolute value
 sum(10, 20) # returns sum of numbers
 id(my_float) # returns object id
 round(my_float) # returns a rounded to decimal value
+
+# type conversion
+my_int = 42
+my_float = 3.0
+# int to str
+print(str(my_int)) # 42
+# int to float
+print(float(my_int)) # 42.0
+# float to int
+print(int(my_float)) # 3
+# float to str
+print(str(my_float)) # 3.0
 ```
 
 ### String
@@ -104,6 +117,16 @@ print(".".join(['hey','this','it']))
 len(my_string) # Returns length of string
 ord("b") # Returns a Unicode of a character
 chr(ord("b")) # Returns Converted the Unicode to a character
+
+# type conversion
+my_string = "bar"
+my_string1 = "20"
+# str to int
+print(int(my_string)) # ValueError
+print(int(my_string1)) # 20
+# str to float
+print(float(my_string)) # ValueError
+print(float(my_string1)) # 20.0
 ```
 
 ### Boolean
@@ -193,10 +216,6 @@ my_dt.insert(y=20) # TypeError: Should be a String
 ```
 
 ### Extras
-* Type conversion:
-
-
-
 
 * isinstance(): Checks if a object is an instance of a particular class. Returns True/False.
 ```Python
@@ -248,6 +267,7 @@ print(id(a)) # 2055633338880
 print(id(b)) # 2055638580288
 # even though thier values are same, they are different objects
 ```
+
 
 ## 3. Flow Control
 
@@ -498,7 +518,7 @@ union is O(m+n).</br>
 intersection is O(min(m,n)), worst is O(m\*n).
 
 ### Dict
-They use Hashtable to store data with a key & value. A hashtable uses a hash function which given a key generates a index to an array like Data Structure, which store the actual values. So instead of indexing, keys are used to access values. This behaviour help hashmap do almost all operations in O(1) making them very efficient for storing and retrival operations. Keys in dict should be hashable(immutable data structures and numeric, string data types). They are used in Dynamic Programming and where values are supposed to have some key associated with them.
+Longform Dictionary in python, use Hashtable to store data with a key & value. A hashtable uses a hash function which given a key generates a index to an array like Data Structure, which store the actual values. So instead of indexing, keys are used to access values. This behaviour help hashmap do almost all operations in O(1) making them very efficient for storing and retrival operations. Keys in dict should be hashable(immutable data structures and numeric, string data types). They are used in Dynamic Programming and where values are supposed to have some key associated with them.
 * Usage:
 ```Python
 # create dict
@@ -552,11 +572,23 @@ my_dict = dict(((1,2), (2,3))) # tuple to dict
 insert, add, delete is O(1).</br>
 iteration is O(n).
 
-### Other Data Structures
+### Implementing other Data Structures
+* Stack: can be easily implemented using lists.
+```Python
+stack = []
 
-* Some other usage:
-  1. Use as stack: my_list.append(value) and my_list.pop().
-  2. Use as queue: my_list.append(value) and my_list.pop(0).
+# add/remove operation
+stack.append(20) # append at top
+stack.pop() # remove at top
+```
+* Queue: similar like stack, can be easily implemented using lists.
+```Python
+queue = []
+
+# add/remove operation
+queue.append(20) # append at rear
+queue.pop(0) # remove at front
+```
 
 ### Extras
 * range() function: Returns sequence of length start_index(0 by default) to end_index, syntax range(start_index:optional, end_index, step:optional). range() function returns range object, which is iterable and supports indexing. It is used in loops, where a certain number of times a loop should work.
@@ -571,9 +603,13 @@ list(range(5,20)) # makes range sequence a list sequence
 for var in range(20):
   # 0 t0 19 var loop
 ```
-* sorted() function:
+* sorted() function: Returns sorted list given list/tuple as input. Sorting is O(nLogn). Also has 'reverse' parameter, which is used to do reverse sorting if set to True.
 ```Python
+my_list = [2,5,1,3]
+my_tuple = (2,5,1,3)
 
+sorted(my_list) # [1,2,3,5]
+sorted(my_tuple, reverse=True) # [5, 3, 2, 1]
 ```
 * enumerate() function: Returns a iterable object given a list, each item is a tuple and has (index, value). Indexes of list variables(0-length) and value is item from the list. enumerate() function returns a enumerate object which is iterable but Indexing/slicing is not supported.
 ```Python
