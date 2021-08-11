@@ -4,12 +4,12 @@
 **What's not this:** Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the concepts here in a simplest possible manner.</br>  
 
 **Index**
-1. [Basics](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#1-basics)
-2. [Data Types](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#2-data-types)
-3. [Flow Control](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#3-flow-control)
-4. [Data structures](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#4-data-structures)
-5. [Function, Class and Object](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#5-function,-class-and-object)
-6. [OOP Concepts](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#6-oop-concepts)
+1. [Basics](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#1-basics)
+2. [Data Types](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#2-data-types)
+3. [Flow Control](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#3-flow-control)
+4. [Data structures](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#4-data-structures)
+5. [Functions, Classes and Objects](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#5-function,-class-and-object)
+6. [OOP Concepts](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#6-oop-concepts)
 
 
 ## 1. Basics
@@ -438,7 +438,7 @@ print(list(filter(myfun, [1,2,3,4]))) # returns [4]
 * ord(): Converts value to Unicode value.
 * chr(): Takes Unicode value and convert it back to a normal value.  
 
-## 5. Classes and Functions
+## 5. Functions, Classes and Objects
 
 ### Functions
 * A function can be defined to perform some operation/task on some data/variables/sequences, it can/can't have paramerters, it can/cannot return something (in Python, None is returned by default if not defined). 
