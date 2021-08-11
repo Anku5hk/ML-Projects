@@ -4,7 +4,7 @@
 **What's not this:** Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the fundamentals is the way to learn things better at first place, so I have tried to explain much of the concepts here in a simplest possible manner.</br>  
 
 **Index**
-1. Basics
+1. [Basics](https://github.com/Anku5hk/ML-Projects/edit/master/Programmer's_guide_to_Python.md#basics)
 2. Data Types
 3. Flow Control
 4. Data structures
@@ -12,7 +12,7 @@
 6. OOP Concepts
 
 
-## Basics
+## 1. Basics
 Everything in python is an Object. A object has its own attributes and properties.  
 
 * Literals: Are raw data given to variable, litrals are constant fix values eg integer 4, there is no other value replacement for int 4, so its a integer literal.
@@ -21,9 +21,9 @@ Everything in python is an Object. A object has its own attributes and propertie
 * Operators: Are used to perform operations on operands. say eg. +,-,/,\*,is,in,=,!,<,>,not,and,or.
 * Data Types: Are used to define the type of data a variable holds. Below are Data types in python.
 
-## Data Types
+## 2. Data Types
 
-### Numeric: 
+### Numeric
 * Three Numeric Types: 
 1. int(interger): Numbers without that do not have decimal values.
 2. float: Numbers that hold decimal values.
@@ -53,7 +53,7 @@ id(my_float) # return object id
 round(my_float) # returns a rounded to decimal value
 ```
 
-### String: 
+### String
 Are immutable(items/values(here characters) cannot be changed/deleted). str in python.
 ```Python
 print(r"\n raw string no escaping characters")
@@ -99,7 +99,7 @@ len(my_string) # Returns length of string
 ord("b") # Returns a Unicode of a character
 chr(ord("b")) # Returns Converted the Unicode to a character
 ```
-### Boolean: 
+### Boolean
 Has only 2 values, one is True (is also 1, so 4 + True is 5) and other False (is 0, so 4 + False is 4).
 ```Python
 my_bool = True
@@ -109,7 +109,7 @@ my_bool = False
 my_bool = my_bool + 4 # stays 4
 ```
 
-### Special: 
+### Special
 None 
 ```Python
 n = None
@@ -186,7 +186,7 @@ print(my_dt) # 20 Bar
 my_dt.insert(y=20) # TypeError: Should be a String
 ```
 
-### Extras:
+### Extras
 * isinstance() function: Checks if an object is a instance of a particular class. Returns True/False.
 ```Python
 a = 23
@@ -219,7 +219,11 @@ if some_var1 == some_var2:
   # this also is true, here values are checked
 ```
 
-## Data Structures
+## 3. Flow Control
+
+
+## 4. Data Structures
+
 Data Structure is a way to store and organize data so that it can be used efficiently. They are used to store/retrive data from. Data can be data types or other data structure. Different data structures have thier advantages/disadvantages in terms of accessing/storing data speed, so they should be used as per the task. They can also be called literal collections.
 
 ### List
@@ -434,7 +438,7 @@ print(list(filter(myfun, [1,2,3,4]))) # returns [4]
 * ord(): Converts value to Unicode value.
 * chr(): Takes Unicode value and convert it back to a normal value.  
 
-## Classes and Functions
+## 5. Classes and Functions
 
 ### Functions
 * A function can be defined to perform some operation/task on some data/variables/sequences, it can/can't have paramerters, it can/cannot return something (in Python, None is returned by default if not defined). 
@@ -709,7 +713,7 @@ my_var = maths.sqrt(8) # acessing function from math
 my_var = math() # this math does something else
 ```
 
-## OOP concepts
+## 6. OOP concepts
 
 ### Inheritance
 * Inherit a base class to use its methods inside child's class and not the other way. Multilevel and Multiple inheritence are also supported in python.
