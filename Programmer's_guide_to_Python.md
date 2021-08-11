@@ -25,19 +25,17 @@ Everything in python is an Object. A object has its own attributes and propertie
 
 ### Numeric
 * Three Numeric Types: 
-1. int(interger): Numbers without that do not have decimal values.
-2. float: Numbers that hold decimal values.
+1. int(interger): Numbers that do not have decimal values.
+2. float: Numbers that have decimal values.
 3. complex: Numbers that have two parts, real and imaginary. First part is normal number, the second part is imaginary number which should be follwed by j. 
 ```Python
-# here my_int is an operand, 42 is a literal and its data type is int(integer)
+# here my_int is an operand, 42 is a literal and its data type is int
 my_int = 42 # int
-
 my_float = 3.0 # float
-
 my_complex = 4.22 + 20j # complex
 print(my_complex)
 >>> 4.22+20j
-my_complex += 30 # same as my_complex = my_complex + 30
+my_complex += 30 # shorthand for my_complex = my_complex + 30
 print(my_complex) # only first part changes
 >>> 34.22+20j
 my_complex1 = 0+10j
@@ -45,26 +43,29 @@ print(my_complex + my_complex1) # add two complex numbers
 >>> 34.22+30j
 
 # Functions supported
-max(30, 20) # returns maximum from numbers
-min(30, 20) # returns minimum from numbers
-abs(-50) # returns absolute value
+max(30, 20) # returns maximum from n numbers(n > 2)
+min(30, 20) # returns minimum from n numbers(n > 2)
+abs(-50) # # returns absolute value
 sum(10, 20) # returns sum of numbers
-id(my_float) # return object id
+id(my_float) # returns object id
 round(my_float) # returns a rounded to decimal value
 ```
 
 ### String
-Are immutable(items/values(here characters) cannot be changed/deleted). str in python.
+Are immutable i.e items/values(here characters) cannot be changed/deleted, only inserted or completely replaced by another set of items. String are 'str' object in python.
 ```Python
 print(r"\n raw string no escaping characters")
 >>> \n raw string no escaping characters
 print("normal str,\t escaping characters")
 >>> normal str,  escaping characters
 
-# Use formarted strings to pass python expression/varaible inside a string using curly braces
+# String formarting, to pass python expression/varaible inside a string
 n = 1
-text = f"This is a String number {n}" # n becomes string and merges to the string
-text = f"This is a String number {20-19}" # generates same output
+text = "This is a String number %s" %n  # C like formatting 
+text = "This is a String number {0}".format(n) # format method of string
+text = f"This is a String number {n}" # f-string to pass varaible
+text = f"This is a String number {20-19}" # or even to pass expression
+print(text)
 >>> This is a String number 1
 
 # concatenate 2 strings
@@ -73,7 +74,7 @@ string2 = "This is 2."
 print(string1 + string2) 
 >>> This is 1.This is 2.
 
-# slicing string syntax is [start_index:end_index:step]
+# slicing string syntax is [start_index:end_index:step], end_index is not considered
 string1[5:7] # is 
 string1[5:] # is 1.
 string1[:4] # This 
@@ -87,20 +88,26 @@ my_string = "this IS it."
 my_string.lower() # Returns Lowercases all characters string
 my_string.upper() # Returns Uppercases all characters string
 my_string.capitalize() # Returns Capitalizes first character string
-my_string.split(" ") # Splits at given a string key(which is whitespace here) and return it
-my_string.strip() # Removes whitespace from beginning, also can strip given a key/string 
-my_string.index("it") # Searches given key/string(which is 'it' here) and returns starting index if found
-my_string.replace("it","not") # Searches given key/string(which is 'is' here), replaces with second key/string and returns final string
-print(".".join(['hey','this','it'])) # joins a list to a single string
+# Splits at a given string key(which is whitespace here) and returns list of strings
+my_string.split(" ") 
+# Removes whitespace from beginning, also can strip given a key string 
+my_string.strip() 
+# Searches given key/string(which is 'it' here) and returns starting index if found
+my_string.index("it")
+# Searches given key string(which is 'it' here), replaces with second key string and returns final string
+my_string.replace("it","not") 
+# joins a list of string to a single string with given string key(which is '.' here)
+print(".".join(['hey','this','it'])) 
 >>> hey.this.it
 
-# Some functions
+# Some functions on string
 len(my_string) # Returns length of string
 ord("b") # Returns a Unicode of a character
 chr(ord("b")) # Returns Converted the Unicode to a character
 ```
+
 ### Boolean
-Has only 2 values, one is True (is also 1, so 4 + True is 5) and other False (is 0, so 4 + False is 4).
+Has only 2 values, one is True (is also 1, so 4 + True is 5) and other False (is 0, so 4 + False stays 4).
 ```Python
 my_bool = True
 my_bool = my_bool + 4 # becomes 5
@@ -120,11 +127,10 @@ if n: # same as if n != None:
 
 if not n:
   # will enter this condition, as n is None
-  # assign value to n
 ```
 
 ### Custom Data Type
-User defined data type, which are used to create a new data type by combining the built-in data types. Unlike in C/C++ language python doesn't have 'struct', but what it does has is objects, which can be utilized to do the same.
+User defined data type, which are used to create a new data type by combining the built-in data types. Unlike in C/C++ python doesn't have 'struct', but what it does has is objects, which can be utilized to do the same.
 ```Python
 # create object of a data type
 class MyDataType:
@@ -133,7 +139,7 @@ class MyDataType:
     self.x = x 
     self.y = y
   def __str__(self):
-    """This magic method is used to represent print function for this object."""
+    """This magic method is used to represent print function for this object, should return a string."""
     return f"{self.x} {self.y}"
 
 my_dt = MyDataType(10, "Hello")
@@ -174,7 +180,7 @@ class MyDataType:
         raise TypeError("Should be a String")
         
   def __str__(self):
-    """This magic method is used to represent print function for this object."""
+    """This magic method is used to represent print function for this object, should return a string."""
     return f"{self.x} {self.y}"
 
 my_dt = MyDataType(10, "Hello")  
@@ -187,14 +193,14 @@ my_dt.insert(y=20) # TypeError: Should be a String
 ```
 
 ### Extras
-* isinstance() function: Checks if an object is a instance of a particular class. Returns True/False.
+* isinstance() function: Checks if a object is an instance of a particular class. Returns True/False.
 ```Python
 a = 23
 isinstance(a, int) # True
-isinstance(a, float) # Flase
-isinstance(a, str) # Flase
+isinstance(a, float) # False
+isinstance(a, str) # False
 ```
-* type() function: Returns the type(class) of an object.
+* type() function: Returns the class_name of an object.
 ```Python
 a = "What?"
 type(a) # str
@@ -202,7 +208,7 @@ type(a) # str
 b = 5.0
 type(b) # float
 ```
-* is operator: Checks if 2 objects are refering to same object. 
+* is operator: Checks if 2 objects are refering to the same object. 
 ```Python
 some_var1 = 42
 some_var2 = 42
@@ -210,13 +216,32 @@ if some_var1 is some_var2:
   # true
   
 # check with id  
-print(id(some_var1))
->>> 2587096149584
-print(id(some_var2))
->>> 2587096149584
+print(id(some_var1) # 2587096149584
+print(id(some_var2)) # 2587096149584
 
 if some_var1 == some_var2:
   # this also is true, here values are checked
+
+# another check
+a = 42
+b = 42.0
+print(id(a)) # 2753953689168
+print(id(b)) # 2753956924080
+print(id(int(b))) # 2753953689168
+
+if a is int(b):
+  # true, right
+  
+# but where's the difference  
+a = [20, 30]
+b = [20, 30]
+
+if a is b:
+  # false, no?
+  
+print(id(a)) # 2055633338880
+print(id(b)) # 2055638580288
+# even though thier values are same, they are different objects
 ```
 
 ## 3. Flow Control
