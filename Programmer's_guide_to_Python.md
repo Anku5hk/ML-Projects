@@ -1,7 +1,8 @@
 # Programmer's guide to Python (Work in Progress).
-**What is this:** Is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python, to check almost all boxes requirements of python while saving you tons of time. The one who have taken python course from somewhere else can also use this as to solidfy their learning. But ofcourse you should practice on your own. I would suggest typing & running your own programs and maintain your own notes.  
+Hello Learner, welcome to this Programmer's guide to Python handbook, this book was originally designed as notes when I was learning python, but then I thought okay why not make it public for other learners, so I added some missing components and completed it as a book. I hope this helps you in learning python. Cheers..  
+**What is this:** This book is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python, while saving you tons of time. The one who have taken python course from somewhere else can also use this as to solidfy their learning further. To grow as a programmer its always better to practice. I would suggest typing & running your own programs and creating your own notes. 
 
-**What's not this:** Somewhat not beginer friendly, some concepts I consider are better explained on the internet already so have been left off. But I believe sodifying the concepts in layman terms is pretty essential which I have tried to here.</br>  
+**What's not this:** Not a traditional programming course/book, this book only emphasis on whats important. Maybe somewhat not beginner friendly, some concepts I consider are better explained on the internet already so have been left off, I don't know what I don't know right?. But I have tried to keep explainations as simple/short as possible most of the times.</br>  
 
 **Index**
 1. [Basics](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#1-basics)
@@ -13,17 +14,19 @@
 
 
 ## 1. Basics
+### Introduction
 Everything in python is an Object. A object has its own attributes and properties.  
 
+### Some Terminology  
 * Literals: Are raw data given to variable, litrals are constant fix values eg integer 4, there is no other value replacement for int 4, so its a integer literal.
 * Operands/Variable: Are objects that hold values, it has its unique user-defined name, say eg. my_int, some_var, my_string12, my_list.
-* Keywords: Are reserved words which are defined inside python, so they can't be used as operands, say eg. if,else,for,while,is,as,or,not,and.
 * Operators: Are used to perform operations on operands. say eg. +,-,/,\*,is,in,=,!,<,>,not,and,or.
-* Data Types: Are used to define the type of data a variable holds. Below are Data types in python.
-
+* Keywords: Are reserved words which are defined inside python, so they can't be used as operands, say eg. if,else,for,while,is,as,or,not,and.
+* Expression: 
+* Statements: 
 
 ## 2. Data Types
-
+Are used to define the type of data a variable holds. Below are Data types in python. Python has built-in 4 data types.
 ### Numeric
 * Three Numeric Types: 
 1. int(interger): Numbers that do not have decimal values.
@@ -282,7 +285,7 @@ print(id(b)) # 2055638580288
 
 ## 3. Data Structures
 
-Data Structure is a way to store and organize data so that it can be used efficiently. They are used to store/retrive data from. Data can be data types or even other data structures. Different data structures have thier advantages/disadvantages in terms of accessing/storing/removing data speed, so they should be used as per the task. They can also be called literal collections.
+Data Structure is a way to store and organize data so that it can be used efficiently. They are used to store/retrive data from. Data can be data types or even other data structures. Different data structures have thier advantages/disadvantages in terms of accessing/storing/removing data speed, so they should be used as per the task. They can also be called literal collections. Python has built-in 4 data structures.
 
 ### List
 They are array like implementation in python. They are ordered collection of sequence of items, which can be of any data type. They are Mutable(values can be changed). Indexing, Slicing is supported and they are iterable objects. They are prefered in most use cases. Where indexing, looping over some items is reqiured lists are used.
@@ -295,7 +298,10 @@ They are array like implementation in python. They are ordered collection of seq
  my_var = 1
  my_list.append(my_var)
  my_list.remove(my_var) # or del my_list[index] or my_list.pop(index)
-
+ # using 'del' keyword
+ del my_list[0] # or even with slicing like, del my_list[2:4]
+ # del statement can also be used to delete a variable/data-structure
+ 
  # acessing element
  var_1 = my_list[0]
  var_2 = my_list[1]
@@ -317,6 +323,7 @@ They are array like implementation in python. They are ordered collection of seq
 
  # list comprehension
  my_list = [x for x in range(10)] # without condition
+ my_list = [[y for y in range(x)] for x in range(1, 4)] # which also can be nested
  my_list = [x for x in range(10) if x > 5] # if condition
  my_list = [True if x > 5 else False for x in range(10)] # if with else condition
  
@@ -1406,6 +1413,5 @@ for a in my_generator():
   print(a)
 ```
 
-### Regex in python(Work in Progress)
+## References
 
-* Meta characters: [] . ^ $ \* + ? {} () \ |
