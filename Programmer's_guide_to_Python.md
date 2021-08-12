@@ -498,7 +498,7 @@ stack = []
 stack.append(20) # append at top
 stack.pop() # remove at top
 ```
-* Queue: similar like stack, can be easily implemented using lists.
+* Queue: similarly can be easily implemented using lists.
 ```Python
 queue = []
 
@@ -508,19 +508,24 @@ queue.pop(0) # remove at front
 ```
 
 ### Extras
-* range() function: Returns sequence of length start_index(0 by default) to end_index, syntax range(start_index:optional, end_index, step:optional). range() function returns range object, which is iterable and supports indexing. It is used in loops, where a certain number of times a loop should work.
+* range() function: Returns sequence of length start_index(0 by default) to end_index(end_index is not included). range() function returns a range object, which is iterable and supports indexing. It is used in loops, where a certain number of times a loop should work.
 ```Python
-range(20) # return [0:20] sequence 
-range(5,20) # return [5:20] sequence 
-range(6,20,2) # return [6, 8, 10, 12, 14, 16, 18] sequence 
-range(20)[0] # indexing a range
-range(20)[0:10] # also slicing but its not prefered/recommended
-list(range(5,20)) # makes range sequence a list sequence
+# syntax range(start_index:optional, end_index, step:optional)
+range(20) # [0:20] 
+range(5,20) # [5:20] 
+range(6,20,2) # [6, 8, 10, 12, 14, 16, 18] 
+# indexing a range
+range(20)[0] # 0
+# also slicing but its not prefered/recommended
+range(20)[0:10] 
+# makes range sequence a list sequence
+list(range(5,20)) [5:20] 
 
-for var in range(20):
-  # 0 t0 19 var loop
+# looping range object
+for var in range(20): # 0 to 19 var loop
+  # do something with var
 ```
-* sorted() function: Returns sorted list given list/tuple as input. Sorting is O(nLogn). Also has 'reverse' parameter, which is used to do reverse sorting if set to True.
+* sorted() function: Returns a sorted list given list/tuple as input. Sorting is O(nLogn). Also has 'reverse' parameter, which is used to do reverse sorting if it is set to True.
 ```Python
 my_list = [2,5,1,3]
 my_tuple = (2,5,1,3)
@@ -528,28 +533,30 @@ my_tuple = (2,5,1,3)
 sorted(my_list) # [1,2,3,5]
 sorted(my_tuple, reverse=True) # [5, 3, 2, 1]
 ```
-* enumerate() function: Returns a iterable object given a list, each item is a tuple and has (index, value). Indexes of list variables(0-length) and value is item from the list. enumerate() function returns a enumerate object which is iterable but Indexing/slicing is not supported.
+* enumerate() function: Returns a iterable object given a list, each item is a tuple and has (index, value) per item. Index is in range from 0-length and value is item from the list. enumerate() function returns a enumerate object which is iterable but Indexing/slicing is not supported.
 ```Python
 my_list = [100,200,500,100]
-enumerate(my_list) # returns a iterable object
-list(enumerate(my_list))[0] # converts to list and so indexing first value gives a tuple which is (0,100) 
+# returns a iterable object
+print(type(enumerate(my_list))) # <class 'enumerate'>
+# converts to list and indexing first value gives a tuple
+list(enumerate(my_list))[0] # (0,100) 
 
-for i,val in enumerate(my_list):
-  # i values are in 0-3
+# looping over enumerate object
+for i, val in enumerate(my_list):
+  # i values are 0,1,2,3
   # val values are 100,200,500,100
 ```
-* Type Cast/Conversion can be performed between (int & float), (str & int) only if str contains numbers. 
-* Conversion of Sequences(list,set,dict,tuple), eg dict([[1,2],[2,3]]) gives {1:2,2:3}
-* filter() function: Takes a function, a list and applies that function on every list item. filter() returns a filter object which iterable but Indexing/slicing is not supported. 
+* filter() function: Takes a function, a list and applies that function on every item of that list. filter() returns a filter object which iterable but Indexing/slicing is not supported. 
 ```Python
 def my_func(var):
   # do something
   return var+2  # return something
   
-filter(my_func, [100,200,500,100]) # returns filter object
-list(filter(my_func, [100,200,500,100])) # returns [102,202,502,102]
+print(type(filter(my_func, [100,200,500,100]))) # <class 'filter'>
+list(filter(my_func, [100,200,500,100])) # [102,202,502,102]
 
-for val in filter(my_func, [100,200,500,100]): # iterable
+# looping through filter object
+for val in filter(my_func, [100,200,500,100]):
   # do something to val
 ```
 * map() function: Takes a function, a list and applies that function on every list item. The difference is map() returns None if some condition is not met(or nothing can be returned), whereas filter returns only if return is provided/some condition is met that makes a return call and else nothing is returned.
@@ -558,27 +565,31 @@ def my_func(var):
   # do something
   return var+2  # return something
   
-map(my_func, [100,200,500,100]) # returns filter object
-list(map(my_func, [100,200,500,100])) # returns [102,202,502,102]
+map(my_func, [100,200,500,100]) # <class 'map'>
+list(map(my_func, [100,200,500,100])) # [102,202,502,102]
 
-for val in filter(map, [100,200,500,100]): # iterable
+# looping through map object
+for val in map(my_func, [100,200,500,100]):
   # do something to val
 
-# the difference
+# the difference between map and filter
 def myfun(val):
     if val == 2:
         return val+2
         
-print(list(map(myfun, [1,2,3,4]))) # returns [None, 4, None, None] 
-print(list(filter(myfun, [1,2,3,4]))) # returns [4] 
+print(list(map(myfun, [1,2,3,4]))) # [None, 4, None, None] 
+print(list(filter(myfun, [1,2,3,4]))) # [4] 
 ```
 * ord(): Converts value to Unicode value.
 * chr(): Takes Unicode value and convert it back to a normal value.  
-
+```Python
+print(ord("c")) # 99
+print(chr(ord("c"))) # c
+```
 
 ## 3. Flow Control and Exception Handling
 
-Unlike using brackets in c/c++/java indentations are used for any Flow Control, Functions, Classes in python. Any expression or even comments should follow indentation rule.
+Unlike using brackets in c/c++/java indentations are used for any Flow Control, Exception Handling, Functions, Classes in python. Any expression or even comments should follow indentation rule.
 
 ### if...else
 ```Python
@@ -590,7 +601,7 @@ if my_var == 20:
 elif my_var == 30:
   # do something else
 else:
-  # just do this
+  # or just do this
   
 # using only if after some variable/sequence to check if it is not None
 if my_var:
@@ -634,10 +645,60 @@ while i<len(my_list):
   i+=1 # (this is shorthand for i=i+1) i++ is not supported
 ```
 
+### Exception Handling
+```Python
+# use traceback module for printing traceback
+import traceback
+# catch keyword is replaced with except, rest is the same
+# catch specific errors
+try:
+  a=10
+  a = "this"+a
+except (TypeError, ZeroDivisionError):    
+  print("ZeroDivisionError/TypeError occured")
+  # print traceback
+  traceback.print_exc()
+  
+# catch any exception with Exception class, which is base class of all exceptions
+# lets cause stackoverflow/RecursionError in python
+def my_fun():
+  try:
+    my_fun() 
+  except Exception as e:
+    # print exception class
+    print(e.__class__)  # <class 'RecursionError'>
+    # print exception
+    print(e) # maximum recursion depth exceeded
+my_fun()
+
+# manually throw(raise) exception
+def my_fun(a):
+  try:
+    if a == 20:
+      raise ValueError("I don't want number 20") 
+      # or not a specific exception like, raise Exception("my message")
+    return a+100
+  except ValueError as v:
+    print(v)
+number = my_fun(20) # I don't want number 20
+      
+# finally and else condition    
+try:
+ a = 20/0
+ a=20
+except Exception as e:
+  print(e.__class__) # <class 'ZeroDivisionError'>
+  print(e) # division by zero
+else:
+    print('Executes if no exception was raised, comment first line under try.')  
+finally:
+    print("Finally, its finally, which always executes.")      
+```
+
 ### Extras
 
-* break: break from loop. 
-* continue: continue to next iteration.
+* break: breaks from loop. 
+* continue: continue to next iteration in loops.
 * pass: move down to next expression.
 ```Python
 ## break and continue
@@ -652,7 +713,7 @@ while i<len(my_list):
   i+=1
   
 ## pass
-# pass can used inside empty functions, just to have the function
+# pass can be used inside empty functions, just to have the function
 # and implement the function later while coding
 def my_fun():
   pass
