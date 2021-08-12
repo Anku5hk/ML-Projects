@@ -34,20 +34,13 @@ Are used to define the type of data a variable holds. Below are Data types in py
 3. complex: Numbers that have two parts, real and imaginary. First part is normal number, the second part is imaginary number which should be follwed by j. 
 ```Python
 # here my_int is an operand, 42 is a literal and its data type is int
-# int
-my_int = 42
-# float
-my_float = 3.0 
-# complex
-my_complex = 4.22 + 20j 
+my_int = 42 # int
+print(type(my_int)) # <class 'int'>
+my_float = 3.0 # float
+print(type(my_float)) # <class 'float'>
+my_complex = 4.22 + 20j # complex
+my_complex = complex(4.22, 20) # alternative way
 print(my_complex) # 4.22+20j
-# shorthand for my_complex = my_complex + 30
-my_complex += 30 
-# only first part changes
-print(my_complex) # 34.22+20j
-my_complex1 = 0+10j
-# add two complex numbers
-print(my_complex + my_complex1) # 34.22+30j
 
 # Functions supported
 # returns maximum from n numbers(n > 2)
@@ -62,6 +55,7 @@ print(sum([10, 20])) # 30
 print(id(my_float)) # 1875526208176
 # returns a rounded to decimal value
 print(round(my_float)) # 3
+
 # type conversion
 my_int = 42
 my_float = 3.0
@@ -76,8 +70,14 @@ print(str(my_float)) # 3.0
 ```
 
 ### String
-Are immutable i.e items/values(here characters) cannot be changed/deleted, only inserted or completely replaced by another set of items. String are 'str' object in python.
+Are sequence of characters in python. Unlike Java, python does not have 'char', it has 'str' object which is a collection of characters data. They are immutable i.e items/values(here characters) cannot be changed/deleted, only inserted.
 ```Python
+text = 'strings can be single quoted'
+text = "strings can be double quoted"
+# multiline string
+text = """This is a long text.
+        And want to use multiple lines."""
+
 print(r"\n raw string no escaping characters") # \n raw string no escaping characters
 print("normal str,\t escaping characters") # normal str,  escaping characters
 
@@ -144,17 +144,24 @@ print(float(my_string1)) # 20.0
 ```
 
 ### Boolean
-Has only 2 values, one is True (is also 1, so 4 + True is 5) and other False (is 0, so 4 + False stays 4).
+Has only 2 values(0 and 1), 1 is True (is also 1, so 4 + True is 5) and 0 is False (is also 0, so 4 + False stays 4).
 ```Python
 my_bool = True
+print(type(my_bool)) # <class 'bool'>
 my_bool = my_bool + 4 # becomes 5
 
 my_bool = False
 my_bool = my_bool + 4 # stays 4
+
+# type conversion
+# int/float to bool, anything not 0 is True
+print(bool(-40), bool(0), bool(40)) # True False True
+# str to bool, empty string is False, rest is True
+print(bool(""), bool("This is string")) # False True
 ```
 
-### Special
-None 
+### Special 
+None: None is similar to 'null' in java.
 ```Python
 n = None
 
@@ -531,7 +538,7 @@ queue.pop(0) # remove at front
 ```
 
 ### Extras
-* range() function: Returns sequence of length start_index(0 by default) to end_index(end_index is not included). range() function returns a range object, which is iterable and supports indexing. It is used in loops, where a certain number of times a loop should work.
+* range() function: Returns sequence of length start_index(0 by default) to end_index(end_index is not included). range() function returns a range object, which is iterable and supports indexing but are immutable. It is used in loops, where a certain number of times a loop should work.
 ```Python
 # syntax range(start_index:optional, end_index, step:optional)
 print(range(20)) # [0:20] 
