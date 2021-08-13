@@ -1,9 +1,9 @@
 # Programmer's guide to Python (Work in Progress).
-Hello Learner, welcome to this Programmer's guide to Python handbook, this book was originally designed as notes when I was learning python, but then I thought okay why not make it public for other learners, so I added some missing components and completed it as a book. I hope this helps you in learning python. Cheers..
+Hello Learner, welcome to this Programmer's guide to Python handbook, this book was originally designed as notes when I was learning python, but then I thought okay why not make it public for other learners, so I added some missing components and completed it as a book. This is by no means a complete python walkthrough, but should cover all important aspects of python. I hope this helps you in learning python. Cheers...
 
 **What is this:** This book is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python, while saving you tons of time. The one who have taken python course from somewhere else can also use this as to solidfy their learning further. To grow as a programmer its always better to practice. I would suggest typing & running your own programs and creating your own notes. 
 
-**What's not this:** Not a traditional programming course/book, this book only emphasis on whats important. Maybe somewhat not beginner friendly, some concepts I consider are better explained on the internet already so have been left off, I don't know what I don't know right?. But I have tried to keep explainations as simple/short as possible most of the times.</br>  
+**What's not this:** Not a traditional programming course/book, this book only emphasis on whats important. Maybe somewhat not beginner friendly, some concepts I consider are better explained on the internet already so have been left off and I don't know what I don't know right?. But I have tried to keep explainations as simple/short as possible most of the times.</br>  
 
 **Index**
 1. [Basics](https://github.com/Anku5hk/ML-Projects/blob/master/Programmer's_guide_to_Python.md#1-basics)
@@ -16,7 +16,9 @@ Hello Learner, welcome to this Programmer's guide to Python handbook, this book 
 
 ## 1. Basics
 ### Introduction
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As wikipedia suggests "Python is an interpreted high-level general-purpose programming language." It was created by Guido van Rossum and released in 1991. It supports multiple programming paradigms like object-oriented, procedural and functional. "Python is also dynamically-typed and garbage-collected". Python's best implementation is in C language([Cython](https://github.com/python/cpython)) which is the default/standard, but there are other implementations in Java,.Net, etc. Its philosophy revolves around code readability and code simplicity, you can also check [zen of python](https://www.python.org/dev/peps/pep-0020/). Python is widely used in Web-Development([flask](https://flask.palletsprojects.com/en/2.0.x/), [django](https://www.djangoproject.com/), [fastapi](https://fastapi.tiangolo.com/)), Android/Windows/IOS/OSX application development([kivi](https://kivy.org/#home)), Big-Data Processing/Databases([Pyspark](https://spark.apache.org/docs/latest/api/python/), [Pandas](https://pandas.pydata.org/)), Machine learning([pytorch](pytorch.org/), [tensorflow](tensorflow.org/), [sklearn](scikit-learn.org/stable/)), Mathemetical/Scientific calculations([numpy](numpy.org/), [scipy](scipy.org/)), etc. The current/latest version is python3 which was released in 2008 and is still relevant(as of 2021), as python2 was discontinued at 1 Jan 2020.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Everything in python is an Object. Why is so? What is an object? A object has its own attributes and properties.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is a fair amount debate around "python is a slow language", but for most parts that does affects usability/credibility, it is the most prefered and powerful programming language which is still growing popular(as of 2021). Let's see whats ahead 
 ### Some Terminology  
 * Literals: Are raw data given to a variable, litrals are constant fix values eg 4, there is no other value replacement for 4, so its a integer literal. A raw value by itself is a literal.eg 4,6,2.5,7.4,'string','something'.
 * Keywords: Are reserved words which are defined by python, so they can't be used as operands, say eg. if,else,for,while,is,as,or,not,and,def,class,return,yeild,pass,raise.
@@ -1429,4 +1431,3 @@ for a in my_generator():
 
 ## References
 * [Python Official docs](https://docs.python.org/3/reference/index.html)
-* 
