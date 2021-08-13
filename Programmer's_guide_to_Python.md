@@ -1,5 +1,6 @@
 # Programmer's guide to Python (Work in Progress).
-Hello Learner, welcome to this Programmer's guide to Python handbook, this book was originally designed as notes when I was learning python, but then I thought okay why not make it public for other learners, so I added some missing components and completed it as a book. I hope this helps you in learning python. Cheers..  
+Hello Learner, welcome to this Programmer's guide to Python handbook, this book was originally designed as notes when I was learning python, but then I thought okay why not make it public for other learners, so I added some missing components and completed it as a book. I hope this helps you in learning python. Cheers..
+
 **What is this:** This book is meant for a programmer who's already familiar with other langauges such as c/c++/Java and wants to learn python but fast. The goal is to take you through enough python, while saving you tons of time. The one who have taken python course from somewhere else can also use this as to solidfy their learning further. To grow as a programmer its always better to practice. I would suggest typing & running your own programs and creating your own notes. 
 
 **What's not this:** Not a traditional programming course/book, this book only emphasis on whats important. Maybe somewhat not beginner friendly, some concepts I consider are better explained on the internet already so have been left off, I don't know what I don't know right?. But I have tried to keep explainations as simple/short as possible most of the times.</br>  
@@ -15,18 +16,17 @@ Hello Learner, welcome to this Programmer's guide to Python handbook, this book 
 
 ## 1. Basics
 ### Introduction
-Everything in python is an Object. A object has its own attributes and properties.  
 
 ### Some Terminology  
-* Literals: Are raw data given to variable, litrals are constant fix values eg integer 4, there is no other value replacement for int 4, so its a integer literal.
-* Operands/Variable: Are objects that hold values, it has its unique user-defined name, say eg. my_int, some_var, my_string12, my_list.
-* Operators: Are used to perform operations on operands. say eg. +,-,/,\*,is,in,=,!,<,>,not,and,or.
-* Keywords: Are reserved words which are defined inside python, so they can't be used as operands, say eg. if,else,for,while,is,as,or,not,and.
-* Expression: 
-* Statements: 
+* Literals: Are raw data given to a variable, litrals are constant fix values eg 4, there is no other value replacement for 4, so its a integer literal. A raw value by itself is a literal.eg 4,6,2.5,7.4,'string','something'.
+* Keywords: Are reserved words which are defined by python, so they can't be used as operands, say eg. if,else,for,while,is,as,or,not,and,def,class,return,yeild,pass,raise.
+* Operands/Variable: Are objects that hold values, it has a user-defined name, a name should not begin with a underscroll(because it is reserved for something else), other naming rules are similar to other languages. eg. my_int, some_var, my_string12, numbers_list.
+* Operators: Are used to perform operations on operands. eg. +,-,/,\*,is,in,=,!,<,>,.,not,and,or.
+* Expressions: Are a part of statement(as in expression statement), a expression is something that returns value/sequence by doing some operation(arthimatic/boolean/conditional/lambda function) in simple terms. eg x+4, a+"this", 5+6, a if a==2 else 30, a or b, 3 and 4, etc.
+* Statements: Are basically every instruction/line of code that python interpreter executes. There are simple statements(expression, assignment, yield, del, return, pass, raise, break, continue) and compound statements(if, while, for, try, with, function/class definations). 
 
 ## 2. Data Types
-Are used to define the type of data a variable holds. Below are Data types in python. Python has built-in 4 data types.
+Are used to define the type of data a variable holds. Python doesn't require declaration of data types like in c/c++/java. Any variable can be assigned any data type, a string variable can be assigned int or float or any other object it doesn't matter. Python has built-in 4 data types.
 ### Numeric
 * Three Numeric Types: 
 1. int(interger): Numbers that do not have decimal values.
@@ -41,6 +41,10 @@ print(type(my_float)) # <class 'float'>
 my_complex = 4.22 + 20j # complex
 my_complex = complex(4.22, 20) # alternative way
 print(my_complex) # 4.22+20j
+
+# type assignment
+some_var = 42 # some_var is assigned int
+some_var = 50.033 # some_var is now assigned a float value
 
 # Functions supported
 # returns maximum from n numbers(n > 2)
@@ -70,7 +74,7 @@ print(str(my_float)) # 3.0
 ```
 
 ### String
-Are sequence of characters in python. Unlike Java, python does not have 'char', it has 'str' object which is a collection of characters data. They are immutable i.e items/values(here characters) cannot be changed/deleted, only inserted.
+Are sequence of characters in python. Unlike Java, python does not have 'char' for character/character array, it has 'str' object which is a collection of character data. They are immutable i.e items/values(here characters) cannot be changed/deleted, only inserted. 
 ```Python
 text = 'strings can be single quoted'
 text = "strings can be double quoted"
@@ -632,7 +636,10 @@ elif my_var == 30:
   # do something else
 else:
   # or just do this
-  
+
+# single line condition
+my_var = 20 if 20%2 == 0 else 10
+
 # using only if after some variable/sequence to check if it is not None
 if my_var:
   # my_var is not 'None', so will print 
@@ -748,7 +755,7 @@ while i<len(my_list):
 def my_fun():
   pass
 ```
-
+* assert: Helps in debugging, "insert assertions into a program"
 
 ## 5. Functions, Classes and Objects
 
@@ -1421,4 +1428,5 @@ for a in my_generator():
 ```
 
 ## References
-
+* [Python Official docs](https://docs.python.org/3/reference/index.html)
+* 
