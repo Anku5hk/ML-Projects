@@ -10,10 +10,8 @@ Index:
 
 ## Python
 ### Introductory
- * [Slither Into Python](https://www.slitherintopython.com/) has everything of basics python to get you started as you begin.
- * [Programiz](https://www.programiz.com/python-programming) similar to Slither into python.
- * [Get to Know Python by me](https://github.com/Anku5hk/ML-Projects/blob/master/Get_to_know_Python.md) takes you to a python ride (some work is still under progress).
- * [Simple One page Overview](https://learnxinyminutes.com/docs/python/) like a cheatsheet.
+ * [Programmer's guide to Python by me](https://github.com/Anku5hk/Programmers_guide_to_Python/blob/main/book.md) takes you to a fast python ride.
+ * [Programiz](https://www.programiz.com/python-programming) bottom-up python course.
  * [Byte of Python](https://python.swaroopch.com/) beginner for python.
  
 ### Advance
@@ -149,4 +147,5 @@ Index:
 * [Yannic Kilcher](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew)
 * [Corey Schafer](https://www.youtube.com/c/Coreyms/featured)
 * [Engineer Man](https://www.youtube.com/channel/UCrUL8K81R4VBzm-KOYwrcxQ)
+* [Arxiv Insights](https://www.youtube.com/channel/UCNIkB2IeJ-6AmZv7bQ1oBYg)
 * [AI Coffee Break with Letitia](https://www.youtube.com/channel/UCobqgqE4i5Kf7wrxRxhToQA)
