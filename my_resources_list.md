@@ -10,10 +10,10 @@ Index:
 
 ## Python
 ### Introductory
- * [Programmer's guide to Python by me](https://github.com/Anku5hk/Programmers_guide_to_Python/blob/main/book.md) takes you to a fast python ride.
- * [Programiz](https://www.programiz.com/python-programming) bottom-up python course.
- * [Byte of Python](https://python.swaroopch.com/) beginner for python.
- 
+* [Byte of Python](https://python.swaroopch.com/) beginner for python.
+* [Think Python](https://greenteapress.com/wp/think-python-2e/) also a very good introductory.
+* [Programmer's guide to Python by me](https://github.com/Anku5hk/Programmers_guide_to_Python/blob/main/book.md) takes you to a fast python ride.
+
 ### Advance
 * [Automate the Boring Stuff By Al Sweigart](https://automatetheboringstuff.com/) takes you from basic to someone good.
 * [WTF Python](https://github.com/satwikkansal/wtfpython#-strings-can-be-tricky-sometimes) exploring and understanding Python through surprising snippets.
