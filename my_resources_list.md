@@ -75,7 +75,7 @@ Index:
  * [Stat 451: Intro to Machine Learning (Fall 2020) by Sebastian Raschka](https://youtube.com/playlist?list=PLTKMiZHVd_2KyGirGEvKlniaWeLOHhUF3)
 ### Reading
  * [The Hundred-Page Machine Learning Book by Andriy Burkov](http://themlbook.com/) is easily the best go-to for beginners, it is free, short, yet comprehensive. Folks with experience can also benefit from this awesome book. Author is very generous to keep the book "READ FIRST, BUY LATER" kind and has new book [Machine Learning Engineering](http://www.mlebook.com/wiki/doku.php) which is simply the next best thing, tons of real-world ML examples which can take you far.
- * [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk) by Aurelien Geron is an excellent primer, yet provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. It supplies sufficient code for using them with sklearn, Tensorflow.
+ * [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow 2](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-TensorFlow-dp-1492032646/dp/1492032646/ref=dp_ob_title_bk)/[Amazon.com](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646) by Aurelien Geron is an excellent primer, yet provides deeper understanding of concepts in General ML, Deep Learning techniques used around Computer Vision, NLP. It supplies sufficient code for using them with sklearn, Tensorflow.
  
 ## Applied ML
 * [ML Foundations + Applied ML](https://madewithml.com/courses/ml-foundations/) neat ML basics and Applied ML techniques.
